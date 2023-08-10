@@ -1,0 +1,329 @@
+---
+title: "Q2 timeseries"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
+Import packages
+
+```{r}
+library(dplyr)
+```
+```{r}
+library (readxl)
+```
+```{r}
+library (tidyverse)
+```
+
+```{r}
+library(ggplot2)
+```
+
+
+
+
+Add 1996 data
+
+```{r}
+clipped1996datalamu <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofExeter/Global Sustainability Solutions/Dissertation/R/Excel spreadsheets /clipped1996datalamu.xls")
+clipped1996datalamu
+```
+
+Rename 1996 column
+
+```{r}
+names(clipped1996datalamu)[names(clipped1996datalamu) == 'clipped1996data'] <- 'mangroves'
+clipped1996datalamu
+```
+
+Create 1996 year column
+
+```{r}
+clipped1996datalamu <- cbind(clipped1996datalamu, year="1996")
+clipped1996datalamu
+```
+
+Add in 2007 data
+```{r}
+clipped2007 <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofExeter/Global Sustainability Solutions/Dissertation/R/Excel spreadsheets /clipped2007.xls")
+clipped2007
+```
+rename 2007 column 
+
+```{r}
+names(clipped2007)[names(clipped2007) == 'clipped2007data'] <- 'mangroves'
+clipped2007
+
+```
+
+create 2007 column
+```{r}
+clipped2007 <- cbind(clipped2007, year="2007")
+clipped2007
+```
+
+Add in 2008 data 
+
+```{r}
+clipped2008lamudata <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofExeter/Global Sustainability Solutions/Dissertation/R/Excel spreadsheets /clipped2008lamudata.xls")
+clipped2008lamudata
+```
+
+Rename 2008 column 
+
+```{r}
+names(clipped2008lamudata)[names(clipped2008lamudata) == 'clipped2008'] <- 'mangroves'
+clipped2008lamudata
+```
+Add 2008 column
+
+```{r}
+clipped2008lamudata <- cbind(clipped2008lamudata, year="2008")
+clipped2008lamudata
+```
+
+Add 2009 data 
+
+```{r}
+clipped2009data <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofExeter/Global Sustainability Solutions/Dissertation/R/Excel spreadsheets /clipped2009data.xls")
+clipped2009data
+```
+rename 2009 column 
+```{r}
+names(clipped2009data)[names(clipped2009data) == 'clipped2009data'] <- 'mangroves'
+clipped2009data
+```
+
+Add 2009 column 
+```{r}
+clipped2009data <- cbind(clipped2009data, year="2009")
+clipped2009data
+```
+
+Add 2010 Data 
+
+```{r}
+clipped2010lamudata <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofExeter/Global Sustainability Solutions/Dissertation/R/Excel spreadsheets /clipped2010lamudata.xls")
+clipped2010lamudata
+```
+
+Rename 2010 column 
+
+```{r}
+names(clipped2010lamudata)[names(clipped2010lamudata) == '2010clippedlamu'] <- 'mangroves'
+clipped2010lamudata
+```
+
+Add 2010 column 
+
+```{r}
+clipped2010lamudata <- cbind(clipped2010lamudata, year="2010")
+clipped2010lamudata
+```
+
+Add 2015 data 
+```{r}
+X2015lamuclipped <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofExeter/Global Sustainability Solutions/Dissertation/R/Excel spreadsheets /2015lamuclipped.xls")
+X2015lamuclipped
+```
+Rename 2015 column 
+```{r}
+names(X2015lamuclipped)[names(X2015lamuclipped) == '2015lamuclipped'] <- 'mangroves'
+X2015lamuclipped
+```
+Add a 2015 year column 
+
+```{r}
+X2015lamuclipped <- cbind(X2015lamuclipped, year="2015")
+X2015lamuclipped
+```
+
+Add 2016 data
+```{r}
+X2016clippedlamu <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofExeter/Global Sustainability Solutions/Dissertation/R/Excel spreadsheets /2016clippedlamuexcel.xls")
+X2016clippedlamu
+```
+Rename 2016 column 
+```{r}
+names(X2016clippedlamu)[names(X2016clippedlamu) == '2016clippedlamu'] <- 'mangroves'
+X2016clippedlamu
+```
+
+Add a 2016 year column 
+```{r}
+X2016clippedlamu <- cbind(X2016clippedlamu, year="2016")
+X2016clippedlamu
+```
+
+Add 2017 data 
+
+```{r}
+clipped2017lamudata <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofExeter/Global Sustainability Solutions/Dissertation/R/Excel spreadsheets /clipped2017lamudata.xls")
+clipped2017lamudata
+```
+
+Rename column 
+```{r}
+names(clipped2017lamudata)[names(clipped2017lamudata) == 'clipped2017'] <- 'mangroves'
+clipped2017lamudata
+```
+
+Add 2017 column 
+```{r}
+clipped2017lamudata <- cbind(clipped2017lamudata, year="2017")
+clipped2017lamudata
+```
+
+Add 2018 data 
+```{r}
+clipped2018lamu <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofExeter/Global Sustainability Solutions/Dissertation/R/Excel spreadsheets /clipped2018lamu.xls")
+clipped2018lamu
+```
+
+Rename column 
+
+```{r}
+names(clipped2018lamu)[names(clipped2018lamu) == 'clipped2018'] <- 'mangroves'
+clipped2018lamu
+```
+Add 2018 year column 
+```{r}
+clipped2018lamu <- cbind(clipped2018lamu, year="2018")
+clipped2018lamu
+```
+
+Add 2019 data 
+```{r}
+X2019lamudata <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofExeter/Global Sustainability Solutions/Dissertation/R/Excel spreadsheets /2019lamudataexel.xls")
+X2019lamudata
+```
+Rename 2019 Column 
+```{r}
+names(X2019lamudata)[names(X2019lamudata) == 'clipped2019'] <- 'mangroves'
+X2019lamudata
+```
+Add a 2019 year column 
+
+```{r}
+X2019lamudata <- cbind(X2019lamudata, year="2019")
+X2019lamudata
+```
+
+Add 2020 Data
+
+```{r}
+clipped2020datalamu <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofExeter/Global Sustainability Solutions/Dissertation/R/Excel spreadsheets /clipped2020lamu.xls")
+clipped2020datalamu
+```
+
+Rename column
+
+```{r}
+names(clipped2020datalamu)[names(clipped2020datalamu) == 'lamu2020'] <- 'mangroves'
+clipped2020datalamu
+```
+
+Add a 2020 year column
+
+```{r}
+clipped2020datalamu <- cbind(clipped2020datalamu, year="2020")
+clipped2020datalamu
+```
+
+
+combine all the dataframes 
+
+```{r}
+df2 <- bind_rows(clipped1996datalamu, clipped2007, clipped2008lamudata, clipped2009data, clipped2010lamudata, X2015lamuclipped, X2016clippedlamu, clipped2017lamudata, clipped2018lamu, X2019lamudata, clipped2020datalamu)
+df2
+```
+unique values
+
+```{r}
+unique(df2$year)
+```
+
+Drop unnecessary data 
+```{r}
+df2 = subset(df2,select = -c(PXLVAL))
+df2
+```
+
+Group by year 
+
+```{r}
+agg_tbl <- df2 %>% group_by(year) %>% summarise(total_mangroves=sum(mangroves),.groups = 'drop')
+agg_tbl
+```
+Convert to dataframe 
+
+```{r}
+df3 <- agg_tbl %>% as.data.frame()
+df3
+```
+Convert column totals to hectares
+
+Show this in a graph
+
+```{r}
+df3
+```
+
+
+```{r}
+df3$total_mangroves_hectares <- df3$total_mangroves / 10000
+df3
+```
+
+Duplicate dataset
+
+```{r}
+df4 <- df3
+df4
+```
+
+Bar plot
+```{r}
+
+# Uniform color
+barplot(height=df4$total_mangroves_hectares, names=df4$year, 
+        col=rgb(0.8,0.1,0.1,0.6),
+        xlab="Year", 
+        ylab="Hectares", 
+        main="Lamu county mangrove cover 1996 to 2020", 
+        ylim=c(0,40000)
+        )
+```
+
+
+Create time series
+
+```{r}
+df4 %>%
+  ggplot( aes(x=year, y=total_mangroves_hectares, group=1)) +
+    geom_line() +
+    geom_point() +
+  ylim(30000, 40000)
+```
+Export 
+
+```{r}
+write.csv(df4, "~/Library/CloudStorage/OneDrive-UniversityofExeter/Global Sustainability Solutions/Dissertation/R/lamu1996-2020.csv", row.names=FALSE)
+```
+
+
+

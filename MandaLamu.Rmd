@@ -1,0 +1,383 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
+
+```{r}
+install.packages('patchwork')
+```
+```{r}
+library(patchwork)
+```
+
+
+
+# Import packages
+##  Import packages
+
+```{r}
+library(dplyr)
+```
+```{r}
+library (readxl)
+```
+```{r}
+library (tidyverse)
+```
+
+```{r}
+library(ggplot2)
+```
+
+```{r}
+library(data.table)
+```
+
+```{r}
+library(scales)
+```
+
+Set plotting theme
+
+```{r}
+## Plotting theme
+theme_fancy <- function() {
+  theme_bw() +
+    theme(
+      text = element_text(family = "Helvetica"),
+      axis.text = element_text(size = 8, color = "black"),
+      axis.title = element_text(size = 10, color = "black"),
+      axis.line.x = element_line(size = 0.3, color = "black"),
+      axis.line.y = element_line(size = 0.3, color = "black"),
+      axis.ticks = element_line(size = 0.3, color = "black"),
+      panel.border = element_blank(),
+      panel.grid.major.x = element_blank(),
+      panel.grid.minor.x = element_blank(),
+      panel.grid.minor.y = element_blank(),
+      panel.grid.major.y = element_blank(),
+      plot.margin = unit(c(0.5, 0.5, 0.5, 0.5), units = , "cm"),
+      plot.title = element_text(
+        size = 10,
+        vjust = 1,
+        hjust = 0.5,
+        color = "black"
+      ),
+      legend.text = element_text(size = 9, color = "black"),
+      legend.title = element_text(size = 9, color = "black"),
+      legend.position = c(0.9, 0.9),
+      legend.key.size = unit(0.7, "line"),
+      legend.background = element_rect(
+        color = "black",
+        fill = "transparent",
+        size = 2,
+        linetype = "blank"
+      )
+    )
+}
+```
+
+
+
+Import CSV files
+
+```{r}
+manda <- read.csv("~/Library/CloudStorage/OneDrive-UniversityofExeter/Global Sustainability Solutions/Dissertation/R/manda1996-2020.csv", header=TRUE)
+manda
+```
+
+```{r}
+# converting into data.table
+setDT(manda)
+class(manda)
+```
+
+Calculate % change
+
+```{r}
+manda[ , change := (total_mangroves_hectares - shift(total_mangroves_hectares)) / shift(total_mangroves_hectares)]  
+manda
+```
+
+```{r}
+manda$percentchange <- percent(manda$change, accuracy=.1)
+manda
+```
+
+convert to data frame
+
+```{r}
+manda <- as.data.frame(manda) 
+manda
+```
+Create location column
+
+```{r}
+manda <- cbind(manda, location="Manda Island")
+manda
+```
+
+
+
+Import lamu
+
+```{r}
+lamu <- read.csv("~/Library/CloudStorage/OneDrive-UniversityofExeter/Global Sustainability Solutions/Dissertation/R/lamu1996-2020.csv", header=TRUE)
+lamu
+```
+
+
+```{r}
+# converting into data.table
+setDT(lamu)
+class(lamu)
+```
+
+Calculate % change
+
+```{r}
+lamu[ , change := (total_mangroves_hectares - shift(total_mangroves_hectares)) / shift(total_mangroves_hectares)]  
+lamu
+```
+
+```{r}
+lamu$percentchange <- percent(lamu$change, accuracy=.1)
+lamu
+```
+
+convert to data frame
+
+```{r}
+lamu <- as.data.frame(lamu) 
+lamu
+```
+
+Create location column
+
+```{r}
+lamu <- cbind(lamu, location="Lamu County")
+lamu
+```
+
+
+Combine dataframes 
+
+```{r}
+df2 <- bind_rows(lamu, manda)
+df2
+```
+
+Check unique years
+
+```{r}
+unique(df2$year)
+```
+
+
+Check unique locations
+
+```{r}
+unique(df2$location)
+```
+
+Form normalisation
+https://www.statology.org/how-to-normalize-data-in-r/#:~:text=By%20normalizing%20the%20variables%2C%20we,(X%20–%20μ)%20%2F%20σ 
+
+```{r}
+df2 %>%
+  ggplot( aes(x=year, y=total_mangroves_hectares, group=location, colour=location)) +
+    geom_line() +
+    geom_point() 
+```
+
+
+Filter out 1996
+
+```{r}
+df3 <- na.omit(df2)
+df3
+```
+
+
+Create a time series
+
+```{r}
+df3 %>%
+  ggplot( aes(x=year, y=percentchange, group=location, colour=location)) +
+    geom_line() +
+    geom_point() 
+
+```
+
+Y axis scaling will be defined as 3% above the max and 3% below the min total
+mangrove coverage in hectares recorded in the Lamu and Manda dataframes.
+
+```{r}
+y_axis_scaler <- 0.03
+y_axis_scaler
+```
+
+Summarise Manda data
+
+```{r}
+summary(manda)
+```
+Calculate Manda range and store as a vector
+
+```{r}
+manda_range <- range(manda$total_mangroves_hectares)
+manda_range
+```
+
+Calculate Manda y axis max value
+
+```{r}
+manda_y_axis_max <- manda_range[2] * (1+y_axis_scaler)
+manda_y_axis_max
+```
+
+Calculate Manda y axis min value
+
+```{r}
+manda_y_axis_min <- manda_range[1] * (1-y_axis_scaler)
+manda_y_axis_min
+```
+
+Summarise Lamu data
+
+```{r}
+summary(lamu)
+```
+Calculate Manda range and store as a vector
+
+```{r}
+lamu_range <- range(lamu$total_mangroves_hectares)
+lamu_range
+```
+
+Calculate Lamu y axis max value
+
+```{r}
+lamu_y_axis_max <- lamu_range[2] * (1+y_axis_scaler)
+lamu_y_axis_max
+```
+
+Calculate Lamu y axis min value
+
+```{r}
+lamu_y_axis_min <- lamu_range[1] * (1-y_axis_scaler)
+lamu_y_axis_min
+```
+
+Plots
+
+```{r}
+p1 <- ggplot(data=lamu, aes(x=year, y=total_mangroves_hectares)) +
+    geom_line() +
+    geom_point() +
+  ylim(lamu_y_axis_min,lamu_y_axis_max) +
+  theme_fancy() +
+  ggtitle("Lamu County") +
+  xlab("Year") +
+  ylab("Hectares of Mangroves")
+
+p2 <- ggplot(data=manda, aes(x=year, y=total_mangroves_hectares)) +
+    geom_line() +
+    geom_point() +
+  ylim(manda_y_axis_min, manda_y_axis_max) +
+  theme_fancy() +
+  ggtitle("MICP") +
+  xlab("Year") +
+  ylab("Hectares of Mangroves")
+
+fig1 <- p1 + p2 + plot_annotation(tag_levels = 'a') + 
+  plot_annotation(title = 'Lamu County and MICP mangrove cover 1996 to 2020',
+                  theme = theme(plot.title = element_text(size = 16)))
+
+fig1
+```
+
+Save
+
+```{r}
+filename = "Lamu County vs MICP cover change 1996-2020"
+
+ggsave(
+  fig1,
+  filename = paste0(filename, ".png"),
+  width = 23,
+  height = 17,
+  units = "cm"
+)
+
+ggsave(
+  fig1,
+  filename = paste0(filename, ".pdf"),
+  width = 23,
+  height = 17,
+  units = "cm"
+)
+```
+
+
+
+```{r}
+
+p1 <- ggplot(data=lamu, aes(x=year, y=total_mangroves_hectares)) +
+    geom_line() +
+    geom_point() +
+  ylim(lamu_y_axis_min,lamu_y_axis_max) +
+  theme_fancy() +
+  ggtitle("Lamu County") +
+  xlab("Year") +
+  ylab("Hectares of Mangroves")
+
+p2 <- ggplot(data=manda, aes(x=year, y=total_mangroves_hectares)) +
+    geom_line() +
+    geom_point() +
+  ylim(manda_y_axis_min, manda_y_axis_max) +
+  theme_fancy() +
+  ggtitle("MICP") +
+  xlab("Year") +
+  ylab("Hectares of Mangroves")
+
+p3 <- ggplot(data=lamu, aes(x=year, y=total_mangroves_hectares)) +
+    geom_bar(stat="identity") +
+  theme_fancy() +
+  ggtitle("Lamu County") +
+  xlab("Year") +
+  ylab("Hectares of Mangroves")
+
+p4 <- ggplot(data=manda, aes(x=year, y=total_mangroves_hectares)) +
+    geom_bar(stat="identity") +
+  theme_fancy() +
+  ggtitle("MICP") +
+  xlab("Year") +
+  ylab("Hectares of Mangroves")
+
+fig2 <- p1 + p2 + p3 + p4 + plot_annotation(tag_levels = 'a') + 
+  plot_annotation(title = 'Lamu County and MICP mangrove cover 1996 to 2020',
+                  theme = theme(plot.title = element_text(size = 16)))
+
+fig2
+```
+```
+
+
+
+
+

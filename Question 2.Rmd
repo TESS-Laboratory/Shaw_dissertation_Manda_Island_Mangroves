@@ -1,0 +1,141 @@
+---
+title: "Question 2"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
+________________________________
+
+
+Import packages
+
+```{r}
+library(readxl)
+```
+
+```{r}
+library(dplyr)
+```
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+library(ggplot2)
+```
+
+Import 1996 data
+
+```{r}
+clipped1996datalamu <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofExeter/Global Sustainability Solutions/Dissertation/R/Excel spreadsheets /clipped1996datalamu.xls")
+clipped1996datalamu
+```
+
+
+Rename 1996 column
+
+```{r}
+names(clipped1996datalamu)[names(clipped1996datalamu) == 'clipped1996data'] <- 'mangroves'
+clipped1996datalamu
+```
+
+Create year column
+
+```{r}
+clipped1996datalamu <- cbind(clipped1996datalamu, year="1996")
+clipped1996datalamu
+```
+
+
+Import 2020 data
+
+```{r}
+clipped2020datalamu <- read_excel("~/Library/CloudStorage/OneDrive-UniversityofExeter/Global Sustainability Solutions/Dissertation/R/Excel spreadsheets /clipped2020lamu.xls")
+clipped2020datalamu
+```
+
+Rename 2020 column
+
+```{r}
+names(clipped2020datalamu)[names(clipped2020datalamu) == 'lamu2020'] <- 'mangroves'
+clipped2020datalamu
+```
+
+Create year column
+
+```{r}
+clipped2020datalamu <- cbind(clipped2020datalamu, year="2020")
+clipped2020datalamu
+```
+
+Combine dataframes
+
+```{r}
+df2 <- rbind(clipped1996datalamu, clipped2020datalamu)
+df2
+```
+
+What are the unique values of year
+
+```{r}
+unique(df2$year)
+```
+
+Drop unecessary data
+
+```{r}
+df2 = subset(df2,select = -c(PXLVAL))
+df2
+```
+
+
+Group by
+
+
+```{r}
+agg_tbl <- df2 %>% group_by(year) %>% summarise(total_mangroves=sum(mangroves),.groups = 'drop')
+agg_tbl
+```
+
+Convert tibble to df
+
+```{r}
+df3 <- agg_tbl %>% as.data.frame()
+df3
+```
+
+Convert to Hectares
+
+```{r}
+div(df3, total_mangroves, by = 1000, grep = FALSE)
+```
+
+
+
+Show this in a bar chart
+
+```{r}
+# Barplot
+ggplot(df3, aes(x=year, y=total_mangroves)) + 
+  geom_bar(stat = "identity")
+```
+
+
+
+
+
+
