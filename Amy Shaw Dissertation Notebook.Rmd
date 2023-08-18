@@ -1,19 +1,405 @@
 ---
-title: "Amy Shaw Dissertation Code"
+title: "Amy Shaw Dissertation Code Script"
 output: html_notebook
 ---
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
-
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+Load packages 
 
 ```{r}
-"hello world"
+library(dplyr)
+library(tidyverse)
+library(ggplot2)
+library(patchwork)
 ```
 
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+```{r}
+library(data.table)
+library(scales)
+```
 
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+Setting Potting Theme 
 
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+```{r}
+theme_fancy <- function() {
+  theme_bw() +
+    theme(
+      text = element_text(family = "Helvetica"),
+      axis.text = element_text(size = 8, color = "black"),
+      axis.title = element_text(size = 10, color = "black"),
+      axis.line.x = element_line(size = 0.3, color = "black"),
+      axis.line.y = element_line(size = 0.3, color = "black"),
+      axis.ticks = element_line(size = 0.3, color = "black"),
+      panel.border = element_blank(),
+      panel.grid.major.x = element_blank(),
+      panel.grid.minor.x = element_blank(),
+      panel.grid.minor.y = element_blank(),
+      panel.grid.major.y = element_blank(),
+      plot.margin = unit(c(0.5, 0.5, 0.5, 0.5), units = , "cm"),
+      plot.title = element_text(
+        size = 10,
+        vjust = 1,
+        hjust = 0.5,
+        color = "black"
+      ),
+      legend.text = element_text(size = 9, color = "black"),
+      legend.title = element_text(size = 9, color = "black"),
+      legend.position = c(0.9, 0.9),
+      legend.key.size = unit(0.7, "line"),
+      legend.background = element_rect(
+        color = "black",
+        fill = "transparent",
+        size = 2,
+        linetype = "blank"
+      )
+    )
+}
+```
+
+Import all Lamu County mangrove cover data sets 
+
+Import Lamu County 1996 Mangrove Data 
+
+```{r}
+Lamu1996Data <- read_csv("Data/Lamu1996Data.csv")
+Lamu1996Data
+```
+Rename 1996 column to mangroves 
+
+```{r}
+names(Lamu1996Data)[names(Lamu1996Data) == '1996'] <- 'Mangroves'
+Lamu1996Data
+```
+Create a 1996 year column 
+
+```{r}
+Lamu1996Data <- cbind(Lamu1996Data, year="1996")
+Lamu1996Data
+```
+Drop columns PXLVAL and clipped1996data as neither is needed 
+
+```{r}
+Lamu1996Data = subset(Lamu1996Data,select = -c(PXLVAL, clipped1996data))
+Lamu1996Data
+```
+Import Lamu County 2007 Mangrove Data 
+
+```{r}
+Lamu2007Data <- read_csv("Data/Lamu2007Data.csv")
+Lamu2007Data
+```
+Rename 2007 year to mangroves 
+
+```{r}
+names(Lamu2007Data)[names(Lamu2007Data) == '2007'] <- 'Mangroves'
+Lamu2007Data
+```
+
+Create a 2007 year column 
+
+```{r}
+Lamu2007Data <- cbind(Lamu2007Data, year="2007")
+Lamu2007Data
+```
+
+Drop columns PXLVAL and clipped2007data as neither is needed 
+
+```{r}
+Lamu2007Data = subset(Lamu2007Data,select = -c(PXLVAL, clipped2007data))
+Lamu2007Data
+```
+Import Lamu County 2008 Mangrove Data 
+
+```{r}
+Lamu2008Data <- read_csv("Data/Lamu2008Data.csv")
+Lamu2008Data
+```
+
+Rename 2008 column to mangroves 
+
+```{r}
+names(Lamu2008Data)[names(Lamu2008Data) == '2008'] <- 'Mangroves'
+Lamu2008Data
+```
+Create a 2008 year column 
+
+```{r}
+Lamu2008Data <- cbind(Lamu2008Data, year="2008")
+Lamu2008Data
+```
+
+Drop columns PXLVAL and clipped2008data as neither is needed 
+
+```{r}
+Lamu2008Data = subset(Lamu2008Data,select = -c(PXLVAL, clipped2008data))
+Lamu2008Data
+```
+
+Import Lamu County 2009 Mangrove Data 
+
+```{r}
+Lamu2009Data <- read_csv("Data/Lamu2009Data.csv")
+Lamu2009Data
+```
+Rename 2009 column to mangroves 
+
+```{r}
+names(Lamu2009Data)[names(Lamu2009Data) == '2009'] <- 'Mangroves'
+Lamu2009Data
+```
+
+Create a 2009 year column 
+
+```{r}
+Lamu2009Data <- cbind(Lamu2009Data, year="2009")
+Lamu2009Data
+```
+
+Drop columns PXLVAL and clipped2009data as neither is needed 
+
+```{r}
+Lamu2009Data = subset(Lamu2009Data,select = -c(PXLVAL, clipped2009data))
+Lamu2009Data
+```
+
+Import Lamu County 2010 Mangrove Data 
+
+```{r}
+Lamu2010Data <- read_csv("Data/Lamu2010Data.csv")
+Lamu2010Data
+```
+
+Rename 2010 column to mangroves 
+
+```{r}
+names(Lamu2010Data)[names(Lamu2010Data) == '2010'] <- 'Mangroves'
+Lamu2010Data
+```
+
+Create a 2010 year column 
+
+```{r}
+Lamu2010Data <- cbind(Lamu2010Data, year="2010")
+Lamu2010Data
+```
+
+Drop columns PXLVAL and clipped2010data as neither is needed 
+
+```{r}
+Lamu2010Data = subset(Lamu2010Data,select = -c(PXLVAL, clipped2010data))
+Lamu2010Data
+```
+
+Import Lamu County 2015 Mangrove Data 
+
+```{r}
+Lamu2015Data <- read_csv("Data/Lamu2015Data.csv")
+Lamu2015Data
+```
+
+Rename 2015 column to mangroves 
+
+```{r}
+names(Lamu2015Data)[names(Lamu2015Data) == '2015'] <- 'Mangroves'
+Lamu2015Data
+```
+
+Create a 2015 year column 
+
+```{r}
+Lamu2015Data <- cbind(Lamu2015Data, year="2015")
+Lamu2015Data
+```
+
+Drop columns PXLVAL and clipped2015data as neither is needed 
+
+```{r}
+Lamu2015Data = subset(Lamu2015Data,select = -c(PXLVAL, clipped2015data))
+Lamu2015Data
+```
+
+Import Lamu County 2016 Mangrove Data 
+
+```{r}
+Lamu2016Data <- read_csv("Data/Lamu2016Data.csv")
+Lamu2016Data
+```
+
+Rename 2016 column to mangroves 
+
+```{r}
+names(Lamu2016Data)[names(Lamu2016Data) == '2016'] <- 'Mangroves'
+Lamu2016Data
+```
+
+Create a 2016 year column 
+
+```{r}
+Lamu2016Data <- cbind(Lamu2016Data, year="2016")
+Lamu2016Data
+```
+
+Drop columns PXLVAL and clipped2016data as neither is needed 
+
+```{r}
+Lamu2016Data = subset(Lamu2016Data,select = -c(PXLVAL, clipped2016data))
+Lamu2016Data
+```
+
+Import Lamu County 2017 Mangrove Data 
+
+```{r}
+Lamu2017Data <- read_csv("Data/Lamu2017Data.csv")
+Lamu2017Data
+```
+Rename 2017 column to Mangroves 
+
+```{r}
+names(Lamu2017Data)[names(Lamu2017Data) == '2017'] <- 'Mangroves'
+Lamu2017Data
+```
+
+Create a 2017 year column 
+
+```{r}
+Lamu2017Data <- cbind(Lamu2017Data, year="2017")
+Lamu2017Data
+```
+
+Drop columns PXLVAL and clipped2017data as neither is needed 
+
+```{r}
+Lamu2017Data = subset(Lamu2017Data,select = -c(PXLVAL, clipped2017data))
+Lamu2017Data
+```
+
+Import Lamu County 2018 Mangrove Data 
+
+```{r}
+Lamu2018Data <- read_csv("Data/Lamu2018Data.csv")
+Lamu2018Data
+```
+Rename 2018 column to Mangroves 
+
+```{r}
+names(Lamu2018Data)[names(Lamu2018Data) == '2018'] <- 'Mangroves'
+Lamu2018Data
+```
+
+Create a 2018 year column 
+
+```{r}
+Lamu2018Data <- cbind(Lamu2018Data, year="2018")
+Lamu2018Data
+```
+Drop PXLVAL column as it is not needed 
+
+```{r}
+Lamu2018Data = subset(Lamu2018Data,select = -c(PXLVAL))
+Lamu2018Data
+```
+
+Import Lamu County 2019 Mangrove Data 
+
+```{r}
+Lamu2019Data <- read_csv("Data/Lamu2019Data.csv")
+Lamu2019Data
+```
+
+Rename 2019 column to Mangroves 
+
+```{r}
+names(Lamu2019Data)[names(Lamu2019Data) == '2019'] <- 'Mangroves'
+Lamu2019Data
+```
+Create a 2019 year column 
+
+```{r}
+Lamu2019Data <- cbind(Lamu2019Data, year="2019")
+Lamu2019Data
+```
+
+Drop columns PXLVAL and clipped2019data as neither is needed 
+
+```{r}
+Lamu2019Data = subset(Lamu2019Data,select = -c(PXLVAL, clipped2019data))
+Lamu2019Data
+```
+
+Import Lamu County 2020 Mangrove Data 
+
+```{r}
+Lamu2020Data <- read_csv("Data/Lamu2020Data.csv")
+Lamu2020Data
+```
+
+Rename 2020 column to Mangroves 
+
+```{r}
+names(Lamu2020Data)[names(Lamu2020Data) == '2020'] <- 'Mangroves'
+Lamu2020Data
+```
+Create a 2020 year column 
+
+```{r}
+Lamu2020Data <- cbind(Lamu2020Data, year="2020")
+Lamu2020Data
+```
+Drop columns PXLVAL and clipped2020data as neither is needed 
+
+```{r}
+Lamu2020Data = subset(Lamu2020Data,select = -c(PXLVAL, clipped2020data))
+Lamu2020Data
+```
+
+Combine all Lamu County Mangrove Datasets by year 
+
+```{r}
+df1 <- bind_rows(Lamu1996Data, Lamu2007Data, Lamu2008Data, Lamu2009Data, Lamu2010Data, Lamu2015Data, Lamu2016Data, Lamu2017Data, Lamu2018Data, Lamu2019Data, Lamu2020Data)
+df1
+```
+
+Check unique values to make sure each year has been included 
+
+```{r}
+unique(df1$year)
+```
+
+
+Group mangroves by year
+
+```{r}
+agg_tbl <- df1 %>% group_by(year) %>% summarise(Total_Mangroves=sum(Mangroves),.groups = 'drop')
+agg_tbl
+```
+
+
+Convert to a new dataframe 
+
+```{r}
+df2 <- agg_tbl %>% as.data.frame()
+df2
+```
+Convert Mangrove cover to hectares
+
+```{r}
+df2$Total_Mangroves_Hectares <- df2$Total_Mangroves / 10000
+df2
+```
+
+Drop Total_Mangroves columns as unnesessary 
+
+```{r}
+df2 = subset(df2,select = -c(Total_Mangroves))
+df2
+```
+
+Duplicate dataset 
+
+```{r}
+df3 <- df2
+df3
+```
+
+
+
 
