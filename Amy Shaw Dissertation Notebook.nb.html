@@ -2722,9 +2722,921 @@ df3</code></pre>
 <!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>Import all Manda Island Conservancy Project (MICP) mangrove cover
+data sets</p>
+<p>Import MICP 1996 Mangrove Data</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDE5OTZEYXRhIDwtIHJlYWRfY3N2KFwiRGF0YS9NSUNQMTk5NkRhdGEuY3N2XCIpXG5gYGAifQ== -->
+<pre class="r"><code>MICP1996Data &lt;- read_csv(&quot;Data/MICP1996Data.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUm93czogMTEgQ29sdW1uczogM+KUgOKUgCBDb2x1bW4gc3BlY2lmaWNhdGlvbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIBcbkRlbGltaXRlcjogXCIsXCJcbmRibCAoMyk6IFBYTFZBTCwgY2xpcHBlZDE5OTZkYXRhLCAxOTk2YXJlYVxu4oS5IFVzZSBgc3BlYygpYCB0byByZXRyaWV2ZSB0aGUgZnVsbCBjb2x1bW4gc3BlY2lmaWNhdGlvbiBmb3IgdGhpcyBkYXRhLlxu4oS5IFNwZWNpZnkgdGhlIGNvbHVtbiB0eXBlcyBvciBzZXQgYHNob3dfY29sX3R5cGVzID0gRkFMU0VgIHRvIHF1aWV0IHRoaXMgbWVzc2FnZS5cbiJ9 -->
+<pre><code>Rows: 11 Columns: 3── Column specification ────────────────────────────────────────────────────────────
+Delimiter: &quot;,&quot;
+dbl (3): PXLVAL, clipped1996data, 1996area
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDE5OTZEYXRhXG5gYGAifQ== -->
+<pre class="r"><code>MICP1996Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93IjoxMSwibmNvbCI6Mywic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyIxMSDDlyAzIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQXd0eWlURG1pdUJpWUdCZ1ptQmhabVJnWmdVeUdWaERROXgwTFJnWVdKaUFIRVlHRmdaT0VGMEJWQ1FNVnNuQXdBZkUzUFlmR01DQTJqVE1mSWZsdTZUbTd5czc2ZEQwMjMyZFNOVkRoNHVuSjVwN0gxc0I1RHRQYldSVGRWajAyMWtvYjNvdm5BK2xIZVVjQ3N0T2JMRjBaTi9GQTZZVGpLNHMycUJ3RkNodkdTR1E1QWMzM3hsaW1VUFREd2g5OFhRRG1DNkdPTVJoMFI5VWVTanRLSzBNb2RsZWNvQnAzVTh4eVBKb0FjZWFsNWliV2d4a0NFQ0NHU3pJRmhEaEUrYm9BK1h4Sitka0ZoU2twaGhhV3BxbEpKWWtRb1U1UVB6RW90UkVOQk01aS9MTDlXQ204Z0l4RThqZC8vLy8vNHB1ZFhKT1lqSE1hcGdnRjhnR3ZiUWlvSDRnN3grYUZ2YjhncExNL0R5Z0ppWlFaTE9pYVdZc1FoUGdMODBEdVNSRk56bWpOQzliMXhCa0FWZ2FBbmloYkc0a05qUEVTcWIvVUtOWVlXR1NtcGVlbVpjS2MzdE9ZbEpxRHBUREIvUXgyTU42QlVXWmVTVXdud0JGaS9WSzhrc1NZZXE0a3ZOellDSmd2ekg4QXdEWXEzREU0d0lBQUE9PSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped1996data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["1996area"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"3037.052","3":"38"},{"1":"1","2":"607.410","3":"607"},{"1":"1","2":"18222.269","3":"18222"},{"1":"1","2":"607.408","3":"319"},{"1":"1","2":"2429.631","3":"2430"},{"1":"1","2":"607.408","3":"607"},{"1":"1","2":"607.408","3":"607"},{"1":"1","2":"495644.366","3":"444608"},{"1":"1","2":"194369.558","3":"187681"},{"1":"1","2":"8492709.084","3":"981294"},{"1":"1","2":"607.403","3":"607"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[11]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Rename 1996 column to mangroves</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoTUlDUDE5OTZEYXRhKVtuYW1lcyhNSUNQMTk5NkRhdGEpID09ICcxOTk2YXJlYSddIDwtICdNYW5ncm92ZXMnXG5NSUNQMTk5NkRhdGFcbmBgYCJ9 -->
+<pre class="r"><code>names(MICP1996Data)[names(MICP1996Data) == &#39;1996area&#39;] &lt;- &#39;Mangroves&#39;
+MICP1996Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93IjoxMSwibmNvbCI6Mywic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyIxMSDDlyAzIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQXd0eWlURG1pdUJpWUdCZ1ptQmhabVJnWmdVeUdWaERROXgwTFJnWVdKaUFIRVlHRmdaT0VGMEJWQ1FNVnNuQXdBZkUzUFlmR01DQTJqVE1mSWZsdTZUbTd5czc2ZEQwMjMyZFNOVkRoNHVuSjVwN0gxc0I1RHRQYldSVGRWajAyMWtvYjNvdm5BK2xIZVVjQ3N0T2JMRjBaTi9GQTZZVGpLNHMycUJ3RkNodkdTR1E1QWMzM3hsaW1VUFREd2g5OFhRRG1DNkdPTVJoMFI5VWVTanRLSzBNb2RsZWNvQnAzVTh4eVBKb0FjZWFsNWliV2d4a0NFQ0NHU3pJRmhEaEUrYm9BK1h4Sitka0ZoU2twaGhhV3BxbEpKWWtRb1U1ZlJQejBvdnl5MEM2VVl6a0xNb3YxNE1aeXd2RVRDQ0gvLy8vL3l1NjNjazVpY1V3dTJHQ1hDQXI5TktLZ1BxQnZIOW9XdGp6QzBveTgvT0FtcGhBc2MyS3BwbXhDRTJBdnpRUDVKSVUzZVNNMHJ4c1hXT1FCV0JwQ09DRnNybVIyTXdRSzVuK1E0MWloUVZLYWw1NlpsNHF6TzA1aVVtcE9WQU9IOURIWUEvckZSUmw1cFhBZkFJVUxkWXJ5UzlKaEtualNzN1BnWW1BL2Nid0R3RFVFZ1k0NUFJQUFBPT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped1996data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mangroves"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"3037.052","3":"38"},{"1":"1","2":"607.410","3":"607"},{"1":"1","2":"18222.269","3":"18222"},{"1":"1","2":"607.408","3":"319"},{"1":"1","2":"2429.631","3":"2430"},{"1":"1","2":"607.408","3":"607"},{"1":"1","2":"607.408","3":"607"},{"1":"1","2":"495644.366","3":"444608"},{"1":"1","2":"194369.558","3":"187681"},{"1":"1","2":"8492709.084","3":"981294"},{"1":"1","2":"607.403","3":"607"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[11]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Create a 1996 year column</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDE5OTZEYXRhIDwtIGNiaW5kKE1JQ1AxOTk2RGF0YSwgeWVhcj1cIjE5OTZcIilcbk1JQ1AxOTk2RGF0YVxuYGBgIn0= -->
+<pre class="r"><code>MICP1996Data &lt;- cbind(MICP1996Data, year=&quot;1996&quot;)
+MICP1996Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MTEsIm5jb2wiOjQsInN1bW1hcnkiOnsiRGVzY3JpcHRpb24iOlsiZGYgWzExIMOXIDRdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQXd0eWlURG1pdUJpWUdCZ1ptQmhabVJnWmdVeUdWaERROXgwTFJnWVdKaUFIRVlHRmdaT0VGMEJWQ1FNWkxBQU1SOFFjOXQvWUFBRGF0TXc4eDJXNzVLYXY2L3NwRVBUYi9kMUlsVVBIUzZlbm1qdWZXd0ZrTzg4dFpGTjFXSFJiMmVodk9tOWNENlVkcFJ6S0N3N3NjWFNrWDBYRDVoT01McXlhSVBDVWFDOFpZUkFraC9jZkdlSVpRNU5QeUQweGRNTllMb1k0aENIUlg5UTVhRzBvN1F5aEdaN3lRR21kVC9GSU1zRGdRRElmR2pBc1JoYVdwb05HQnMxRWxuekVuTlRpNkVPWklFS3NnVkUrSVE1K2tCNS9NazVtUVVGcVNrZzNTbUpKWWxRWVU3ZnhMejBvdnd5b0c2bzhaV3BpVVZveG5NVzVaZnJ3YXpnQldLbUJraDRjS083SXprbnNSam1EcGdnRjhnNnZiUWlvSDRnN3grYUZ2YjhncExNL0R5Z0ppWlFLbVJGMDh4WWhDYkFYNW9IY2ttS2JuSkdhVjYycmduSUFyQTBCUEJDMmR4SWJCYUlsVXovb1VheHdnSW9OUzg5TXk4VjV2YWN4S1RVSENpSEQraGpzSWYxQ29veTgwcGdQZ0dLRnV1VjVKY2t3dFJ4SmVmbndFVEFmbVA0QndBSTRUSGxmQU1BQUE9PSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped1996data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mangroves"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"3037.052","3":"38","4":"1996"},{"1":"1","2":"607.410","3":"607","4":"1996"},{"1":"1","2":"18222.269","3":"18222","4":"1996"},{"1":"1","2":"607.408","3":"319","4":"1996"},{"1":"1","2":"2429.631","3":"2430","4":"1996"},{"1":"1","2":"607.408","3":"607","4":"1996"},{"1":"1","2":"607.408","3":"607","4":"1996"},{"1":"1","2":"495644.366","3":"444608","4":"1996"},{"1":"1","2":"194369.558","3":"187681","4":"1996"},{"1":"1","2":"8492709.084","3":"981294","4":"1996"},{"1":"1","2":"607.403","3":"607","4":"1996"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[11]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Drop columns PXLVAL and clipped1996data as neither is needed</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDE5OTZEYXRhID0gc3Vic2V0KE1JQ1AxOTk2RGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQxOTk2ZGF0YSkpXG5NSUNQMTk5NkRhdGFcbmBgYCJ9 -->
+<pre class="r"><code>MICP1996Data = subset(MICP1996Data,select = -c(PXLVAL, clipped1996data))
+MICP1996Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MTEsIm5jb2wiOjIsInN1bW1hcnkiOnsiRGVzY3JpcHRpb24iOlsiZGYgWzExIMOXIDJdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQXd0eWlURG1pdUJpWUdCZ1ptQmhabVJnWmdVeUdWaERROXgwTFJnWVdKaUFIRVlHRmdaT0VGMEJWQ1FNWklBRStZQ1kyOEdaQVF3Y21uNUE2SXVuRzhCMDhRY0lmOUVmVkhrbzdTaXRES0haWG5LQWFkMVBNY2p5UUNBQU1oOXFNWXVocGFYWmdMRlJBNEUxTHpFM3RSanFRQ2FvSUtkdllsNTZVWDRaVUFLcXN6STFzUWhOSjJkUmZya2VURGN2U0hjRHhLdmM2RllrNXlRV3c2eUFDWEtsSkpZazZxVVZBZlVEZWYvUXRMRG5GNVJrNXVjQk5UR0JJb2dWVFROakVab0FmMmtleUNVcHVza1pwWG5adXFZZ0M4RFNFTXdMcGJtUjJFd1FLNW4rUTQxaWhSckZscHFYbnBtWENuTjdUbUpTYWc2VXd3ZjBNZGpEZWdWRm1Ya2xNSjhBUll2MVN2SkxFbUhxdUpMemMyQWlZTDh4L0FNQVducEJnWmNDQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Mangroves"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"38","2":"1996","_rn_":"1"},{"1":"607","2":"1996","_rn_":"2"},{"1":"18222","2":"1996","_rn_":"3"},{"1":"319","2":"1996","_rn_":"4"},{"1":"2430","2":"1996","_rn_":"5"},{"1":"607","2":"1996","_rn_":"6"},{"1":"607","2":"1996","_rn_":"7"},{"1":"444608","2":"1996","_rn_":"8"},{"1":"187681","2":"1996","_rn_":"9"},{"1":"981294","2":"1996","_rn_":"10"},{"1":"607","2":"1996","_rn_":"11"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[11]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Import MICP 2007 Mangrove Data</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMDdEYXRhIDwtIHJlYWRfY3N2KFwiRGF0YS9NSUNQMjAwN0RhdGEuY3N2XCIpXG5gYGAifQ== -->
+<pre class="r"><code>MICP2007Data &lt;- read_csv(&quot;Data/MICP2007Data.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUm93czogMTEgQ29sdW1uczogM+KUgOKUgCBDb2x1bW4gc3BlY2lmaWNhdGlvbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIBcbkRlbGltaXRlcjogXCIsXCJcbmRibCAoMyk6IFBYTFZBTCwgY2xpcHBlZDIwMDdkYXRhLCAyMDA3XG7ihLkgVXNlIGBzcGVjKClgIHRvIHJldHJpZXZlIHRoZSBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9uIGZvciB0aGlzIGRhdGEuXG7ihLkgU3BlY2lmeSB0aGUgY29sdW1uIHR5cGVzIG9yIHNldCBgc2hvd19jb2xfdHlwZXMgPSBGQUxTRWAgdG8gcXVpZXQgdGhpcyBtZXNzYWdlLlxuIn0= -->
+<pre><code>Rows: 11 Columns: 3── Column specification ────────────────────────────────────────────────────────────
+Delimiter: &quot;,&quot;
+dbl (3): PXLVAL, clipped2007data, 2007
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMDdEYXRhXG5gYGAifQ== -->
+<pre class="r"><code>MICP2007Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93IjoxMSwibmNvbCI6Mywic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyIxMSDDlyAzIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQXd0eWlURG1pdUJpWUdCZ1ptQmhabVJnWmdVeUdWaERROXgwTFJnWVdKaUFIRVlHRmdaT0VGMEJWQ1FNVnNuQXdBZkUzUFlmR01DQTJqVE1mSWVtMys3clJLb2VPbHc4UGRIYys5Z0tJTjk1YWlPYktweGU5TnRaS0c5Nkw0enZLT2RRV0haaWk2VWoreTRlRUEwVXQ0d1FTUEp6VERDNnNtaUR3bEdINWJ1azV1OHJPNGt3L3dmWU1xRDVEV0FheGkrR09NUmgwUjhHWkhGSDZkODVZSnA5NXcwVWNkM2Z0OEI4WjVqelVRS09OUzh4TjdVWXlCQ0FCRE5Za0MwZ3dpZk0wUWZLNDAvT3lTd29TRTB4TWpBd1Qwa3NTWVFLczRENGFLWnhGdVdYNjhGTTVBVmlKcERiLy8vLy94WGQydVNjeEdLWXRUQkJMcERwZW1sRlFQMUEzajgwTGV6NUJTV1orWGxBVFV5Z2lHWkYwOHhZaENiQVg1b0hja21LYm5KR2FWNjJyaG5JQXJBMEJQQkMyZHhJYkdhSWxVei9vVWF4d3NJak5TODlNeThWNXZhY3hLVFVIQ2lIRCtoanNJZjFDb295ODBwZ1BnR0tGdXVWNUpja3d0UnhKZWZud0VUQWZtUDRCd0FxWG00ZDN3SUFBQT09In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2007data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["2007"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"607.410","3":"607"},{"1":"1","2":"18222.269","3":"18222"},{"1":"1","2":"607.408","3":"607"},{"1":"1","2":"607.408","3":"319"},{"1":"1","2":"2429.631","3":"2430"},{"1":"1","2":"607.408","3":"607"},{"1":"1","2":"495644.366","3":"458459"},{"1":"1","2":"194369.558","3":"194363"},{"1":"1","2":"607.403","3":"607"},{"1":"1","2":"8492709.084","3":"982509"},{"1":"1","2":"3037.052","3":"38"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[11]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Rename 2007 column to mangroves</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoTUlDUDIwMDdEYXRhKVtuYW1lcyhNSUNQMjAwN0RhdGEpID09ICcyMDA3J10gPC0gJ01hbmdyb3Zlcydcbk1JQ1AyMDA3RGF0YVxuYGBgIn0= -->
+<pre class="r"><code>names(MICP2007Data)[names(MICP2007Data) == &#39;2007&#39;] &lt;- &#39;Mangroves&#39;
+MICP2007Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93IjoxMSwibmNvbCI6Mywic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyIxMSDDlyAzIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQXd0eWlURG1pdUJpWUdCZ1ptQmhabVJnWmdVeUdWaERROXgwTFJnWVdKaUFIRVlHRmdaT0VGMEJWQ1FNVnNuQXdBZkUzUFlmR01DQTJqVE1mSWVtMys3clJLb2VPbHc4UGRIYys5Z0tJTjk1YWlPYktweGU5TnRaS0c5Nkw0enZLT2RRV0haaWk2VWoreTRlRUEwVXQ0d1FTUEp6VERDNnNtaUR3bEdINWJ1azV1OHJPNGt3L3dmWU1xRDVEV0FheGkrR09NUmgwUjhHWkhGSDZkODVZSnA5NXcwVWNkM2Z0OEI4WjVqelVRS09OUzh4TjdVWXlCQ0FCRE5Za0MwZ3dpZk0wUWZLNDAvT3lTd29TRTB4TWpBd1Qwa3NTWVFLYy9vbTVxVVg1WmVCZEtNWXlWbVVYNjRITTVZWGlKbEFIdmovLy85WGRMdVRjeEtMWVhiREJMbEFWdWlsRlFIMUEzbi8wTFN3NXhlVVpPYm5BVFV4Z1dLYkZVMHpZeEdhQUg5cEhzZ2xLYnJKR2FWNTJicm1JQXZBMGhEQUMyVnpJN0daSVZZeS9ZY2F4UW9MbE5TODlNeThWSmpiY3hLVFVuT2dIRDZnajhFZTFpc295c3dyZ2ZrRUtGcXNWNUpma2doVHg1V2Nud01UQWZ1TjRSOEFic3htSnVRQ0FBQT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2007data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mangroves"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"607.410","3":"607"},{"1":"1","2":"18222.269","3":"18222"},{"1":"1","2":"607.408","3":"607"},{"1":"1","2":"607.408","3":"319"},{"1":"1","2":"2429.631","3":"2430"},{"1":"1","2":"607.408","3":"607"},{"1":"1","2":"495644.366","3":"458459"},{"1":"1","2":"194369.558","3":"194363"},{"1":"1","2":"607.403","3":"607"},{"1":"1","2":"8492709.084","3":"982509"},{"1":"1","2":"3037.052","3":"38"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[11]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Create a 2007 year column</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMDdEYXRhIDwtIGNiaW5kKE1JQ1AyMDA3RGF0YSwgeWVhcj1cIjIwMDdcIilcbk1JQ1AyMDA3RGF0YVxuYGBgIn0= -->
+<pre class="r"><code>MICP2007Data &lt;- cbind(MICP2007Data, year=&quot;2007&quot;)
+MICP2007Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MTEsIm5jb2wiOjQsInN1bW1hcnkiOnsiRGVzY3JpcHRpb24iOlsiZGYgWzExIMOXIDRdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQXd0eWlURG1pdUJpWUdCZ1ptQmhabVJnWmdVeUdWaERROXgwTFJnWVdKaUFIRVlHRmdaT0VGMEJWQ1FNWkxBQU1SOFFjOXQvWUFBRGF0TXc4eDJhZnJ1dkU2bDY2SER4OUVSejcyTXJnSHpucVkxc3FuQjYwVzlub2J6cHZUQytvNXhEWWRtSkxaYU83THQ0UURSUTNESkNJTW5QTWNIb3lxSU5Da2NkbHUrU21yK3Y3Q1RDL0I5Z3k0RG1ONEJwR0w4WTRoQ0hSWDhZa01VZHBYL25nR24yblRkUXhIVi8zd0x6bmVIdUZ3Q1pEdzA0RmlNREEvTUJZNk5HSW10ZVltNXFNZFNCTEZCQnRvQUluekJISHlpUFB6a25zNkFnTlFXa095V3hKQkVxek9tYm1KZGVsRjhHMUEwMXZqSTFzUWpOZU02aS9ISTltQlc4UU16VUFBa1BiblIzSk9ja0ZzUGNBUlBrQWxtbmwxWUUxQS9rL1VQVHdwNWZVSktabndmVXhBUktoYXhvbWhtTDBBVDRTL05BTGtuUlRjNG96Y3NHSldjR0xyQTBCUEJDMmR4SWJCYUlsVXovb1VheHdnSW9OUzg5TXk4VjV2YWN4S1RVSENpSEQraGpzSWYxQ29veTgwcGdQZ0dLRnV1VjVKY2t3dFJ4SmVmbndFVEFmbVA0QndEejNpV1pmQU1BQUE9PSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2007data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mangroves"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"607.410","3":"607","4":"2007"},{"1":"1","2":"18222.269","3":"18222","4":"2007"},{"1":"1","2":"607.408","3":"607","4":"2007"},{"1":"1","2":"607.408","3":"319","4":"2007"},{"1":"1","2":"2429.631","3":"2430","4":"2007"},{"1":"1","2":"607.408","3":"607","4":"2007"},{"1":"1","2":"495644.366","3":"458459","4":"2007"},{"1":"1","2":"194369.558","3":"194363","4":"2007"},{"1":"1","2":"607.403","3":"607","4":"2007"},{"1":"1","2":"8492709.084","3":"982509","4":"2007"},{"1":"1","2":"3037.052","3":"38","4":"2007"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[11]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Drop columns PXLVAL and clipped2007data as neither is needed</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMDdEYXRhID0gc3Vic2V0KE1JQ1AyMDA3RGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQyMDA3ZGF0YSkpXG5NSUNQMjAwN0RhdGFcbmBgYCJ9 -->
+<pre class="r"><code>MICP2007Data = subset(MICP2007Data,select = -c(PXLVAL, clipped2007data))
+MICP2007Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MTEsIm5jb2wiOjIsInN1bW1hcnkiOnsiRGVzY3JpcHRpb24iOlsiZGYgWzExIMOXIDJdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQXd0eWlURG1pdUJpWUdCZ1ptQmhabVJnWmdVeUdWaERROXgwTFJnWVdKaUFIRVlHRmdaT0VGMEJWQ1FNWklBRStZQ1kyNkhwQjBnMWc4UEYwdzFnR3NZdi9nQ2hGLzFoUUJaM2xQNmRBNmJaZDk1QUVkZjlmUXZNZDJhQUFRR1ErVkNMV1l3TURNd0hqSTBhQ0t4NWlibXB4VkFITWtFRk9YMFQ4OUtMOHN1QUVsQ2RsYW1KUldnNk9Zdnl5L1ZndW5sQnVoc2dYdVZHdHlJNUo3RVlaZ1ZNa0NzbHNTUlJMNjBJcUIvSSs0ZW1oVDIvb0NRelB3K29pUWtVUWF4b21obUwwQVQ0Uy9OQUxrblJUYzRvemN2V3RRUlpBSmFHWUY0b3pZM0Vab0pZeWZRZmFoUXIxQ2kyMUx6MHpMeFVtTnR6RXBOU2M2QWNQcUNQd1I3V0t5akt6Q3VCK1FRb1dxeFhrbCtTQ0ZQSGxaeWZBeE1CKzQzaEh3QWV2Qlk4bHdJQUFBPT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Mangroves"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"607","2":"2007","_rn_":"1"},{"1":"18222","2":"2007","_rn_":"2"},{"1":"607","2":"2007","_rn_":"3"},{"1":"319","2":"2007","_rn_":"4"},{"1":"2430","2":"2007","_rn_":"5"},{"1":"607","2":"2007","_rn_":"6"},{"1":"458459","2":"2007","_rn_":"7"},{"1":"194363","2":"2007","_rn_":"8"},{"1":"607","2":"2007","_rn_":"9"},{"1":"982509","2":"2007","_rn_":"10"},{"1":"38","2":"2007","_rn_":"11"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[11]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Import MICP 2008 Mangrove Data</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMDhEYXRhIDwtIHJlYWRfY3N2KFwiRGF0YS9NSUNQMjAwOERhdGEuY3N2XCIpXG5gYGAifQ== -->
+<pre class="r"><code>MICP2008Data &lt;- read_csv(&quot;Data/MICP2008Data.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUm93czogMTEgQ29sdW1uczogM+KUgOKUgCBDb2x1bW4gc3BlY2lmaWNhdGlvbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIBcbkRlbGltaXRlcjogXCIsXCJcbmRibCAoMyk6IFBYTFZBTCwgY2xpcHBlZDIwMDhkYXRhLCAyMDA4XG7ihLkgVXNlIGBzcGVjKClgIHRvIHJldHJpZXZlIHRoZSBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9uIGZvciB0aGlzIGRhdGEuXG7ihLkgU3BlY2lmeSB0aGUgY29sdW1uIHR5cGVzIG9yIHNldCBgc2hvd19jb2xfdHlwZXMgPSBGQUxTRWAgdG8gcXVpZXQgdGhpcyBtZXNzYWdlLlxuIn0= -->
+<pre><code>Rows: 11 Columns: 3── Column specification ────────────────────────────────────────────────────────────
+Delimiter: &quot;,&quot;
+dbl (3): PXLVAL, clipped2008data, 2008
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMDhEYXRhXG5gYGAifQ== -->
+<pre class="r"><code>MICP2008Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93IjoxMSwibmNvbCI6Mywic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyIxMSDDlyAzIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQXd0eWlURG1pdUJpWUdCZ1ptQmhabVJnWmdVeUdWaERROXgwTFJnWVdKaUFIRVlHRmdaT0VGMEJWQ1FNVnNuQXdBZkUzUFlmR01DQTJqVE1mSWVtMys3clJLb2VPbHc4UGRIYys5Z0toMDIvWGFKazFuQUF4WjJuTnJLcHd1azFGVS91NmtzdGNKajAyNzdtN2NRTVI5a2V1ZFZNUEY2TzdKLytLUnladmN3eHdlU0ZBbENqdzZMZkhsc3NJd1FRNXY4QVd3WTB2d0ZNYi9vTjRjUEVpeUVPQXBvUG9Sc2p3TFNqOUpzTFlKcjlNNFN2K3lrR0xPOE1jejVLd0xIbUplYW1GZ01aQXBCZ0JndXlCVVQ0aERuNlFIbjh5VG1aQlFXcEtVWUdCaFlwaVNXSlVHRVdFQi9OTk02aS9ISTltSW04UU13RWN2di8vLysvb2x1Ym5KTllETE1XSnNnRk1sMHZyUWlvSDhqN2g2YUZQYitnSkRNL0Q2aUpDUlRSckdpYUdZdlFCQVJLODBBdVNkRk56aWpOeTlZMU5BRFpBSmFIQUY0b214dUp6UXl4aytrLzFDeFdXSUNrNXFWbjVxWENISitUbUpTYUErWHdBYjBNOXJGZVFWRm1YZ25NSzBEUllyMlMvSkpFbURxdTVQd2NtQWpZY3d6L0FIVnlDZFBnQWdBQSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2008data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["2008"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"607.410","3":"607"},{"1":"1","2":"18222.269","3":"18222"},{"1":"1","2":"4859.267","3":"4859"},{"1":"1","2":"607.408","3":"607"},{"1":"1","2":"607.408","3":"319"},{"1":"1","2":"3644.447","3":"3644"},{"1":"1","2":"1214.812","3":"555"},{"1":"1","2":"484103.667","3":"457524"},{"1":"1","2":"196191.766","3":"196192"},{"1":"1","2":"8496961.011","3":"981294"},{"1":"1","2":"2429.642","3":"38"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[11]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Rename 2008 column to mangroves</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoTUlDUDIwMDhEYXRhKVtuYW1lcyhNSUNQMjAwOERhdGEpID09ICcyMDA4J10gPC0gJ01hbmdyb3Zlcydcbk1JQ1AyMDA4RGF0YVxuYGBgIn0= -->
+<pre class="r"><code>names(MICP2008Data)[names(MICP2008Data) == &#39;2008&#39;] &lt;- &#39;Mangroves&#39;
+MICP2008Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93IjoxMSwibmNvbCI6Mywic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyIxMSDDlyAzIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQXd0eWlURG1pdUJpWUdCZ1ptQmhabVJnWmdVeUdWaERROXgwTFJnWVdKaUFIRVlHRmdaT0VGMEJWQ1FNVnNuQXdBZkUzUFlmR01DQTJqVE1mSWVtMys3clJLb2VPbHc4UGRIYys5Z0toMDIvWGFKazFuQUF4WjJuTnJLcHd1azFGVS91NmtzdGNKajAyNzdtN2NRTVI5a2V1ZFZNUEY2TzdKLytLUnladmN3eHdlU0ZBbENqdzZMZkhsc3NJd1FRNXY4QVd3WTB2d0ZNYi9vTjRjUEVpeUVPQXBvUG9Sc2p3TFNqOUpzTFlKcjlNNFN2K3lrR0xPOE1jejVLd0xIbUplYW1GZ01aQXBCZ0JndXlCVVQ0aERuNlFIbjh5VG1aQlFXcEtVWUdCaFlwaVNXSlVHRk8zOFM4OUtMOE1wQnVGQ001aS9MTDlXREc4Z0l4RThnRC8vLy8vNHB1ZDNKT1lqSE1icGdnRjhnS3ZiUWlvSDRnN3grYUZ2YjhncExNL0R5Z0ppWlFiTE9pYVdZc1FoTVFLTTBEdVNSRk56bWpOQzliMTlBUVpBTllIZ0o0b1d4dUpEWXp4RTZtLzFDeldHR2hrcHFYbnBtWENuTjhUbUpTYWc2VXd3ZjBNdGpIZWdWRm1Ya2xNSzhBUll2MVN2SkxFbUhxdUpMemMyQWlZTTh4L0FNQXdwZXdoK1VDQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2008data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mangroves"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"607.410","3":"607"},{"1":"1","2":"18222.269","3":"18222"},{"1":"1","2":"4859.267","3":"4859"},{"1":"1","2":"607.408","3":"607"},{"1":"1","2":"607.408","3":"319"},{"1":"1","2":"3644.447","3":"3644"},{"1":"1","2":"1214.812","3":"555"},{"1":"1","2":"484103.667","3":"457524"},{"1":"1","2":"196191.766","3":"196192"},{"1":"1","2":"8496961.011","3":"981294"},{"1":"1","2":"2429.642","3":"38"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[11]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Create a 2008 year column</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMDhEYXRhIDwtIGNiaW5kKE1JQ1AyMDA4RGF0YSwgeWVhcj1cIjIwMDhcIilcbk1JQ1AyMDA4RGF0YVxuYGBgIn0= -->
+<pre class="r"><code>MICP2008Data &lt;- cbind(MICP2008Data, year=&quot;2008&quot;)
+MICP2008Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MTEsIm5jb2wiOjQsInN1bW1hcnkiOnsiRGVzY3JpcHRpb24iOlsiZGYgWzExIMOXIDRdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQXd0eWlURG1pdUJpWUdCZ1ptQmhabVJnWmdVeUdWaERROXgwTFJnWVdKaUFIRVlHRmdaT0VGMEJWQ1FNWkxBQU1SOFFjOXQvWUFBRGF0TXc4eDJhZnJ1dkU2bDY2SER4OUVSejcyTXJIRGI5ZG9tU1djTUJGSGVlMnNpbUNxZlhWRHk1cXkrMXdHSFNiL3VhdHhNekhHVjc1Rll6OFhnNXNuLzZwM0JrOWpMSEJKTVhDa0NORG90K2UyeXhqQkJBbVA4RGJCblEvQVl3dmVrM2hBOFRMNFk0Q0dnK2hHNk1BTk9PMG04dWdHbjJ6eEMrN3FjWXNMd3ozUDBnTzdpaEFjZGlaR0JnTVdCczFFaGt6VXZNVFMyR09wQUZLc2dXRU9FVDV1Z0Q1ZkVuNTJRV0ZLU21nSFNuSkpZa1FvVTVmUlB6MG92eXk0QzZvY1pYcGlZV29SblBXWlJmcmdlemdoZUltUm9nNGNHTjdvN2tuTVJpbUR0Z2dsd2c2L1RTaW9ENmdieC9hRnJZOHd0S012UHpnSnFZUUttUUZVMHpZeEdhZ0VCcEhzZ2xLYnJKR2FWNTJicUdSaUFid1BJUXdBdGxjeU94V1NCMk12Mkhtc1VLQzZIVXZQVE12RlNZNDNNU2sxSnpvQncrb0pmQlB0WXJLTXJNSzRGNUJTaGFyRmVTWDVJSVU4ZVZuSjhERXdGN2p1RWZBQXYyL2U1OUF3QUEifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2008data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mangroves"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"607.410","3":"607","4":"2008"},{"1":"1","2":"18222.269","3":"18222","4":"2008"},{"1":"1","2":"4859.267","3":"4859","4":"2008"},{"1":"1","2":"607.408","3":"607","4":"2008"},{"1":"1","2":"607.408","3":"319","4":"2008"},{"1":"1","2":"3644.447","3":"3644","4":"2008"},{"1":"1","2":"1214.812","3":"555","4":"2008"},{"1":"1","2":"484103.667","3":"457524","4":"2008"},{"1":"1","2":"196191.766","3":"196192","4":"2008"},{"1":"1","2":"8496961.011","3":"981294","4":"2008"},{"1":"1","2":"2429.642","3":"38","4":"2008"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[11]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Drop columns PXLVAL and clipped2008data as neither is needed</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMDhEYXRhID0gc3Vic2V0KE1JQ1AyMDA4RGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQyMDA4ZGF0YSkpXG5NSUNQMjAwOERhdGFcbmBgYCJ9 -->
+<pre class="r"><code>MICP2008Data = subset(MICP2008Data,select = -c(PXLVAL, clipped2008data))
+MICP2008Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MTEsIm5jb2wiOjIsInN1bW1hcnkiOnsiRGVzY3JpcHRpb24iOlsiZGYgWzExIMOXIDJdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQXd0eWlURG1pdUJpWUdCZ1ptQmhabVJnWmdVeUdWaERROXgwTFJnWVdKaUFIRVlHRmdaT0VGMEJWQ1FNWklBRStZQ1kyNkhwQjBnMWc4UEYwdzFnZXROdkNCOG1YdndCUXErcGdOQ05FV0RhVWZyTkJURE4vaG5DMS8wVUE1WjNab0FCQVpENVVJdFpqQXdNTEFhTWpSb0lySG1KdWFuRlVBY3lRUVU1ZlJQejBvdnl5NEFTVUoyVnFZbEZhRG81aS9MTDlXQzZlVUc2R3lCZTVVYTNJamtuc1JobUJVeVFLeVd4SkZFdnJRaW9IOGo3aDZhRlBiK2dKRE0vRDZpSkNSUkJyR2lhR1l2UUJBUks4MEF1U2RGTnppak55OVkxTkFiWkFKYUhZRjRvelkzRVpvTFl5ZlFmYWhZcjFDeTIxTHowekx4VW1PTnpFcE5TYzZBY1BxQ1h3VDdXS3lqS3pDdUJlUVVvV3F4WGtsK1NDRlBIbFp5ZkF4TUJlNDdoSHdDQlpuYThtQUlBQUE9PSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Mangroves"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"607","2":"2008","_rn_":"1"},{"1":"18222","2":"2008","_rn_":"2"},{"1":"4859","2":"2008","_rn_":"3"},{"1":"607","2":"2008","_rn_":"4"},{"1":"319","2":"2008","_rn_":"5"},{"1":"3644","2":"2008","_rn_":"6"},{"1":"555","2":"2008","_rn_":"7"},{"1":"457524","2":"2008","_rn_":"8"},{"1":"196192","2":"2008","_rn_":"9"},{"1":"981294","2":"2008","_rn_":"10"},{"1":"38","2":"2008","_rn_":"11"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[11]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Import MICP 2009 Mangrove Data</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMDlEYXRhIDwtIHJlYWRfY3N2KFwiRGF0YS9NSUNQMjAwOURhdGEuY3N2XCIpXG5gYGAifQ== -->
+<pre class="r"><code>MICP2009Data &lt;- read_csv(&quot;Data/MICP2009Data.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUm93czogMTEgQ29sdW1uczogM+KUgOKUgCBDb2x1bW4gc3BlY2lmaWNhdGlvbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIBcbkRlbGltaXRlcjogXCIsXCJcbmRibCAoMyk6IFBYTFZBTCwgY2xpcHBlZDIwMDlkYXRhLCAyMDA5XG7ihLkgVXNlIGBzcGVjKClgIHRvIHJldHJpZXZlIHRoZSBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9uIGZvciB0aGlzIGRhdGEuXG7ihLkgU3BlY2lmeSB0aGUgY29sdW1uIHR5cGVzIG9yIHNldCBgc2hvd19jb2xfdHlwZXMgPSBGQUxTRWAgdG8gcXVpZXQgdGhpcyBtZXNzYWdlLlxuIn0= -->
+<pre><code>Rows: 11 Columns: 3── Column specification ────────────────────────────────────────────────────────────
+Delimiter: &quot;,&quot;
+dbl (3): PXLVAL, clipped2009data, 2009
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMDlEYXRhXG5gYGAifQ== -->
+<pre class="r"><code>MICP2009Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93IjoxMSwibmNvbCI6Mywic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyIxMSDDlyAzIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQXd0eWlURG1pdUJpWUdCZ1ptQmhabVJnWmdVeUdWaERROXgwTFJnWVdKaUFIRVlHRmdaT0VGMEJWQ1FNVnNuQXdBZkUzUFlmR01DQTJqVE1mSWVMeHR0KzNsYTY2TkQwMjNscUk1c3FuTjR3KzlaRDkzVWlRTDU5emR1SkdRNlRJTFNqekpFTE15YVg3SEZrUDhzT3BMSWNFeHlPYWdBTkFzcDdiTEdNRUFEU1lQMUk1aDhBV2ViUTlBTnNxVU14eEFFT0crWXdvSWczUm9CcFIrbXJDbUNhL1N3SG1OWmptQUdXZDRZNDJtSFNINmp6VVFLT05TOHhON1VZeUJDQUJETllrQzBnd2lmTTBRZks0MC9PeVN3b1NFMHhNakN3VEVrc1NZUUtzNEQ0YUtaeEZ1V1g2OEZNNUFWaXBnWWc4Zi8vLzYvbzFpYm5KQmJEcklVSmNvRk0xMHNyQXVvSDh2NmhhV0hQTHlqSnpNOERhbUlDUlRRcm1tYkdJalFCZ2RJOGtFdFNkSk16U3ZPeWRRMU5RRGFBNVNHQUY4cm1SbUl6USt4aytnODFpeFVXSUtsNTZabDVxVERINXlRbXBlWkFPWHhBTDROOXJGZFFsSmxYQXZNS1VMUllyeVMvSkJHbWppczVQd2NtQXZZY3d6OEF5UXBEUStBQ0FBQT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2009data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["2009"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"17614.859","3":"17615"},{"1":"1","2":"607.408","3":"607"},{"1":"1","2":"607.408","3":"319"},{"1":"1","2":"4251.855","3":"4252"},{"1":"1","2":"607.406","3":"607"},{"1":"1","2":"1214.812","3":"555"},{"1":"1","2":"471348.149","3":"456008"},{"1":"1","2":"194976.947","3":"194977"},{"1":"1","2":"8521257.250","3":"983116"},{"1":"1","2":"1214.821","3":"38"},{"1":"1","2":"1214.816","3":"1215"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[11]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Rename 2009 column to mangroves</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoTUlDUDIwMDlEYXRhKVtuYW1lcyhNSUNQMjAwOURhdGEpID09ICcyMDA5J10gPC0gJ01hbmdyb3Zlcydcbk1JQ1AyMDA5RGF0YVxuYGBgIn0= -->
+<pre class="r"><code>names(MICP2009Data)[names(MICP2009Data) == &#39;2009&#39;] &lt;- &#39;Mangroves&#39;
+MICP2009Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93IjoxMSwibmNvbCI6Mywic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyIxMSDDlyAzIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQXd0eWlURG1pdUJpWUdCZ1ptQmhabVJnWmdVeUdWaERROXgwTFJnWVdKaUFIRVlHRmdaT0VGMEJWQ1FNVnNuQXdBZkUzUFlmR01DQTJqVE1mSWVMeHR0KzNsYTY2TkQwMjNscUk1c3FuTjR3KzlaRDkzVWlRTDU5emR1SkdRNlRJTFNqekpFTE15YVg3SEZrUDhzT3BMSWNFeHlPYWdBTkFzcDdiTEdNRUFEU1lQMUk1aDhBV2ViUTlBTnNxVU14eEFFT0crWXdvSWczUm9CcFIrbXJDbUNhL1N3SG1OWmptQUdXZDRZNDJtSFNINmp6VVFLT05TOHhON1VZeUJDQUJETllrQzBnd2lmTTBRZks0MC9PeVN3b1NFMHhNakN3VEVrc1NZUUtjL29tNXFVWDVaZUJkS01ZeVZtVVg2NEhNNVlYaUprYWdNVC8vLysvb3R1ZG5KTllETE1iSnNnRnNrSXZyUWlvSDhqN2g2YUZQYitnSkRNL0Q2aUpDUlRickdpYUdZdlFCQVJLODBBdVNkRk56aWpOeTlZMU5BWFpBSmFIQUY0b214dUp6UXl4aytrLzFDeFdXS2lrNXFWbjVxWENISitUbUpTYUErWHdBYjBNOXJGZVFWRm1YZ25NSzBEUllyMlMvSkpFbURxdTVQd2NtQWpZY3d6L0FDSm8zYS9sQWdBQSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2009data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mangroves"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"17614.859","3":"17615"},{"1":"1","2":"607.408","3":"607"},{"1":"1","2":"607.408","3":"319"},{"1":"1","2":"4251.855","3":"4252"},{"1":"1","2":"607.406","3":"607"},{"1":"1","2":"1214.812","3":"555"},{"1":"1","2":"471348.149","3":"456008"},{"1":"1","2":"194976.947","3":"194977"},{"1":"1","2":"8521257.250","3":"983116"},{"1":"1","2":"1214.821","3":"38"},{"1":"1","2":"1214.816","3":"1215"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[11]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Create a 2009 year column</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMDlEYXRhIDwtIGNiaW5kKE1JQ1AyMDA5RGF0YSwgeWVhcj1cIjIwMDlcIilcbk1JQ1AyMDA5RGF0YVxuYGBgIn0= -->
+<pre class="r"><code>MICP2009Data &lt;- cbind(MICP2009Data, year=&quot;2009&quot;)
+MICP2009Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MTEsIm5jb2wiOjQsInN1bW1hcnkiOnsiRGVzY3JpcHRpb24iOlsiZGYgWzExIMOXIDRdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQXd0eWlURG1pdUJpWUdCZ1ptQmhabVJnWmdVeUdWaERROXgwTFJnWVdKaUFIRVlHRmdaT0VGMEJWQ1FNWkxBQU1SOFFjOXQvWUFBRGF0TXc4eDB1R20vN2VWdnBva1BUYitlcGpXeXFjSHJEN0ZzUDNkZUpBUG4yTlc4blpqaE1ndENPTWtjdXpKaGNzc2VSL1N3N2tNcHlUSEE0cWdFMENDanZzY1V5UWdCSWcvVWptWDhBWkpsRDB3K3dwUTdGRUFjNGJKakRnQ0xlR0FHbUhhV3ZLb0JwOXJNY1lGcVBZUVpZM2huaWFJZEpmMkR1RndDWkR3MDRGaU1EQThzQlk2TkdJbXRlWW01cU1kU0JMRkJCdG9BSW56QkhIeWlQUHprbnM2QWdOUVdrT3lXeEpCRXF6T21ibUpkZWxGOEcxQTAxdmpJMXNRak5lTTZpL0hJOW1CVzhRTXpVQUFrUGJuUjNKT2NrRnNQY0FSUGtBbG1ubDFZRTFBL2svVVBUd3A1ZlVKS1pud2ZVeEFSS2hheG9taG1MMEFRRVN2TkFMa25SVGM0b3pjdldOVFFEMlFDV2h3QmVLSnNiaWMwQ3NaUHBQOVFzVmxnSXBlYWxaK2Fsd2h5Zms1aVVtZ1BsOEFHOURQYXhYa0ZSWmw0SnpDdEEwV0s5a3Z5U1JKZzZydVQ4SEpnSTJITU0vd0JaNlNiNGZRTUFBQT09In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2009data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mangroves"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"17614.859","3":"17615","4":"2009"},{"1":"1","2":"607.408","3":"607","4":"2009"},{"1":"1","2":"607.408","3":"319","4":"2009"},{"1":"1","2":"4251.855","3":"4252","4":"2009"},{"1":"1","2":"607.406","3":"607","4":"2009"},{"1":"1","2":"1214.812","3":"555","4":"2009"},{"1":"1","2":"471348.149","3":"456008","4":"2009"},{"1":"1","2":"194976.947","3":"194977","4":"2009"},{"1":"1","2":"8521257.250","3":"983116","4":"2009"},{"1":"1","2":"1214.821","3":"38","4":"2009"},{"1":"1","2":"1214.816","3":"1215","4":"2009"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[11]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Drop columns PXLVAL and clipped2009data as neither is needed</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMDlEYXRhID0gc3Vic2V0KE1JQ1AyMDA5RGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQyMDA5ZGF0YSkpXG5NSUNQMjAwOURhdGFcbmBgYCJ9 -->
+<pre class="r"><code>MICP2009Data = subset(MICP2009Data,select = -c(PXLVAL, clipped2009data))
+MICP2009Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MTEsIm5jb2wiOjIsInN1bW1hcnkiOnsiRGVzY3JpcHRpb24iOlsiZGYgWzExIMOXIDJdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQXd0eWlURG1pdUJpWUdCZ1ptQmhabVJnWmdVeUdWaERROXgwTFJnWVdKaUFIRVlHRmdaT0VGMEJWQ1FNWklBRStZQ1kyK0dpOFFHUWNvZW1Id3hndXZnRGhONHdod0ZGdkRFQ1REdEtYMVVBMCt4bk9jQzBIc01Nc0x3ekEwVGRwRDhNVUNBQU1oOXFNWXVSZ1lIbGdMRlJBNEUxTHpFM3RSanFRQ2FvSUtkdllsNTZVWDRaVUFLcXN6STFzUWhOSjJkUmZya2VURGN2U0hjRHhLdmM2RllrNXlRV3c2eUFDWEtsSkpZazZxVVZBZlVEZWYvUXRMRG5GNVJrNXVjQk5UR0JJb2dWVFROakVacUFRR2tleUNVcHVza1pwWG5adW9ibUlCdkE4aERNQzZXNWtkaE1FRHVaL2tQTllvV2F4WmFhbDU2Wmx3cHpmRTVpVW1vT2xNTUg5RExZeDNvRlJabDVKVEN2QUVXTDlVcnlTeEpoNnJpUzgzTmdJbURQTWZ3REFHaVd1OXVZQWdBQSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Mangroves"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"17615","2":"2009","_rn_":"1"},{"1":"607","2":"2009","_rn_":"2"},{"1":"319","2":"2009","_rn_":"3"},{"1":"4252","2":"2009","_rn_":"4"},{"1":"607","2":"2009","_rn_":"5"},{"1":"555","2":"2009","_rn_":"6"},{"1":"456008","2":"2009","_rn_":"7"},{"1":"194977","2":"2009","_rn_":"8"},{"1":"983116","2":"2009","_rn_":"9"},{"1":"38","2":"2009","_rn_":"10"},{"1":"1215","2":"2009","_rn_":"11"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[11]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Import MICP 2010 Mangrove Data</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMTBEYXRhIDwtIHJlYWRfY3N2KFwiRGF0YS9NSUNQMjAxMERhdGEuY3N2XCIpXG5gYGAifQ== -->
+<pre class="r"><code>MICP2010Data &lt;- read_csv(&quot;Data/MICP2010Data.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUm93czogOSBDb2x1bW5zOiAz4pSA4pSAIENvbHVtbiBzcGVjaWZpY2F0aW9uIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgFxuRGVsaW1pdGVyOiBcIixcIlxuZGJsICgzKTogUFhMVkFMLCBjbGlwcGVkMjAxMGRhdGEsIDIwMTBcbuKEuSBVc2UgYHNwZWMoKWAgdG8gcmV0cmlldmUgdGhlIGZ1bGwgY29sdW1uIHNwZWNpZmljYXRpb24gZm9yIHRoaXMgZGF0YS5cbuKEuSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
+<pre><code>Rows: 9 Columns: 3── Column specification ────────────────────────────────────────────────────────────
+Delimiter: &quot;,&quot;
+dbl (3): PXLVAL, clipped2010data, 2010
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMTBEYXRhXG5gYGAifQ== -->
+<pre class="r"><code>MICP2010Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93Ijo5LCJuY29sIjozLCJzdW1tYXJ5Ijp7IkEgdGliYmxlIjpbIjkgw5cgMyJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVZzbkF3QWZFblBZZkdNQ0FVaHBtbnNORjQyMC9ieXRkZEpqMDIzbHFJNXVxUXhPY3RxOTVPekVES0E2bUhXVzY3OTBRU1BKelpEL0xQcmxrVDVaamdzMDhRM1B2NDBCNWp5MldFUUpJNWgwQUdlNHc2US9ZRW9lbUg2aDBZd1NZZHBUZU93Tk1zNSs2QUtiMUdNQjhCMmVZODFBQ2dqVXZNVGUxR01nUWdBUWJXSkF0SU1JbnpORUh5dU5QenNrc0tFaE5NVEl3TkVoSkxFbUVDck9BK0dpbWNSYmxsK3ZCVE9RRllxWUdJUEgvLy8vdjZOWW01eVFXdzZ5RkNYS0JUTmRMS3dMcUIvTCtvV2xoenk4b3ljelBBMnBpQWtVY0s1cG14aUkwQVlIU1BKQkxVblNUTTByenNuVU5MVUEyZ09VaGdCZks1a1JpTTBQc1pQb1BOWXNWRmlDcGVlbVplYWt3eCtja0pxWG1RRGw4UUMrRGZheFhVSlNaVndMekNsQzBXSzhrdnlRUnBvNHJPVDhISmdMMkhNTS9BR1oraVlpd0FnQUEifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2010data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["2010"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"17614.859","3":"17615"},{"1":"1","2":"1214.816","3":"1215"},{"1":"1","2":"607.408","3":"607"},{"1":"1","2":"607.406","3":"607"},{"1":"1","2":"1214.812","3":"555"},{"1":"1","2":"467703.711","3":"454502"},{"1":"1","2":"194976.947","3":"194906"},{"1":"1","2":"8512753.538","3":"983116"},{"1":"1","2":"1214.821","3":"38"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[9]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Rename 2010 column to mangroves</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoTUlDUDIwMTBEYXRhKVtuYW1lcyhNSUNQMjAxMERhdGEpID09ICcyMDEwJ10gPC0gJ01hbmdyb3Zlcydcbk1JQ1AyMDEwRGF0YVxuYGBgIn0= -->
+<pre class="r"><code>names(MICP2010Data)[names(MICP2010Data) == &#39;2010&#39;] &lt;- &#39;Mangroves&#39;
+MICP2010Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93Ijo5LCJuY29sIjozLCJzdW1tYXJ5Ijp7IkEgdGliYmxlIjpbIjkgw5cgMyJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVZzbkF3QWZFblBZZkdNQ0FVaHBtbnNORjQyMC9ieXRkZEpqMDIzbHFJNXVxUXhPY3RxOTVPekVES0E2bUhXVzY3OTBRU1BKelpEL0xQcmxrVDVaamdzMDhRM1B2NDBCNWp5MldFUUpJNWgwQUdlNHc2US9ZRW9lbUg2aDBZd1NZZHBUZU93Tk1zNSs2QUtiMUdNQjhCMmVZODFBQ2dqVXZNVGUxR01nUWdBUWJXSkF0SU1JbnpORUh5dU5QenNrc0tFaE5NVEl3TkVoSkxFbUVDblA2SnVhbEYrV1hnWFNqR01sWmxGK3VCek9XRjRpWkdvREUvLy8vdjZQYm5aeVRXQXl6R3liSUJiSkNMNjBJcUIvSSs0ZW1oVDIvb0NRelB3K29pUWtVZTZ4b21obUwwQVFFU3ZOQUxrblJUYzRvemN2V05iUUUyUUNXaHdCZUtKc1RpYzBNc1pQcFA5UXNWbGlvcE9hbForYWx3aHlmazVpVW1nUGw4QUc5RFBheFhrRlJabDRKekN0QTBXSzlrdnlTUkpnNnJ1VDhISmdJMkhNTS93QnVaZEpMdFFJQUFBPT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2010data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mangroves"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"17614.859","3":"17615"},{"1":"1","2":"1214.816","3":"1215"},{"1":"1","2":"607.408","3":"607"},{"1":"1","2":"607.406","3":"607"},{"1":"1","2":"1214.812","3":"555"},{"1":"1","2":"467703.711","3":"454502"},{"1":"1","2":"194976.947","3":"194906"},{"1":"1","2":"8512753.538","3":"983116"},{"1":"1","2":"1214.821","3":"38"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[9]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Create a 2010 year column</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMTBEYXRhIDwtIGNiaW5kKE1JQ1AyMDEwRGF0YSwgeWVhcj1cIjIwMTBcIilcbk1JQ1AyMDEwRGF0YVxuYGBgIn0= -->
+<pre class="r"><code>MICP2010Data &lt;- cbind(MICP2010Data, year=&quot;2010&quot;)
+MICP2010Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6OSwibmNvbCI6NCwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbOSDDlyA0XSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVpMQUFNUjhRYzlwL1lBQURTbW1ZZVE0WGpiZjl2SzEwMFdIU2IrZXBqV3lxRGsxdzJyN203Y1FNb0RpWWRwVHB2bmRESU1uUGtmMHMrK1NTUFZtT0NUYnpETTI5andQbFBiWllSZ2dnbVhjQVpMakRwRDlnU3h5YWZxRFNqUkZnMmxGNjd3d3d6WDdxQXBqV1l3RHpIWnpoN2dPWnlRa05DQllqQTBNRG1yTlJBNTgxTHpFM3RSanFFQmFvSUZ0QWhFK1lvdytVeDUrY2sxbFFrSm9DMHAyU1dKSUlGZWIwVGN4TEw4b3ZBK3FHR2wrWm1saUVaanhuVVg2NUhzd0tYaUJtYW9ENG14UGRIY2s1aWNVd2Q4QUV1VURXNmFVVkFmVURlZi9RdExEbkY1Ums1dWNCTlRHQlVnOHJtbWJHSWpRQmdkSThrRXRTZEpNelN2T3lkWTBNUURhQTVTR0FGOHJtUkdLelFPeGsrZzgxaXhVV1FxbDU2Wmw1cVRESDV5UW1wZVpBT1h4QUw0TjlyRmRRbEpsWEF2TUtVTFJZcnlTL0pCR21qaXM1UHdjbUF2WWN3ejhBSW5xQ1d6VURBQUE9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2010data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mangroves"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"17614.859","3":"17615","4":"2010"},{"1":"1","2":"1214.816","3":"1215","4":"2010"},{"1":"1","2":"607.408","3":"607","4":"2010"},{"1":"1","2":"607.406","3":"607","4":"2010"},{"1":"1","2":"1214.812","3":"555","4":"2010"},{"1":"1","2":"467703.711","3":"454502","4":"2010"},{"1":"1","2":"194976.947","3":"194906","4":"2010"},{"1":"1","2":"8512753.538","3":"983116","4":"2010"},{"1":"1","2":"1214.821","3":"38","4":"2010"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[9]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Drop columns PXLVAL and clipped2010data as neither is needed</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMTBEYXRhID0gc3Vic2V0KE1JQ1AyMDEwRGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQyMDEwZGF0YSkpXG5NSUNQMjAxMERhdGFcbmBgYCJ9 -->
+<pre class="r"><code>MICP2010Data = subset(MICP2010Data,select = -c(PXLVAL, clipped2010data))
+MICP2010Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6OSwibmNvbCI6Miwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbOSDDlyAyXSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVpJQUUrWUNZMCtHaThRR1Fjb2RKZnhqQWROTVBWTG94QWt3N1N1K2RBYWJaVDEwQTAzb01ZTDZETXdNTUNJRE1nMXJFWW1SZ2FFQnpOcXJuV1BNU2MxT0xvUTVoZ2dweStpYm1wUmZsbHdFbG9Eb3JVeE9MMEhSeUZ1V1g2OEYwODRKME4wQzh4SWx1UlhKT1lqSE1DcGdnVjBwaVNhSmVXaEZRUDVEM0QwMExlMzVCU1daK0hsQVRFeWpnV2RFME14YWhDUWlVNW9GY2txS2JuRkdhbDYxclpBaXlBU3dQd2J4UW1oT0p6UVN4aytrLzFDeFdxRmxzcVhucG1YbXBNTWZuSkNhbDVrQTVmRUF2ZzMyc1YxQ1VtVmNDOHdwUXRGaXZKTDhrRWFhT0t6ay9CeVlDOWh6RFB3Q3JDdU40Y0FJQUFBPT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Mangroves"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"17615","2":"2010","_rn_":"1"},{"1":"1215","2":"2010","_rn_":"2"},{"1":"607","2":"2010","_rn_":"3"},{"1":"607","2":"2010","_rn_":"4"},{"1":"555","2":"2010","_rn_":"5"},{"1":"454502","2":"2010","_rn_":"6"},{"1":"194906","2":"2010","_rn_":"7"},{"1":"983116","2":"2010","_rn_":"8"},{"1":"38","2":"2010","_rn_":"9"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[9]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Import MICP 2015 Mangrove Data</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMTVEYXRhIDwtIHJlYWRfY3N2KFwiRGF0YS9NSUNQMjAxNURhdGEuY3N2XCIpXG5gYGAifQ== -->
+<pre class="r"><code>MICP2015Data &lt;- read_csv(&quot;Data/MICP2015Data.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUm93czogMTAgQ29sdW1uczogM+KUgOKUgCBDb2x1bW4gc3BlY2lmaWNhdGlvbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIBcbkRlbGltaXRlcjogXCIsXCJcbmRibCAoMyk6IFBYTFZBTCwgY2xpcHBlZDIwMTVkYXRhLCAyMDE1XG7ihLkgVXNlIGBzcGVjKClgIHRvIHJldHJpZXZlIHRoZSBmdWxsIGNvbHVtbiBzcGVjaWZpY2F0aW9uIGZvciB0aGlzIGRhdGEuXG7ihLkgU3BlY2lmeSB0aGUgY29sdW1uIHR5cGVzIG9yIHNldCBgc2hvd19jb2xfdHlwZXMgPSBGQUxTRWAgdG8gcXVpZXQgdGhpcyBtZXNzYWdlLlxuIn0= -->
+<pre><code>Rows: 10 Columns: 3── Column specification ────────────────────────────────────────────────────────────
+Delimiter: &quot;,&quot;
+dbl (3): PXLVAL, clipped2015data, 2015
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMTVEYXRhXG5gYGAifQ== -->
+<pre class="r"><code>MICP2015Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93IjoxMCwibmNvbCI6Mywic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyIxMCDDlyAzIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQXd0eWlURG1pdUJpWUdCZ1ptQmhabVJnWmdVeUdWaERROXgwTFJnWVdKaUFIRVlHRmdaT0VGMEJWQ1FNVnNuQXdBZkVYUFlmR01DQVdqVE1YSWVtMys3clJLb2VPc3lwZUZYMzg3YXl3MFhqYlQ5dksxMTBtUFRiZVdvam15cFFIa3c3eXVoOEt6dXh4ZEtSUFZyRk9pVktGaWh1R1NHUTVPZVlvTGpnUzlWREQ1ZzZoTGsvd0pZNHpINERvUzhhSHdEVGsvNUErRkI1Uittd05XQ2FQVm9EUlZ5UFlRWXlIeTJBV1BNU2MxT0xnUXdCU0hDQ0Jka0NJbnpDSEgyZ1BQN2tuTXlDZ3RRVUl3TkQwNVRFa2tTb01BdUlqMllhWjFGK3VSN01SRjRnWm1vQUV2Ly8vLytHYm0xeVRtSXh6RnFZSUJmSWRMMjBJcUIrSU84Zm1oYjIvSUtTelB3OG9DWW1VSVN5b21sbUxFSVRFQ2pOQTdra1JUYzVvelF2VzlmSUdHUURXQjRDZUtGc0xpUTJNOFJPcHY5UXMxaGhBWkthbDU2Wmx3cHpmRTVpVW1vT2xNTUg5RExZeDNvRlJabDVKVEN2QUVXTDlVcnlTeEpoNnJpUzgzTmdJbURQTWZ3REFFWGpQZkhJQWdBQSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2015data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["2015"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"607.410","3":"607"},{"1":"1","2":"1822.229","3":"1787"},{"1":"1","2":"17614.859","3":"17615"},{"1":"1","2":"1214.816","3":"1215"},{"1":"1","2":"607.408","3":"607"},{"1":"1","2":"461629.616","3":"447915"},{"1":"1","2":"191332.529","3":"191333"},{"1":"1","2":"607.403","3":"607"},{"1":"1","2":"8457479.640","3":"983116"},{"1":"1","2":"607.408","3":"607"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Rename 2015 column to mangroves</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoTUlDUDIwMTVEYXRhKVtuYW1lcyhNSUNQMjAxNURhdGEpID09ICcyMDE1J10gPC0gJ01hbmdyb3Zlcydcbk1JQ1AyMDE1RGF0YVxuYGBgIn0= -->
+<pre class="r"><code>names(MICP2015Data)[names(MICP2015Data) == &#39;2015&#39;] &lt;- &#39;Mangroves&#39;
+MICP2015Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93IjoxMCwibmNvbCI6Mywic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyIxMCDDlyAzIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQXd0eWlURG1pdUJpWUdCZ1ptQmhabVJnWmdVeUdWaERROXgwTFJnWVdKaUFIRVlHRmdaT0VGMEJWQ1FNVnNuQXdBZkVYUFlmR01DQVdqVE1YSWVtMys3clJLb2VPc3lwZUZYMzg3YXl3MFhqYlQ5dksxMTBtUFRiZVdvam15cFFIa3c3eXVoOEt6dXh4ZEtSUFZyRk9pVktGaWh1R1NHUTVPZVlvTGpnUzlWREQ1ZzZoTGsvd0pZNHpINERvUzhhSHdEVGsvNUErRkI1Uittd05XQ2FQVm9EUlZ5UFlRWXlIeTJBV1BNU2MxT0xnUXdCU0hDQ0Jka0NJbnpDSEgyZ1BQN2tuTXlDZ3RRVUl3TkQwNVRFa2tTb01LZHZZbDU2VVg0WlNEZUtrWnhGK2VWNk1HTjVnWmlwQVVqOC8vLy9HN3JkeVRtSnhUQzdZWUpjSUN2MDBvcUErb0c4ZjJoYTJQTUxTakx6ODRDYW1FQ3h5b3FtbWJFSVRVQ2dOQS9ra2hUZDVJelN2R3hkSXhPUURXQjVDT0NGc3JtUTJNd1FPNW4rUTgxaWhZVkthbDU2Wmw0cXpQRTVpVW1wT1ZBT0g5RExZQi9yRlJSbDVwWEF2QUlVTGRZcnlTOUpoS25qU3M3UGdZbUFQY2Z3RHdDbnZoRnR6UUlBQUE9PSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2015data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mangroves"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"607.410","3":"607"},{"1":"1","2":"1822.229","3":"1787"},{"1":"1","2":"17614.859","3":"17615"},{"1":"1","2":"1214.816","3":"1215"},{"1":"1","2":"607.408","3":"607"},{"1":"1","2":"461629.616","3":"447915"},{"1":"1","2":"191332.529","3":"191333"},{"1":"1","2":"607.403","3":"607"},{"1":"1","2":"8457479.640","3":"983116"},{"1":"1","2":"607.408","3":"607"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Create a 2015 year column</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMTVEYXRhIDwtIGNiaW5kKE1JQ1AyMDE1RGF0YSwgeWVhcj1cIjIwMTVcIilcbk1JQ1AyMDE1RGF0YVxuYGBgIn0= -->
+<pre class="r"><code>MICP2015Data &lt;- cbind(MICP2015Data, year=&quot;2015&quot;)
+MICP2015Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MTAsIm5jb2wiOjQsInN1bW1hcnkiOnsiRGVzY3JpcHRpb24iOlsiZGYgWzEwIMOXIDRdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQXd0eWlURG1pdUJpWUdCZ1ptQmhabVJnWmdVeUdWaERROXgwTFJnWVdKaUFIRVlHRmdaT0VGMEJWQ1FNWkxBQU1SOFFjOWwvWUFBRGF0RXdjeDJhZnJ1dkU2bDY2RENuNGxYZHo5dktEaGVOdC8yOHJYVFJZZEp2NTZtTmJLcEFlVER0S0tQenJlekVGa3RIOW1nVjY1UW9XYUM0WllSQWtwOWpndUtDTDFVUFBXRHFFT2IrQUZ2aU1Qc05oTDVvZkFCTVQvb0Q0VVBsSGFYRDFvQnA5bWdORkhFOWhobklmQ0FRQUprTERTQVdJd05EVTdxeVVTT0lOUzh4TjdVWTZpZ1dxQ0JiUUlSUG1LTVBsTWVmbkpOWlVKQ2FBdEtka2xpU0NCWG05RTNNU3kvS0x3UHFoaHBmbVpwWWhHWThaMUYrdVI3TUNsNGdabXFBaEFFWHVqdVNjeEtMWWU2QUNYS0JyTk5MS3dMcUIvTCtvV2xoenk4b3ljelBBMnBpQXFVd1ZqVE5qRVZvQWdLbGVTQ1hwT2dtWjVUbVplc2FtVUtjQVpTSEFGNG9td3VKelFLeGsray8xQ3hXV0FpbDVxVm41cVhDSEorVG1KU2FBK1h3QWIwTTlyRmVRVkZtWGduTUswRFJZcjJTL0pKRW1EcXU1UHdjbUFqWWN3ei9BTnZkSUd4WkF3QUEifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2015data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mangroves"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"607.410","3":"607","4":"2015"},{"1":"1","2":"1822.229","3":"1787","4":"2015"},{"1":"1","2":"17614.859","3":"17615","4":"2015"},{"1":"1","2":"1214.816","3":"1215","4":"2015"},{"1":"1","2":"607.408","3":"607","4":"2015"},{"1":"1","2":"461629.616","3":"447915","4":"2015"},{"1":"1","2":"191332.529","3":"191333","4":"2015"},{"1":"1","2":"607.403","3":"607","4":"2015"},{"1":"1","2":"8457479.640","3":"983116","4":"2015"},{"1":"1","2":"607.408","3":"607","4":"2015"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Drop columns PXLVAL and clipped2015data as neither is needed</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMTVEYXRhID0gc3Vic2V0KE1JQ1AyMDE1RGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQyMDE1ZGF0YSkpXG5NSUNQMjAxNURhdGFcbmBgYCJ9 -->
+<pre class="r"><code>MICP2015Data = subset(MICP2015Data,select = -c(PXLVAL, clipped2015data))
+MICP2015Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MTAsIm5jb2wiOjIsInN1bW1hcnkiOnsiRGVzY3JpcHRpb24iOlsiZGYgWzEwIMOXIDJdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQXd0eWlURG1pdUJpWUdCZ1ptQmhabVJnWmdVeUdWaERROXgwTFJnWVdKaUFIRVlHRmdaT0VGMEJWQ1FNWklBRStZQ1l5NkhwQjBnMWc4UHNOeEQ2b3ZFQk1EM3BENFFQbFhlVURsc0RwdG1qTlZERTlSaG1JUE9CUUFCa0x0UkNGaU1EUTFPNnNsRTl6SnFYbUp0YURIVVVFMVNRMHpjeEw3MG92d3dvQWRWWm1acFloS2FUc3lpL1hBK21teGVrdXdIaVBTNTBLNUp6RW90aFZzQUV1VklTU3hMMTBvcUErb0c4ZjJoYTJQTUxTakx6ODRDYW1FQ1J3WXFtbWJFSVRVQ2dOQS9ra2hUZDVJelN2R3hkSXpPSU00RHlFTXdMcGJtUTJFd1FPNW4rUTgxaWhackZscHFYbnBtWENuTjhUbUpTYWc2VXd3ZjBNdGpIZWdWRm1Ya2xNSzhBUll2MVN2SkxFbUhxdUpMemMyQWlZTTh4L0FNQU43c3JhSVFDQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Mangroves"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"607","2":"2015","_rn_":"1"},{"1":"1787","2":"2015","_rn_":"2"},{"1":"17615","2":"2015","_rn_":"3"},{"1":"1215","2":"2015","_rn_":"4"},{"1":"607","2":"2015","_rn_":"5"},{"1":"447915","2":"2015","_rn_":"6"},{"1":"191333","2":"2015","_rn_":"7"},{"1":"607","2":"2015","_rn_":"8"},{"1":"983116","2":"2015","_rn_":"9"},{"1":"607","2":"2015","_rn_":"10"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[10]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Import MICP 2016 Mangrove Data</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMTZEYXRhIDwtIHJlYWRfY3N2KFwiRGF0YS9NSUNQMjAxNkRhdGEuY3N2XCIpXG5gYGAifQ== -->
+<pre class="r"><code>MICP2016Data &lt;- read_csv(&quot;Data/MICP2016Data.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUm93czogOCBDb2x1bW5zOiAz4pSA4pSAIENvbHVtbiBzcGVjaWZpY2F0aW9uIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgFxuRGVsaW1pdGVyOiBcIixcIlxuZGJsICgzKTogUFhMVkFMLCBjbGlwcGVkMjAxNmRhdGEsIDIwMTZcbuKEuSBVc2UgYHNwZWMoKWAgdG8gcmV0cmlldmUgdGhlIGZ1bGwgY29sdW1uIHNwZWNpZmljYXRpb24gZm9yIHRoaXMgZGF0YS5cbuKEuSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
+<pre><code>Rows: 8 Columns: 3── Column specification ────────────────────────────────────────────────────────────
+Delimiter: &quot;,&quot;
+dbl (3): PXLVAL, clipped2016data, 2016
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMTZEYXRhXG5gYGAifQ== -->
+<pre class="r"><code>MICP2016Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93Ijo4LCJuY29sIjozLCJzdW1tYXJ5Ijp7IkEgdGliYmxlIjpbIjggw5cgMyJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVZzbkF3QWZFSFBZZkdNQ0FYQnBtanNPY2lsZDFQMjhyTzF3MDN2Ynp0dEpGaDZiZnpsTWIyVlFkcGIrd3JQejlQTmVSUFUrKzZxSDdPcUM0WllSQWtwOWpBdS9CTDdPWFBvYXBnNXN6K3czWVVLQTVCOEIwMHc4dzMxRmF5QUZNcytjcG9JanIzbHFFekVmek1HdGVZbTVxTVpBaEFBa2VzQ0JiUUlSUG1LTVBsTWVmbkpOWlVKQ2FZbVJnYUphU1dKSUlGV1lCOGRGTTR5ektMOWVEbWNnTHhFd05RT0wvLy84LzBLMU56a2tzaGxrTEUrUUNtYTZYVmdUVUQrVDlROVBDbmw5UWtwbWZCOVRFQklvZ1ZqVE5qRVZvQWdLbGVTQ1hwT2dtWjVUbVplc2FtWU5zQU10REFDK1V6WUhFWm9iWXlmUWZhaFlyTEVCUzg5SXo4MUpoanM5SlRFck5nWEw0Z0Y0RysxaXZvQ2d6cndUbUZhQm9zVjVKZmtraVRCMVhjbjRPVEFUc09ZWi9BTkMyRVdpWUFnQUEifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2016data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["2016"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"1822.229","3":"1787"},{"1":"1","2":"17614.859","3":"17615"},{"1":"1","2":"607.408","3":"607"},{"1":"1","2":"457985.166","3":"443536"},{"1":"1","2":"191939.935","3":"191940"},{"1":"1","2":"607.403","3":"607"},{"1":"1","2":"8416783.644","3":"978257"},{"1":"1","2":"607.408","3":"607"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[8]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Rename 2016 column to mangroves</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoTUlDUDIwMTZEYXRhKVtuYW1lcyhNSUNQMjAxNkRhdGEpID09ICcyMDE2J10gPC0gJ01hbmdyb3Zlcydcbk1JQ1AyMDE2RGF0YVxuYGBgIn0= -->
+<pre class="r"><code>names(MICP2016Data)[names(MICP2016Data) == &#39;2016&#39;] &lt;- &#39;Mangroves&#39;
+MICP2016Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93Ijo4LCJuY29sIjozLCJzdW1tYXJ5Ijp7IkEgdGliYmxlIjpbIjggw5cgMyJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVZzbkF3QWZFSFBZZkdNQ0FYQnBtanNPY2lsZDFQMjhyTzF3MDN2Ynp0dEpGaDZiZnpsTWIyVlFkcGIrd3JQejlQTmVSUFUrKzZxSDdPcUM0WllSQWtwOWpBdS9CTDdPWFBvYXBnNXN6K3czWVVLQTVCOEIwMHc4dzMxRmF5QUZNcytjcG9JanIzbHFFekVmek1HdGVZbTVxTVpBaEFBa2VzQ0JiUUlSUG1LTVBsTWVmbkpOWlVKQ2FZbVJnYUphU1dKSUlGZWIwVGN4TEw4b3ZBK2xHTVpLektMOWNEMllzTHhBek5RQ0ovLy8vLzBDM096a25zUmhtTjB5UUMyU0ZYbG9SVUQrUTl3OU5DM3QrUVVsbWZoNVFFeE1vbGxqUk5ETVdvUWtJbE9hQlhKS2ltNXhSbXBldGEyUUJzZ0VzRHdHOFVEWUhFcHNaWWlmVGY2aFpyTEJRU2MxTHo4eExoVGsrSnpFcE5RZks0UU42R2V4anZZS2l6THdTbUZlQW9zVjZKZmtsaVRCMVhNbjVPVEFSc09jWS9nRUFoSENIMEowQ0FBQT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2016data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mangroves"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"1822.229","3":"1787"},{"1":"1","2":"17614.859","3":"17615"},{"1":"1","2":"607.408","3":"607"},{"1":"1","2":"457985.166","3":"443536"},{"1":"1","2":"191939.935","3":"191940"},{"1":"1","2":"607.403","3":"607"},{"1":"1","2":"8416783.644","3":"978257"},{"1":"1","2":"607.408","3":"607"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[8]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Create a 2016 year column</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMTZEYXRhIDwtIGNiaW5kKE1JQ1AyMDE2RGF0YSwgeWVhcj1cIjIwMTZcIilcbk1JQ1AyMDE2RGF0YVxuYGBgIn0= -->
+<pre class="r"><code>MICP2016Data &lt;- cbind(MICP2016Data, year=&quot;2016&quot;)
+MICP2016Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6OCwibmNvbCI6NCwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbOCDDlyA0XSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVpMQUFNUjhRYzloL1lBQURjbW1ZT1E1ektsN1YvYnl0N0hEUmVOdlAyMG9YSFpwK08wOXRaRk4xbFA3Q3N2TDM4MXhIOWp6NXFvZnU2NERpbGhFQ1NYNk9DYndIdjh4ZStoaW1EbTdPN0RkZ1E0SG1IQURUVFQvQWZFZHBJUWN3elo2bmdDS3VlMnNSTWg4SUJFRG1RRDNNWW1SZ2FFWVRObXJBc3VZbDVxWVdReTFuZ1FxeUJVVDRoRG42UUhuOHlUbVpCUVdwS1NEZEtZa2xpVkJoVHQvRXZQU2kvREtnYnFqeGxhbUpSV2pHY3hibGwrdkJyT0FGWXFZR2lGODUwTjJSbkpOWURITUhUSkFMWkoxZVdoRlFQNUQzRDAwTGUzNUJTV1orSGxBVEV5aGxzS0pwWml4Q0V4QW96UU81SkVVM09hTTBMMXZYeUJKa0ExZ2VBbmloYkE0a05ndkVUcWIvVUxOWVlTR1VtcGVlbVpjS2MzeE9ZbEpxRHBUREIvUXkyTWQ2QlVXWmVTVXdyd0JGaS9WSzhrc1NZZXE0a3ZOellDSmd6ekg4QXdBS0pDcDZFUU1BQUE9PSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2016data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mangroves"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"1822.229","3":"1787","4":"2016"},{"1":"1","2":"17614.859","3":"17615","4":"2016"},{"1":"1","2":"607.408","3":"607","4":"2016"},{"1":"1","2":"457985.166","3":"443536","4":"2016"},{"1":"1","2":"191939.935","3":"191940","4":"2016"},{"1":"1","2":"607.403","3":"607","4":"2016"},{"1":"1","2":"8416783.644","3":"978257","4":"2016"},{"1":"1","2":"607.408","3":"607","4":"2016"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[8]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Drop columns PXLVAL and clipped2016data as neither is needed</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMTZEYXRhID0gc3Vic2V0KE1JQ1AyMDE2RGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQyMDE2ZGF0YSkpXG5NSUNQMjAxNkRhdGFcbmBgYCJ9 -->
+<pre class="r"><code>MICP2016Data = subset(MICP2016Data,select = -c(PXLVAL, clipped2016data))
+MICP2016Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6OCwibmNvbCI6Miwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbOCDDlyAyXSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVpJQUUrWUNZdzJIMkc1QnFCb2VMeGdmQWROTVBNTjlSV3NnQlRMUG5LYUNJNjk1YWhNd0hBZ0dRT1ZBTFdJd01ETTFvd2tiMUNHdGVZbTVxTWRSeUpxZ2dwMjlpWG5wUmZobFFBcXF6TWpXeENFMG5aMUYrdVI1TU55OUlkd1BFR3h6b1ZpVG5KQmJEcklBSmNxVWtsaVRxcFJVQjlRTjUvOUMwc09jWGxHVG01d0UxTVlFQ21SVk5NMk1SbW9CQWFSN0lKU202eVJtbGVkbTZ4Z1lnRzhEeUVNd0xwVG1RMkV3UU81bitRODFpaFpyRmxwcVhucG1YQ25OOFRtSlNhZzZVd3dmME10akhlZ1ZGbVhrbE1LOEFSWXYxU3ZKTEVtSHF1Skx6YzJBaVlNOHgvQU1BQTFTaFcxd0NBQUE9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Mangroves"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"1787","2":"2016","_rn_":"1"},{"1":"17615","2":"2016","_rn_":"2"},{"1":"607","2":"2016","_rn_":"3"},{"1":"443536","2":"2016","_rn_":"4"},{"1":"191940","2":"2016","_rn_":"5"},{"1":"607","2":"2016","_rn_":"6"},{"1":"978257","2":"2016","_rn_":"7"},{"1":"607","2":"2016","_rn_":"8"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[8]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Import MICP 2017 Mangrove Data</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMTdEYXRhIDwtIHJlYWRfY3N2KFwiRGF0YS9NSUNQMjAxN0RhdGEuY3N2XCIpXG5gYGAifQ== -->
+<pre class="r"><code>MICP2017Data &lt;- read_csv(&quot;Data/MICP2017Data.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUm93czogOCBDb2x1bW5zOiAz4pSA4pSAIENvbHVtbiBzcGVjaWZpY2F0aW9uIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgFxuRGVsaW1pdGVyOiBcIixcIlxuZGJsICgzKTogUFhMVkFMLCBjbGlwcGVkMjAxN2RhdGEsIDIwMTdcbuKEuSBVc2UgYHNwZWMoKWAgdG8gcmV0cmlldmUgdGhlIGZ1bGwgY29sdW1uIHNwZWNpZmljYXRpb24gZm9yIHRoaXMgZGF0YS5cbuKEuSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
+<pre><code>Rows: 8 Columns: 3── Column specification ────────────────────────────────────────────────────────────
+Delimiter: &quot;,&quot;
+dbl (3): PXLVAL, clipped2017data, 2017
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMTdEYXRhXG5gYGAifQ== -->
+<pre class="r"><code>MICP2017Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93Ijo4LCJuY29sIjozLCJzdW1tYXJ5Ijp7IkEgdGliYmxlIjpbIjggw5cgMyJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVZzbkF3QWZFSFBZZkdNQ0FYQnBtanNPY2l0ZXRjanVDSENiOWRsditmdTRtaDR2RzIzN2VWcnJvMFBUYmVXb2ptNnFqRERzREk1dktYVWNPN2ZkUEV4dzdnZUtXRVFKSmZvNEpmQjlCNnBITUFSdnFNT2tQaEw1b2ZBQk1OLzBBOHgybExmZUFhUTd0RHlqaXV1dW1RSnlENG1IV3ZNVGMxR0lnUXdBU1BHQkJ0b0FJbnpCSEh5aVBQemtuczZBZ05jWEl3TkE4SmJFa0VTck1BdUtqbWNaWmxGK3VCek9SRjRpWkdvREUvLy8vZjZCYm01eVRXQXl6RmliSUJUSmRMNjBJcUIvSSs0ZW1oVDIvb0NRelB3K29pUWtVUWF4b21obUwwQVFFU3ZOQUxrblJUYzRvemN2V05UWUUyUUNXaHdCZUtKc0RpYzBNc1pQcFA5UXNWbGlBcE9hbForYWx3aHlmazVpVW1nUGw4QUc5RFBheFhrRlJabDRKekN0QTBXSzlrdnlTUkpnNnJ1VDhISmdJMkhNTS93QUprRzA2bUFJQUFBPT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2017data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["2017"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"1822.230","3":"1822"},{"1":"1","2":"1214.819","3":"1215"},{"1":"1","2":"17614.859","3":"17615"},{"1":"1","2":"607.408","3":"607"},{"1":"1","2":"459200.001","3":"446063"},{"1":"1","2":"198013.987","3":"198014"},{"1":"1","2":"607.403","3":"607"},{"1":"1","2":"8419213.248","3":"972618"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[8]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Rename 2017 column to mangroves</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoTUlDUDIwMTdEYXRhKVtuYW1lcyhNSUNQMjAxN0RhdGEpID09ICcyMDE3J10gPC0gJ01hbmdyb3Zlcydcbk1JQ1AyMDE3RGF0YVxuYGBgIn0= -->
+<pre class="r"><code>names(MICP2017Data)[names(MICP2017Data) == &#39;2017&#39;] &lt;- &#39;Mangroves&#39;
+MICP2017Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93Ijo4LCJuY29sIjozLCJzdW1tYXJ5Ijp7IkEgdGliYmxlIjpbIjggw5cgMyJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVZzbkF3QWZFSFBZZkdNQ0FYQnBtanNPY2l0ZXRjanVDSENiOWRsditmdTRtaDR2RzIzN2VWcnJvMFBUYmVXb2ptNnFqRERzREk1dktYVWNPN2ZkUEV4dzdnZUtXRVFKSmZvNEpmQjlCNnBITUFSdnFNT2tQaEw1b2ZBQk1OLzBBOHgybExmZUFhUTd0RHlqaXV1dW1RSnlENG1IV3ZNVGMxR0lnUXdBU1BHQkJ0b0FJbnpCSEh5aVBQemtuczZBZ05jWEl3TkE4SmJFa0VTck02WnVZbDE2VVh3YlNqV0lrWjFGK3VSN01XRjRnWm1vQUV2Ly8vLytCYm5keVRtSXh6RzZZSUJmSUNyMjBJcUIrSU84Zm1oYjIvSUtTelB3OG9DWW1VQ3l4b21sbUxFSVRFQ2pOQTdra1JUYzVvelF2VzlmWUdHUURXQjRDZUtGc0RpUTJNOFJPcHY5UXMxaGhvWkthbDU2Wmx3cHpmRTVpVW1vT2xNTUg5RExZeDNvRlJabDVKVEN2QUVXTDlVcnlTeEpoNnJpUzgzTmdJbURQTWZ3REFETmEvS21kQWdBQSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2017data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mangroves"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"1822.230","3":"1822"},{"1":"1","2":"1214.819","3":"1215"},{"1":"1","2":"17614.859","3":"17615"},{"1":"1","2":"607.408","3":"607"},{"1":"1","2":"459200.001","3":"446063"},{"1":"1","2":"198013.987","3":"198014"},{"1":"1","2":"607.403","3":"607"},{"1":"1","2":"8419213.248","3":"972618"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[8]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Create a 2017 year column</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMTdEYXRhIDwtIGNiaW5kKE1JQ1AyMDE3RGF0YSwgeWVhcj1cIjIwMTdcIilcbk1JQ1AyMDE3RGF0YVxuYGBgIn0= -->
+<pre class="r"><code>MICP2017Data &lt;- cbind(MICP2017Data, year=&quot;2017&quot;)
+MICP2017Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6OCwibmNvbCI6NCwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbOCDDlyA0XSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVpMQUFNUjhRYzloL1lBQURjbW1ZT1E1ektsNjN5dTBJY3BqMDIyMzUrN21iSEM0YWIvdDVXK21pUTlOdjU2bU5iS3FPTXV3TWpHd3FkeDA1dE44L1RYRHNCSXBiUmdnaytUa204SDBFcVVjeUIyeW93NlEvRVBxaThRRXczZlFEekhlVXR0d0Rwam0wUDZDSTY2NmJBbldQQU1nY3FJZFpqQXdNelduQ1JnMVkxcnpFM05SaXFPVXNVRUcyZ0FpZk1FY2ZLSTgvT1Nlem9DQTFCYVE3SmJFa0VTck02WnVZbDE2VVh3YlVEVFcrTWpXeENNMTR6cUw4Y2oyWUZieEF6TlFBOFNzSHVqdVNjeEtMWWU2QUNYS0JyTk5MS3dMcUIvTCtvV2xoenk4b3ljelBBMnBpQXFVTVZqVE5qRVZvQWdLbGVTQ1hwT2dtWjVUbVplc2FtNEJzQU10REFDK1V6WUhFWm9IWXlmUWZhaFlyTElSUzg5SXo4MUpoanM5SlRFck5nWEw0Z0Y0RysxaXZvQ2d6cndUbUZhQm9zVjVKZmtraVRCMVhjbjRPVEFUc09ZWi9BS3UvOStnUkF3QUEifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2017data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mangroves"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"1822.230","3":"1822","4":"2017"},{"1":"1","2":"1214.819","3":"1215","4":"2017"},{"1":"1","2":"17614.859","3":"17615","4":"2017"},{"1":"1","2":"607.408","3":"607","4":"2017"},{"1":"1","2":"459200.001","3":"446063","4":"2017"},{"1":"1","2":"198013.987","3":"198014","4":"2017"},{"1":"1","2":"607.403","3":"607","4":"2017"},{"1":"1","2":"8419213.248","3":"972618","4":"2017"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[8]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Drop columns PXLVAL and clipped2017data as neither is needed</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMTdEYXRhID0gc3Vic2V0KE1JQ1AyMDE3RGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQyMDE3ZGF0YSkpXG5NSUNQMjAxN0RhdGFcbmBgYCJ9 -->
+<pre class="r"><code>MICP2017Data = subset(MICP2017Data,select = -c(PXLVAL, clipped2017data))
+MICP2017Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6OCwibmNvbCI6Miwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbOCDDlyAyXSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVpJQUUrWUNZdzJGT0JVZzFnOE9rUHhENm92RUJNTjMwQTh4M2xMYmNBNlk1dEQrZ2lPdXVtOElBQVFJZ2M2QVdzQmdaR0pyVGhJM3FFZGE4eE56VVlxamxURkJCVHQvRXZQU2kvREtnQkZSblpXcGlFWnBPenFMOGNqMllibDZRN2dhSU56alFyVWpPU1N5R1dRRVQ1RXBKTEVuVVN5c0M2Z2Z5L3FGcFljOHZLTW5NendOcVlnSUZNaXVhWnNZaU5BR0IwanlRUzFKMGt6Tks4N0oxalUxQk5vRGxJWmdYU25NZ3Naa2dkakw5aDVyRkNqV0xMVFV2UFRNdkZlYjRuTVNrMUJ3b2h3L29aYkNQOVFxS012TktZRjRCaWhicmxlU1hKTUxVY1NYbjU4QkV3SjVqK0FjQU5tcXdvVndDQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Mangroves"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"1822","2":"2017","_rn_":"1"},{"1":"1215","2":"2017","_rn_":"2"},{"1":"17615","2":"2017","_rn_":"3"},{"1":"607","2":"2017","_rn_":"4"},{"1":"446063","2":"2017","_rn_":"5"},{"1":"198014","2":"2017","_rn_":"6"},{"1":"607","2":"2017","_rn_":"7"},{"1":"972618","2":"2017","_rn_":"8"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[8]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Import MICP 2018 Mangrove Data</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMThEYXRhIDwtIHJlYWRfY3N2KFwiRGF0YS9NSUNQMjAxOERhdGEuY3N2XCIpXG5gYGAifQ== -->
+<pre class="r"><code>MICP2018Data &lt;- read_csv(&quot;Data/MICP2018Data.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUm93czogOSBDb2x1bW5zOiAy4pSA4pSAIENvbHVtbiBzcGVjaWZpY2F0aW9uIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgFxuRGVsaW1pdGVyOiBcIixcIlxuZGJsICgyKTogUFhMVkFMLCAyMDE4YXJlYVxu4oS5IFVzZSBgc3BlYygpYCB0byByZXRyaWV2ZSB0aGUgZnVsbCBjb2x1bW4gc3BlY2lmaWNhdGlvbiBmb3IgdGhpcyBkYXRhLlxu4oS5IFNwZWNpZnkgdGhlIGNvbHVtbiB0eXBlcyBvciBzZXQgYHNob3dfY29sX3R5cGVzID0gRkFMU0VgIHRvIHF1aWV0IHRoaXMgbWVzc2FnZS5cbiJ9 -->
+<pre><code>Rows: 9 Columns: 2── Column specification ────────────────────────────────────────────────────────────
+Delimiter: &quot;,&quot;
+dbl (2): PXLVAL, 2018area
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMThEYXRhXG5gYGAifQ== -->
+<pre class="r"><code>MICP2018Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93Ijo5LCJuY29sIjoyLCJzdW1tYXJ5Ijp7IkEgdGliYmxlIjpbIjkgw5cgMiJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVpJQUUrWUNZMC80REF4aFFTc1BNYzlpK0M4eHh1SzdrQUtZWC9RSHpIYVViTk1BMFIva0RzSGpURDRpNDdnNGhNSDlOQlVSZjB3dW9jU2dPWjgxTHpFMHRCaklFd0k2SENMSUZSUGlFT2ZwQWVSeEdCb1lXaVVXcGlXaGFPWXZ5eS9WZzJubEIyaHVBeFAvLy83K2oyNUdjazFnTXN3TW15SldTV0pLb2wxWUUxQS9rL1VQVHdwNWZVSktabndmVXhBUUtWVlkwell4RmFBTDhwWGtnbDZUb0ptZVU1bVhyR29Jc0FFdERBQytVelluRVpvSll5ZlFmYWhRcnpQT3BlZW1aZWFrd3QrY2tKcVhtUURsOFFCK0RQYXhYVUpTWlZ3THpDVkMwV0s4a3Z5UVJwbzRyT1Q4SEpnTDJHOE0vQUROdXpzeE1BZ0FBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["2018area"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"6074"},{"1":"1","2":"23689"},{"1":"1","2":"2430"},{"1":"1","2":"450570"},{"1":"1","2":"200444"},{"1":"1","2":"607"},{"1":"1","2":"973833"},{"1":"1","2":"3644"},{"1":"1","2":"605"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[9]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Rename 2018 column to mangroves</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoTUlDUDIwMThEYXRhKVtuYW1lcyhNSUNQMjAxOERhdGEpID09ICcyMDE4YXJlYSddIDwtICdNYW5ncm92ZXMnXG5NSUNQMjAxOERhdGFcbmBgYCJ9 -->
+<pre class="r"><code>names(MICP2018Data)[names(MICP2018Data) == &#39;2018area&#39;] &lt;- &#39;Mangroves&#39;
+MICP2018Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93Ijo5LCJuY29sIjoyLCJzdW1tYXJ5Ijp7IkEgdGliYmxlIjpbIjkgw5cgMiJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVpJQUUrWUNZMC80REF4aFFTc1BNYzlpK0M4eHh1SzdrQUtZWC9RSHpIYVViTk1BMFIva0RzSGpURDRpNDdnNGhNSDlOQlVSZjB3dW9jU2dPWjgxTHpFMHRCaklFd0k2SENMSUZSUGlFT2ZwQWVaeStpWG5wUmZsbElHVW9lam1MOHN2MVlQcDVRZm9iZ01ULy8vKy9vMXVTbkpOWURMTUVKc2lWa2xpU3FKZFdCTlFQNVAxRDA4S2VYMUNTbVo4SDFNUUVDbFpXTk0yTVJXZ0MvS1Y1SUplazZDWm5sT1psNnhxQkxBQkxRd0F2bE0ySnhHYUNXTW4wSDJvVUs4ejNxWG5wbVhtcE1MZm5KQ2FsNWtBNWZFQWZnejJzVjFDVW1WY0M4d2xRdEZpdkpMOGtFYWFPS3prL0J5WUM5aHZEUHdCdGE4cW9UUUlBQUE9PSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["Mangroves"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"6074"},{"1":"1","2":"23689"},{"1":"1","2":"2430"},{"1":"1","2":"450570"},{"1":"1","2":"200444"},{"1":"1","2":"607"},{"1":"1","2":"973833"},{"1":"1","2":"3644"},{"1":"1","2":"605"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[9]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Create a 2018 year column</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMThEYXRhIDwtIGNiaW5kKE1JQ1AyMDE4RGF0YSwgeWVhcj1cIjIwMThcIilcbk1JQ1AyMDE4RGF0YVxuYGBgIn0= -->
+<pre class="r"><code>MICP2018Data &lt;- cbind(MICP2018Data, year=&quot;2018&quot;)
+MICP2018Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6OSwibmNvbCI6Mywic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbOSDDlyAzXSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVZzbkF3QWZFblBZZkdNQ0FVaHBtbnNQMlhXQ093M1VsQnpDOTZBK1k3eWpkb0FHbU9jb2ZnTVdiZmtERWRYY0lnZmxyS2lENm1sN0F6Qk1BbVFkMU9JdVJnYUVGemRtb2djV2FsNWliV2d4MUNETlVrQzBnd2lmTTBRZks0L1JOekVzdnlpOERLb09hVTVtYVdJUm1EbWRSZnJrZXpDeGVJR1pxZ0hpUUU5M0M1SnpFWXBpRk1FR3VsTVNTUkwyMElxQitJTzhmbWhiMi9JS1N6UHc4b0NZbVVMU3lvbWxtTEVJVDRDL05BN2trUlRjNW96UXZXOWNZWkFGWUdnSjRvV3hPSkRZenhFcW0vMUNqV0dFaGtacVhucG1YQ25ON1RtSlNhZzZVd3dmME1kakRlZ1ZGbVhrbE1KOEFSWXYxU3ZKTEVtSHF1Skx6YzJBaVlMOHgvQU1BVjZ1QkpNMENBQUE9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["Mangroves"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"6074","3":"2018"},{"1":"1","2":"23689","3":"2018"},{"1":"1","2":"2430","3":"2018"},{"1":"1","2":"450570","3":"2018"},{"1":"1","2":"200444","3":"2018"},{"1":"1","2":"607","3":"2018"},{"1":"1","2":"973833","3":"2018"},{"1":"1","2":"3644","3":"2018"},{"1":"1","2":"605","3":"2018"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[9]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Drop PXLVAL column as it is not needed</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMThEYXRhID0gc3Vic2V0KE1JQ1AyMDE4RGF0YSxzZWxlY3QgPSAtYyhQWExWQUwpKVxuTUlDUDIwMThEYXRhXG5gYGAifQ== -->
+<pre class="r"><code>MICP2018Data = subset(MICP2018Data,select = -c(PXLVAL))
+MICP2018Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6OSwibmNvbCI6Miwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbOSDDlyAyXSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVpJQUUrWUNZMDJIN0xwQnFCb2ZyU2c1Z2V0RWZNTjlSdWtFRFRIT1VQd0NMTi8yQWlPdnVFQUx6MTFSQTlEVzlZSUFDQVpCNVVJdFlqQXdNTFdqT1J2VWNhMTVpYm1veDFDRk1VRUZPMzhTODlLTDhNcUFFVkdkbGFtSVJtazdPb3Z4eVBaaHVYcER1Qm9pWE9OR3RTTTVKTElaWkFSUGtTa2tzU2RSTEt3THFCL0wrb1dsaHp5OG95Y3pQQTJwaUFnVThLNXBteGlJMEFmN1NQSkJMVW5TVE0wcnpzblZOUUJhQXBTR1lGMHB6SXJHWklGWXkvWWNheFFvMWlpMDFMejB6THhYbTlwekVwTlFjS0ljUDZHT3doL1VLaWpMelNtQStBWW9XNjVYa2x5VEMxSEVsNStmQVJNQitZL2dIQUJJVHo1OXZBZ0FBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Mangroves"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"6074","2":"2018","_rn_":"1"},{"1":"23689","2":"2018","_rn_":"2"},{"1":"2430","2":"2018","_rn_":"3"},{"1":"450570","2":"2018","_rn_":"4"},{"1":"200444","2":"2018","_rn_":"5"},{"1":"607","2":"2018","_rn_":"6"},{"1":"973833","2":"2018","_rn_":"7"},{"1":"3644","2":"2018","_rn_":"8"},{"1":"605","2":"2018","_rn_":"9"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[9]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Import MICP 2019 Mangrove Data</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMTlEYXRhIDwtIHJlYWRfY3N2KFwiRGF0YS9NSUNQMjAxOURhdGEuY3N2XCIpXG5gYGAifQ== -->
+<pre class="r"><code>MICP2019Data &lt;- read_csv(&quot;Data/MICP2019Data.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUm93czogOSBDb2x1bW5zOiAz4pSA4pSAIENvbHVtbiBzcGVjaWZpY2F0aW9uIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgFxuRGVsaW1pdGVyOiBcIixcIlxuZGJsICgzKTogUFhMVkFMLCBjbGlwcGVkMjAxOWRhdGEsIDIwMTlcbuKEuSBVc2UgYHNwZWMoKWAgdG8gcmV0cmlldmUgdGhlIGZ1bGwgY29sdW1uIHNwZWNpZmljYXRpb24gZm9yIHRoaXMgZGF0YS5cbuKEuSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
+<pre><code>Rows: 9 Columns: 3── Column specification ────────────────────────────────────────────────────────────
+Delimiter: &quot;,&quot;
+dbl (3): PXLVAL, clipped2019data, 2019
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMTlEYXRhXG5gYGAifQ== -->
+<pre class="r"><code>MICP2019Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93Ijo5LCJuY29sIjozLCJzdW1tYXJ5Ijp7IkEgdGliYmxlIjpbIjkgw5cgMyJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVZzbkF3QWZFblBZZkdNQ0FVaHBtbnNQZEZRc2pCSkw4SFBaVXZIYWUyc2ptTUtmaWRhdmNqaUNINjd2RXVXd0xsamhzM3lYOC9keE5jVWZwYzN6emRnUytjZVFvdjNPZHk3YlFvZW0zSlVpZlk0Sm5QT2ZyVm5razh3NkFESGZZVXdtMkJHZ2VoTDYrQzBKdjd3ZlRqdEpyU3NBMFIva0RzSGpURDRpNDd0VW5FT2VoQkFSclhtSnVhakdRSVFBSk5yQWdXMENFVDVpakQ1VEhuNXlUV1ZDUW1tSmtZR2laa2xpU0NCVm1BZkhSVE9Nc3lpL1hnNW5JQzhSTURVRGkvLy8vMzlHdFRjNUpMSVpaQ3hQa0FwbXVsMVlFMUEvay9VUFR3cDVmVUpLWm53ZlV4QVNLT0ZZMHpZeEZhQUw4cFhrZ2w2VG9KbWVVNW1Ycm1vSXNBRXREQUMrVXpZbkVab1pZeWZRZmFoUXJMRHhTODlJejgxSmhiczlKVEVyTmdYTDRnRDRHZTFpdm9DZ3pyd1RtRTZCb3NWNUpma2tpVEIxWGNuNE9UQVRzTjRaL0FQVmlWeCt2QWdBQSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2019data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["2019"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"30370.521","3":"30371"},{"1":"1","2":"7288.919","3":"7289"},{"1":"1","2":"1822.230","3":"1822"},{"1":"1","2":"24296.360","3":"24296"},{"1":"1","2":"6074.078","3":"6031"},{"1":"1","2":"455555.655","3":"453405"},{"1":"1","2":"200443.605","3":"200444"},{"1":"1","2":"607.403","3":"607"},{"1":"1","2":"8538872.310","3":"977650"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[9]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Rename 2019 column to mangroves</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoTUlDUDIwMTlEYXRhKVtuYW1lcyhNSUNQMjAxOURhdGEpID09ICcyMDE5J10gPC0gJ01hbmdyb3Zlcydcbk1JQ1AyMDE5RGF0YVxuYGBgIn0= -->
+<pre class="r"><code>names(MICP2019Data)[names(MICP2019Data) == &#39;2019&#39;] &lt;- &#39;Mangroves&#39;
+MICP2019Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93Ijo5LCJuY29sIjozLCJzdW1tYXJ5Ijp7IkEgdGliYmxlIjpbIjkgw5cgMyJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVZzbkF3QWZFblBZZkdNQ0FVaHBtbnNQZEZRc2pCSkw4SFBaVXZIYWUyc2ptTUtmaWRhdmNqaUNINjd2RXVXd0xsamhzM3lYOC9keE5jVWZwYzN6emRnUytjZVFvdjNPZHk3YlFvZW0zSlVpZlk0Sm5QT2ZyVm5razh3NkFESGZZVXdtMkJHZ2VoTDYrQzBKdjd3ZlRqdEpyU3NBMFIva0RzSGpURDRpNDd0VW5FT2VoQkFSclhtSnVhakdRSVFBSk5yQWdXMENFVDVpakQ1VEhuNXlUV1ZDUW1tSmtZR2laa2xpU0NCWG05RTNNU3kvS0x3UHBSakdTc3lpL1hBOW1MQzhRTXpVQWlmLy8vMzlIdHpzNUo3RVlaamRNa0F0a2hWNWFFVkEva1BjUFRRdDdma0ZKWm40ZVVCTVRLUFpZMFRRekZxRUo4SmZtZ1Z5U29wdWNVWnFYcldzR3NnQXNEUUc4VURZbkVwc1pZaVhUZjZoUnJMQkFTYzFMejh4TGhiazlKekVwTlFmSzRRUDZHT3hodllLaXpMd1NtRStBb3NWNkpma2xpVEIxWE1uNU9UQVJzTjhZL2dFQVAzaWJ6YlFDQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2019data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mangroves"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"30370.521","3":"30371"},{"1":"1","2":"7288.919","3":"7289"},{"1":"1","2":"1822.230","3":"1822"},{"1":"1","2":"24296.360","3":"24296"},{"1":"1","2":"6074.078","3":"6031"},{"1":"1","2":"455555.655","3":"453405"},{"1":"1","2":"200443.605","3":"200444"},{"1":"1","2":"607.403","3":"607"},{"1":"1","2":"8538872.310","3":"977650"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[9]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Create a 2019 year column</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMTlEYXRhIDwtIGNiaW5kKE1JQ1AyMDE5RGF0YSwgeWVhcj1cIjIwMTlcIilcbk1JQ1AyMDE5RGF0YVxuYGBgIn0= -->
+<pre class="r"><code>MICP2019Data &lt;- cbind(MICP2019Data, year=&quot;2019&quot;)
+MICP2019Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6OSwibmNvbCI6NCwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbOSDDlyA0XSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVpMQUFNUjhRYzlwL1lBQURTbW1ZZVE1M1Z5eU1FRWp5YzloVDhkcDVhaU9idzV5SzE2MXlPNEljcnU4UzU3SXRXT0t3ZlpmdzkzTTN4UjJsei9ITjJ4SDR4cEdqL001MUx0dENoNmJmbGlCOWpnbWU4Wnl2VytXUnpEc0FNdHhoVHlYWUVxQjVFUHI2TGdpOXZSOU1PMHF2S1FIVEhPVVB3T0pOUHlEaXVsZWZRTjBuQURJUEdoQXNSZ2FHbGpSbm93WSthMTVpYm1veDFDRXNVRUcyZ0FpZk1FY2ZLSTgvT1Nlem9DQTFCYVE3SmJFa0VTck02WnVZbDE2VVh3YlVEVFcrTWpXeENNMTR6cUw4Y2oyWUZieEF6TlFBOFRjbnVqdVNjeEtMWWU2QUNYS0JyTk5MS3dMcUIvTCtvV2xoenk4b3ljelBBMnBpQXFVZVZqVE5qRVZvQXZ5bGVTQ1hwT2dtWjVUbVpldWFneXdBUzBNQUw1VE5pY1JtZ1ZqSjlCOXFGQ3NzZ0ZMejBqUHpVbUZ1ejBsTVNzMkJjdmlBUGdaN1dLK2dLRE92Qk9ZVG9HaXhYa2wrU1NKTUhWZHlmZzVNQk93M2huOEFyVTdIQVRRREFBQT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2019data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mangroves"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"30370.521","3":"30371","4":"2019"},{"1":"1","2":"7288.919","3":"7289","4":"2019"},{"1":"1","2":"1822.230","3":"1822","4":"2019"},{"1":"1","2":"24296.360","3":"24296","4":"2019"},{"1":"1","2":"6074.078","3":"6031","4":"2019"},{"1":"1","2":"455555.655","3":"453405","4":"2019"},{"1":"1","2":"200443.605","3":"200444","4":"2019"},{"1":"1","2":"607.403","3":"607","4":"2019"},{"1":"1","2":"8538872.310","3":"977650","4":"2019"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[9]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Drop columns PXLVAL and clipped2019data as neither is needed</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMTlEYXRhID0gc3Vic2V0KE1JQ1AyMDE5RGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQyMDE5ZGF0YSkpXG5NSUNQMjAxOURhdGFcbmBgYCJ9 -->
+<pre class="r"><code>MICP2019Data = subset(MICP2019Data,select = -c(PXLVAL, clipped2019data))
+MICP2019Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6OSwibmNvbCI6Miwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbOSDDlyAyXSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVpJQUUrWUNZMCtIdWlnTWc1UTU3S2huQTlKd0tDSDE5RjRUZTNnK21IYVhYbElCcGp2SUhZUEdtSHhCeDNhdFBHQ0JBQUdRZTFDSVdJd05EUzVxelVUM0htcGVZbTFvTWRRZ1RWSkRUTnpFdnZTaS9EQ2dCMVZtWm1saUVwcE96S0w5Y0Q2YWJGNlM3QWVJbFRuUXJrbk1TaTJGV3dBUzVVaEpMRXZYU2lvRDZnYngvYUZyWTh3dEtNdlB6Z0pxWVFBSFBpcWFac1FoTmdMODBEK1NTRk4za2pOSzhiRkFNTW5DQnBTR1lGMHB6SXJHWklGWXkvWWNheFFvMWlpMDFMejB6THhYbTlwekVwTlFjS0ljUDZHT3doL1VLaWpMelNtQStBWW9XNjVYa2x5VEMxSEVsNStmQVJNQitZL2dIQUl0bEl3WnZBZ0FBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Mangroves"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"30371","2":"2019","_rn_":"1"},{"1":"7289","2":"2019","_rn_":"2"},{"1":"1822","2":"2019","_rn_":"3"},{"1":"24296","2":"2019","_rn_":"4"},{"1":"6031","2":"2019","_rn_":"5"},{"1":"453405","2":"2019","_rn_":"6"},{"1":"200444","2":"2019","_rn_":"7"},{"1":"607","2":"2019","_rn_":"8"},{"1":"977650","2":"2019","_rn_":"9"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[9]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Import MICP 2020 Mangrove Data</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMjBEYXRhIDwtIHJlYWRfY3N2KFwiRGF0YS9NSUNQMjAyMERhdGEuY3N2XCIpXG5gYGAifQ== -->
+<pre class="r"><code>MICP2020Data &lt;- read_csv(&quot;Data/MICP2020Data.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUm93czogOSBDb2x1bW5zOiAz4pSA4pSAIENvbHVtbiBzcGVjaWZpY2F0aW9uIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgFxuRGVsaW1pdGVyOiBcIixcIlxuZGJsICgzKTogUFhMVkFMLCBjbGlwcGVkMjAyMGRhdGEsIDIwMjBcbuKEuSBVc2UgYHNwZWMoKWAgdG8gcmV0cmlldmUgdGhlIGZ1bGwgY29sdW1uIHNwZWNpZmljYXRpb24gZm9yIHRoaXMgZGF0YS5cbuKEuSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
+<pre><code>Rows: 9 Columns: 3── Column specification ────────────────────────────────────────────────────────────
+Delimiter: &quot;,&quot;
+dbl (3): PXLVAL, clipped2020data, 2020
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMjBEYXRhXG5gYGAifQ== -->
+<pre class="r"><code>MICP2020Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93Ijo5LCJuY29sIjozLCJzdW1tYXJ5Ijp7IkEgdGliYmxlIjpbIjkgw5cgMyJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVZzbkF3QWZFblBZZkdNQ0FVaHBtbnNNajhVYTVIWUZ2SFBiZENMR01FRWh5bUZQeHVsVnVSNUREOVYzaVhMWUZTeHkyN3hMK2Z1Nm11S08wL1NiZlN4OVhPWEpvdjc4cDFxN3QwUFFicE56UE1TSDVTQk9QNXk0azh4cEFoZ1BOQTFzQ05BOUNYOThGb2JmM2cybEhhYTBuWUpwREcrd2loNllmRUhIZExXc2d6a01KQ05hOHhOelVZaUJEQUJKc1lFRzJnQWlmTUVjZktJOC9PU2V6b0NBMXhjakF5Q0Fsc1NRUktzd0M0cU9aeGxtVVg2NEhNNUVYaUpsQWJ2Ny8vLzkzZEd1VGN4S0xZZGJDQkxsQXB1dWxGUUgxQTNuLzBMU3c1eGVVWk9ibkFUVXhnU0tPRlUwell4R2FBSDlwSHNnbEtickpHYVY1MmJxV0lBdkEwaERBQzJWeklyR1pJVll5L1ljYXhRb0xqOVM4OU15OFZKamJjeEtUVW5PZ0hENmdqOEVlMWlzb3lzd3JnZmtFS0Zxc1Y1SmZrZ2hUeDVXY253TVRBZnVONFI4QTAra3JDNjhDQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2020data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["2020"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"37052.035","3":"37052"},{"1":"1","2":"7896.329","3":"7896"},{"1":"1","2":"1822.230","3":"1822"},{"1":"1","2":"24296.360","3":"24296"},{"1":"1","2":"6074.078","3":"6031"},{"1":"1","2":"446444.576","3":"445113"},{"1":"1","2":"198013.981","3":"198014"},{"1":"1","2":"607.403","3":"607"},{"1":"1","2":"8592932.064","3":"973398"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[9]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Rename 2020 column to mangroves</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoTUlDUDIwMjBEYXRhKVtuYW1lcyhNSUNQMjAyMERhdGEpID09ICcyMDIwJ10gPC0gJ01hbmdyb3Zlcydcbk1JQ1AyMDIwRGF0YVxuYGBgIn0= -->
+<pre class="r"><code>names(MICP2020Data)[names(MICP2020Data) == &#39;2020&#39;] &lt;- &#39;Mangroves&#39;
+MICP2020Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93Ijo5LCJuY29sIjozLCJzdW1tYXJ5Ijp7IkEgdGliYmxlIjpbIjkgw5cgMyJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVZzbkF3QWZFblBZZkdNQ0FVaHBtbnNNajhVYTVIWUZ2SFBiZENMR01FRWh5bUZQeHVsVnVSNUREOVYzaVhMWUZTeHkyN3hMK2Z1Nm11S08wL1NiZlN4OVhPWEpvdjc4cDFxN3QwUFFicE56UE1TSDVTQk9QNXk0azh4cEFoZ1BOQTFzQ05BOUNYOThGb2JmM2cybEhhYTBuWUpwREcrd2loNllmRUhIZExXc2d6a01KQ05hOHhOelVZaUJEQUJKc1lFRzJnQWlmTUVjZktJOC9PU2V6b0NBMXhjakF5Q0Fsc1NRUktzenBtNWlYWHBSZkJ0S05ZaVJuVVg2NUhzeFlYaUJtQWpuOC8vLy8zOUh0VHM1SkxJYlpEUlBrQWxtaGwxWUUxQS9rL1VQVHdwNWZVSktabndmVXhBU0tQVlkwell4RmFBSUNwWGtnbDZUb0ptZVU1bVhyR2hxQWJBRExRd0F2bE0ySnhHYUcyTW4wSDJvV0t5eFVVdlBTTS9OU1lZN1BTVXhLellGeStJQmVCdnRZcjZBb002OEU1aFdnYUxGZVNYNUpJa3dkVjNKK0Rrd0U3RG1HZndBYmdsZlR0UUlBQUE9PSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2020data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mangroves"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"37052.035","3":"37052"},{"1":"1","2":"7896.329","3":"7896"},{"1":"1","2":"1822.230","3":"1822"},{"1":"1","2":"24296.360","3":"24296"},{"1":"1","2":"6074.078","3":"6031"},{"1":"1","2":"446444.576","3":"445113"},{"1":"1","2":"198013.981","3":"198014"},{"1":"1","2":"607.403","3":"607"},{"1":"1","2":"8592932.064","3":"973398"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[9]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Create a 2020 year column</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMjBEYXRhIDwtIGNiaW5kKE1JQ1AyMDIwRGF0YSwgeWVhcj1cIjIwMjBcIilcbk1JQ1AyMDIwRGF0YVxuYGBgIn0= -->
+<pre class="r"><code>MICP2020Data &lt;- cbind(MICP2020Data, year=&quot;2020&quot;)
+MICP2020Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6OSwibmNvbCI6NCwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbOSDDlyA0XSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVpMQUFNUjhRYzlwL1lBQURTbW1ZZVE2UHhCdmxkZ1MrY2RoM0k4UXlRaURKWVU3RjYxYTVIVUVPMTNlSmM5a1dMSEhZdmt2NCs3bWI0bzdTOXB0OEwzMWM1Y2loL2Y2bVdMdTJROU52a0hJL3g0VGtJMDA4bnJ1UXpHc0FHUTQwRDJ3SjBEd0lmWDBYaE43ZUQ2WWRwYldlZ0drT2JiQ0xISnArUU1SMXQ2eUJ1azhBWkI0MElGaU1ESXdNYU01R0RYeld2TVRjMUdLb1ExaWdnbXdCRVQ1aGpqNVFIbjl5VG1aQlFXb0tTSGRLWWtraVZKalROekV2dlNpL0RLZ2JhbnhsYW1JUm12R2NSZm5sZWpBcmVJR1lxUUhpYjA1MGR5VG5KQmJEM0FFVDVBSlpwNWRXQk5RUDVQMUQwOEtlWDFDU21aOEgxTVFFU2oyc2FKb1ppOUFFQkVyelFDNUowVTNPS00zTDFqVTBCTmtBbG9jQVhpaWJFNG5OQXJHVDZUL1VMRlpZQ0tYbXBXZm1wY0ljbjVPWWxKb0Q1ZkFCdlF6MnNWNUJVV1plQ2N3clFORml2Wkw4a2tTWU9xN2svQnlZQ05oekRQOEExSGQyQ1RVREFBQT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["PXLVAL"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["clipped2020data"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Mangroves"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"37052.035","3":"37052","4":"2020"},{"1":"1","2":"7896.329","3":"7896","4":"2020"},{"1":"1","2":"1822.230","3":"1822","4":"2020"},{"1":"1","2":"24296.360","3":"24296","4":"2020"},{"1":"1","2":"6074.078","3":"6031","4":"2020"},{"1":"1","2":"446444.576","3":"445113","4":"2020"},{"1":"1","2":"198013.981","3":"198014","4":"2020"},{"1":"1","2":"607.403","3":"607","4":"2020"},{"1":"1","2":"8592932.064","3":"973398","4":"2020"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[9]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Drop columns PXLVAL and clipped2020data as neither is needed</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuTUlDUDIwMjBEYXRhID0gc3Vic2V0KE1JQ1AyMDIwRGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQyMDIwZGF0YSkpXG5NSUNQMjAyMERhdGFcbmBgYCJ9 -->
+<pre class="r"><code>MICP2020Data = subset(MICP2020Data,select = -c(PXLVAL, clipped2020data))
+MICP2020Data</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6OSwibmNvbCI6Miwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbOSDDlyAyXSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVpJQUUrWUNZMCtHUmVBTkl1Y08rR3d4Z2VrNEZoTDYrQzBKdjd3ZlRqdEphVDhBMGgvWUhzSGpURDRpNDdwWTFEQkFnQURJUGFoR0xrWUdSQWMzWnFKNWp6VXZNVFMyR09vUUpLc2pwbTVpWFhwUmZCcFNBNnF4TVRTeEMwOGxabEYrdUI5UE5DOUxkQVBFU0o3b1Z5VG1KeFRBcllJSmNLWWtsaVhwcFJVRDlRTjQvTkMzcytRVWxtZmw1UUUxTW9JQm5SZFBNV0lRbUlGQ2FCM0pKaW01eVJtbGV0cTZoRWNnR3NEd0U4MEpwVGlRMkU4Uk9wdjlRczFpaFpyR2w1cVZuNXFYQ0hKK1RtSlNhQStYd0FiME05ckZlUVZGbVhnbk1LMERSWXIyUy9KSkVtRHF1NVB3Y21Balljd3ovQUJzd3lCWndBZ0FBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Mangroves"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"37052","2":"2020","_rn_":"1"},{"1":"7896","2":"2020","_rn_":"2"},{"1":"1822","2":"2020","_rn_":"3"},{"1":"24296","2":"2020","_rn_":"4"},{"1":"6031","2":"2020","_rn_":"5"},{"1":"445113","2":"2020","_rn_":"6"},{"1":"198014","2":"2020","_rn_":"7"},{"1":"607","2":"2020","_rn_":"8"},{"1":"973398","2":"2020","_rn_":"9"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[9]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Combine all MICP Mangrove Datasets by year</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGY0IDwtIGJpbmRfcm93cyhNSUNQMTk5NkRhdGEsIE1JQ1AyMDA3RGF0YSwgTUlDUDIwMDhEYXRhLCBNSUNQMjAwOURhdGEsIE1JQ1AyMDEwRGF0YSwgTUlDUDIwMTVEYXRhLCBNSUNQMjAxNkRhdGEsIE1JQ1AyMDE3RGF0YSwgTUlDUDIwMThEYXRhLCBNSUNQMjAxOURhdGEsIE1JQ1AyMDIwRGF0YSlcbmRmNFxuYGBgIn0= -->
+<pre class="r"><code>df4 &lt;- bind_rows(MICP1996Data, MICP2007Data, MICP2008Data, MICP2009Data, MICP2010Data, MICP2015Data, MICP2016Data, MICP2017Data, MICP2018Data, MICP2019Data, MICP2020Data)
+df4</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MTA2LCJuY29sIjoyLCJzdW1tYXJ5Ijp7IkRlc2NyaXB0aW9uIjpbImRmIFsxMDYgw5cgMl0iXX19LCJyZGYiOiJINHNJQUFBQUFBQUFBd3R5aVREbWl1QmlZR0JnWm1CaFptUmdaZ1V5R1ZoRFE5eDBMUmdZV0ppQUhFWUdGZ1pPRUYwQlZDUU1aSUFFK1lBNHk4R1pBUXdjbW41QTZJdW5HOEIwOFFjSWY5RWZWSGtvN1NpdERLSFpYbktBYWQxUE1kalV3YzJEOFhHWTZ5ajlPd2RNcysrOGdTS3UrL3NXbUkvTG5adCtvNHJEekY5VEFhRWJJNkRtdjdrQU1mOHpBNHA3WWVaZU5ENkExWndOYzFETmg1dDNWUUZpM2xtSS8vVVlacUNZTitrUHFybVRzSWNqd3J5OU15RG1uYnFBMVR5WSt0bHY4SnJyS0IyMkJtSk90QWFLT013OFhPYkE5UXM1UVBUbkthQ0k2OTVhaEtKL1RnVjJmOExOc2R3RHBqbTBQNkNhczI0S21MOTlGMFRmZFNXd2ZiRDA0Q2pkb0FIUlYvNEFWZDhPSVRBZkZxOU5MeUQwM1JVUWUvZFVvcnJyT3RUODdmMVFjOWVVWURmMzZoTXcvNUY0QTVqZWQ0T0FPVnBQc1B0ckN6amNnVUFBaUxPZ0dZN0YwTkxTYktEWlJnWUc1b09BYlRFSTJKWUR6elkwb0NQYmRJRFlaalJtbTlPWWJVRkh0aVg5MkVZR05HZWpOamhZOHhKelU0dWhoU0lUVkpEVE56RXZ2U2kvRENnQjFWbVptbGlFcHBPektMOWNENmFiRjZTN0FWSzhacUZia1p5VFdBeXpBaWJJbFpKWWtxaVhWZ1RVRCtUOVE5UENubDlRa3BtZkI5VEVCR29Nc2FKcFppeENFK0F2elFPNUpFVTNPYU0wTDF2WEVHUUJXQm9DZUtIc0xDUTJFOFJLcHY5UW8xaWhSckdsNXFWbjVxWEMzSjZUbUpTYUErWHdBWDBNOXJCZVFWRm1YZ25NSjBEUllyMlMvSkpFbURxdTVQd2NtQWpZYnd6L0FGdWQ4endEQ2dBQSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Mangroves"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["year"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"38","2":"1996"},{"1":"607","2":"1996"},{"1":"18222","2":"1996"},{"1":"319","2":"1996"},{"1":"2430","2":"1996"},{"1":"607","2":"1996"},{"1":"607","2":"1996"},{"1":"444608","2":"1996"},{"1":"187681","2":"1996"},{"1":"981294","2":"1996"},{"1":"607","2":"1996"},{"1":"607","2":"2007"},{"1":"18222","2":"2007"},{"1":"607","2":"2007"},{"1":"319","2":"2007"},{"1":"2430","2":"2007"},{"1":"607","2":"2007"},{"1":"458459","2":"2007"},{"1":"194363","2":"2007"},{"1":"607","2":"2007"},{"1":"982509","2":"2007"},{"1":"38","2":"2007"},{"1":"607","2":"2008"},{"1":"18222","2":"2008"},{"1":"4859","2":"2008"},{"1":"607","2":"2008"},{"1":"319","2":"2008"},{"1":"3644","2":"2008"},{"1":"555","2":"2008"},{"1":"457524","2":"2008"},{"1":"196192","2":"2008"},{"1":"981294","2":"2008"},{"1":"38","2":"2008"},{"1":"17615","2":"2009"},{"1":"607","2":"2009"},{"1":"319","2":"2009"},{"1":"4252","2":"2009"},{"1":"607","2":"2009"},{"1":"555","2":"2009"},{"1":"456008","2":"2009"},{"1":"194977","2":"2009"},{"1":"983116","2":"2009"},{"1":"38","2":"2009"},{"1":"1215","2":"2009"},{"1":"17615","2":"2010"},{"1":"1215","2":"2010"},{"1":"607","2":"2010"},{"1":"607","2":"2010"},{"1":"555","2":"2010"},{"1":"454502","2":"2010"},{"1":"194906","2":"2010"},{"1":"983116","2":"2010"},{"1":"38","2":"2010"},{"1":"607","2":"2015"},{"1":"1787","2":"2015"},{"1":"17615","2":"2015"},{"1":"1215","2":"2015"},{"1":"607","2":"2015"},{"1":"447915","2":"2015"},{"1":"191333","2":"2015"},{"1":"607","2":"2015"},{"1":"983116","2":"2015"},{"1":"607","2":"2015"},{"1":"1787","2":"2016"},{"1":"17615","2":"2016"},{"1":"607","2":"2016"},{"1":"443536","2":"2016"},{"1":"191940","2":"2016"},{"1":"607","2":"2016"},{"1":"978257","2":"2016"},{"1":"607","2":"2016"},{"1":"1822","2":"2017"},{"1":"1215","2":"2017"},{"1":"17615","2":"2017"},{"1":"607","2":"2017"},{"1":"446063","2":"2017"},{"1":"198014","2":"2017"},{"1":"607","2":"2017"},{"1":"972618","2":"2017"},{"1":"6074","2":"2018"},{"1":"23689","2":"2018"},{"1":"2430","2":"2018"},{"1":"450570","2":"2018"},{"1":"200444","2":"2018"},{"1":"607","2":"2018"},{"1":"973833","2":"2018"},{"1":"3644","2":"2018"},{"1":"605","2":"2018"},{"1":"30371","2":"2019"},{"1":"7289","2":"2019"},{"1":"1822","2":"2019"},{"1":"24296","2":"2019"},{"1":"6031","2":"2019"},{"1":"453405","2":"2019"},{"1":"200444","2":"2019"},{"1":"607","2":"2019"},{"1":"977650","2":"2019"},{"1":"37052","2":"2020"},{"1":"7896","2":"2020"},{"1":"1822","2":"2020"},{"1":"24296","2":"2020"},{"1":"6031","2":"2020"},{"1":"445113","2":"2020"},{"1":"198014","2":"2020"},{"1":"607","2":"2020"},{"1":"973398","2":"2020"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[106]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Check unique values to make sure each year has been included</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudW5pcXVlKGRmNCR5ZWFyKVxuYGBgIn0= -->
+<pre class="r"><code>unique(df4$year)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIjE5OTZcIiBcIjIwMDdcIiBcIjIwMDhcIiBcIjIwMDlcIiBcIjIwMTBcIiBcIjIwMTVcIiBcIjIwMTZcIiBcIjIwMTdcIiBcIjIwMThcIiBcIjIwMTlcIiBcIjIwMjBcIlxuIn0= -->
+<pre><code> [1] &quot;1996&quot; &quot;2007&quot; &quot;2008&quot; &quot;2009&quot; &quot;2010&quot; &quot;2015&quot; &quot;2016&quot; &quot;2017&quot; &quot;2018&quot; &quot;2019&quot; &quot;2020&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Group mangroves by year</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYWdnX3RibCA8LSBkZjQgJT4lIGdyb3VwX2J5KHllYXIpICU+JSBzdW1tYXJpc2UoVG90YWxfTWFuZ3JvdmVzPXN1bShNYW5ncm92ZXMpLC5ncm91cHMgPSAnZHJvcCcpXG5hZ2dfdGJsXG5gYGAifQ== -->
+<pre class="r"><code>agg_tbl &lt;- df4 %&gt;% group_by(year) %&gt;% summarise(Total_Mangroves=sum(Mangroves),.groups = &#39;drop&#39;)
+agg_tbl</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibnJvdyI6MTEsIm5jb2wiOjIsInN1bW1hcnkiOnsiQSB0aWJibGUiOlsiMTEgw5cgMiJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWm1SZ1pnVXlHVmhEUTl4MExSZ1lXSmlBSEVZR0ZnWk9FRjBCVkNRTVpJQUVCWUNZR3lyQlltaHBhUVpqR3hrWW1DT3hMWkRZbGdpMm9RRVMyeFNKaldTT0laSTVoa2ptR0NLWlkyUUFwUGxBYm5HMCtEVUg1SFJIUy84SkVEcTVGRUlIcm9YUWxpc2h0SFFpbUxiNDFBUGhNeXlFME5FbklQUVBhUWg5UzVRQkRGQUNnVFV2TVRlMUdCb0FURENIVktZbUZrSFovQ0g1SllrNThiNkplZWxGK1dVZ3BTajZPWXZ5eS9WZ1p2Q0N6R2dBRXYvLy8vK0tibEZ5VG1JeHpDS1lJRmRLWWttaVhsb1JVRCtROXc5TkMzdCtRVWxtZmg1UUV4TW9tbGpSTkRNV29RbndsK2FCWEpLaW01eFJtcGV0YXd5eUFDd05BYnhRTmpjU213bGlKZE4vcUZHc1VLUFlVdlBTTS9OU1lXN1BTVXhLellGeStJQStCbnRZcjZBb002OEU1aE9nYUxGZUNTaXNZQ0xKK1Rrd0ViRGZHUDRCQUZMYnNZbWRBZ0FBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["year"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Total_Mangroves"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"1996","2":"1637020"},{"1":"2007","2":"1658768"},{"1":"2008","2":"1663861"},{"1":"2009","2":"1659309"},{"1":"2010","2":"1653161"},{"1":"2015","2":"1645409"},{"1":"2016","2":"1634956"},{"1":"2017","2":"1638561"},{"1":"2018","2":"1661896"},{"1":"2019","2":"1701915"},{"1":"2020","2":"1694229"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[11]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Convert to a new dataframe</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGY1IDwtIGFnZ190YmwgJT4lIGFzLmRhdGEuZnJhbWUoKVxuZGY1XG5gYGAifQ== -->
+<pre class="r"><code>df5 &lt;- agg_tbl %&gt;% as.data.frame()
+df5</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MTEsIm5jb2wiOjIsInN1bW1hcnkiOnsiRGVzY3JpcHRpb24iOlsiZGYgWzExIMOXIDJdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQTExUnUwN0RNQlM5ZVlHYXFDMFNZdW8zSkVyS0t4a3JJVGFFUUVXcXhJQk1Ha3BFc0NzbmdiTHhBUXg4QUFzakEvL0JOL0FaVElpaFlNZTJjR01wT3VjZSs1Nzd5T25CWk51ZHVBQmdnVzBaWURtTWduTTJQdlJqQU50a2dRRTJkRGd1MktOTlJyaTR3VDVQWHRoUmt1d3BQZ3pEZlkzSEdrLytlUlJxZkZmam1rK2srVVNhVDZUNURFT0dQZDdMS1A1NTRhMlBrdU5uZ1drdDhPUmRZUEltY0lBYWpMK2VSQXl2QXM4L0JINFBCSDV1UVhOV2x1QmdkSnVWY2dHbWF1UWhRMVR5L3BoVXFMZzRRbmhHeVIxL3VwTGZvZVErVUI1ZDd2RW9xbmp0UW1tQlNsVklpZTRVVlNpNG9peWZSY3RXeWpxWlZ6bkJMTW5rdjhscEpSdTBKZlJyekR1Wit1bDFqVy84SFY2Z3VSYW5LN21uY1ZPVU5IK2xsU090MWpJOHkzR21laS9RWlZiSW9NY21iZ1lPNWpUSGxacUVxV1ZROFYwcEpTV0ZVcHJaWVBrSDJ6dUJNcDBDQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["year"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Total_Mangroves"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"1996","2":"1637020"},{"1":"2007","2":"1658768"},{"1":"2008","2":"1663861"},{"1":"2009","2":"1659309"},{"1":"2010","2":"1653161"},{"1":"2015","2":"1645409"},{"1":"2016","2":"1634956"},{"1":"2017","2":"1638561"},{"1":"2018","2":"1661896"},{"1":"2019","2":"1701915"},{"1":"2020","2":"1694229"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[11]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Convert Mangrove cover to hectares</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGY1JFRvdGFsX01hbmdyb3Zlc19IZWN0YXJlcyA8LSBkZjUkVG90YWxfTWFuZ3JvdmVzIC8gMTAwMDBcbmRmNVxuYGBgIn0= -->
+<pre class="r"><code>df5$Total_Mangroves_Hectares &lt;- df5$Total_Mangroves / 10000
+df5</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MTEsIm5jb2wiOjMsInN1bW1hcnkiOnsiRGVzY3JpcHRpb24iOlsiZGYgWzExIMOXIDNdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQXd0eWlURG1pdUJpWUdCZ1ptQmhabVJnWmdVeUdWaERROXgwTFJnWVdKaUFIRVlHRmdaT0VGMEJWQ1FNVnNuQUlBREUzRkFKRmtOTFN6TVkyOGpBd0J5SmJZSEV0a1N3RFEyUTJLWkliQ1J6REpITU1VUXl4eERKSENNRElNMEhjb3VqeGE4NUlLYzdXdnBQZ05ESnBSQTZjQzJFdGx3Sm9hVVR3YlRGcHg0SW4yRWhoSTQrQWFGL1NFUG9XNklNRUFBMjN5R2xyT3pFRnNzSWg1UTlmUHZ1TDNGd1NEa1Q5UzVadnNzaFplL0pkNmQvaXpta3JKS3QzZS9SNEpBeTBaKzN4WmZSSVNYLzlwZjJQenNkVXFwVHRTOGZUblJJT1Nab3d2TEsyeUhWVGVISTdLV1BIVkoxTzFLbnJQZEhDMlRXdk1UYzFHSm9BRFBEUEZxWm1sZ0VaZk9INUpjazVzVDdKdWFsRitXWEFaVkNoQ1hRaE9NOVVwTkxFb3RBUnFHWXoxbVVYNjRIczRNWGlKa2FJSjdrUm5kSWNrNWlNY3doTUVHdWxNU1NSTDIwSXFCK0lPOGZtaGIyL0lLU3pQdzhvQ1ltVURKaFJkUE1XSVFtd0YrYUIzSkppbTV5Um1sZXRxNFp5QUt3TkFUd1F0bmNTR3htaUpWTS82RkdzVUtOWWt2TlM4L01TNFc1UFNjeEtUVUh5dUVEK2hqc1liMkNvc3k4RXBoUGdLTEZlaVdnUUlPSkpPZm53RVRBZm1QNEJ3QnlnZnVmSFFNQUFBPT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["year"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Total_Mangroves"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Total_Mangroves_Hectares"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1996","2":"1637020","3":"163.7020"},{"1":"2007","2":"1658768","3":"165.8768"},{"1":"2008","2":"1663861","3":"166.3861"},{"1":"2009","2":"1659309","3":"165.9309"},{"1":"2010","2":"1653161","3":"165.3161"},{"1":"2015","2":"1645409","3":"164.5409"},{"1":"2016","2":"1634956","3":"163.4956"},{"1":"2017","2":"1638561","3":"163.8561"},{"1":"2018","2":"1661896","3":"166.1896"},{"1":"2019","2":"1701915","3":"170.1915"},{"1":"2020","2":"1694229","3":"169.4229"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[11]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Drop Total_Mangroves columns as unnesessary</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGY1ID0gc3Vic2V0KGRmNSxzZWxlY3QgPSAtYyhUb3RhbF9NYW5ncm92ZXMpKVxuZGY1XG5gYGAifQ== -->
+<pre class="r"><code>df5 = subset(df5,select = -c(Total_Mangroves))
+df5</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MTEsIm5jb2wiOjIsInN1bW1hcnkiOnsiRGVzY3JpcHRpb24iOlsiZGYgWzExIMOXIDJdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQXd0eWlURG1pdUJpWUdCZ1ptQmhabVJnWmdVeUdWaERROXgwTFJnWVdKaUFIRVlHRmdaT0VGMEJWQ1FNWklBRUJZQ1lHeXJCWW1ocGFRWmpHeGtZbUNPeExaRFlsZ2kyb1FFUzJ4U0pqV1NPSVpJNWhram1HQ0taWTJRQXBQbEFibkZJS1NzN3NjVXl3aUZsRDkrKyswc2NIRkxPUkwxTGx1OXlTTmw3OHQzcDMySU9LYXRrYS9kN05EaWtUUFRuYmZGbGRFakp2LzJsL2M5T2g1VHFWTzNMaHhNZFVvNEptckM4OG5aSWRWTTRNbnZwWTRkVTNZN1VLZXY5MFFLQk5TOHhON1VZR2dCTU1JZFVwaVlXUWRrU0lma2xpVG54dm9sNTZVWDVaYW5GOFI2cHlTV0pSU0E5S0FaeEZ1V1g2OEVNNHdVWjFzQUFCdHpvTmlibkpCYkRiSVFKY3FVa2xpVHFwUlVCOVFONS85QzBzT2NYbEdUbTV3RTFNWUhpaXhWTk0yTVJtZ0IvYVI3SUpTbTZ5Um1sZWRtNjVpQUx3TklRekF1bHVaSFlUQkFybWY1RGpXS0ZHc1dXbXBlZW1aY0tjM3RPWWxKcURwVERCL1F4Mk1ONkJVV1plU1V3bndCRmkvVktRSUVHRTBuT3o0R0pnUDNHOEE4QWV3S2RDcVlDQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["year"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Total_Mangroves_Hectares"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"1996","2":"163.7020","_rn_":"1"},{"1":"2007","2":"165.8768","_rn_":"2"},{"1":"2008","2":"166.3861","_rn_":"3"},{"1":"2009","2":"165.9309","_rn_":"4"},{"1":"2010","2":"165.3161","_rn_":"5"},{"1":"2015","2":"164.5409","_rn_":"6"},{"1":"2016","2":"163.4956","_rn_":"7"},{"1":"2017","2":"163.8561","_rn_":"8"},{"1":"2018","2":"166.1896","_rn_":"9"},{"1":"2019","2":"170.1915","_rn_":"10"},{"1":"2020","2":"169.4229","_rn_":"11"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[11]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Duplicate dataset</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGY2IDwtIGRmNVxuZGY2XG5gYGAifQ== -->
+<pre class="r"><code>df6 &lt;- df5
+df6</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MTEsIm5jb2wiOjIsInN1bW1hcnkiOnsiRGVzY3JpcHRpb24iOlsiZGYgWzExIMOXIDJdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQXd0eWlURG1pdUJpWUdCZ1ptQmhabVJnWmdVeUdWaERROXgwTFJnWVdKaUFIRVlHRmdaT0VGMEJWQ1FNWklBRUJZQ1lHeXJCWW1ocGFRWmpHeGtZbUNPeExaRFlsZ2kyb1FFUzJ4U0pqV1NPSVpJNWhram1HQ0taWTJRQXBQbEFibkZJS1NzN3NjVXl3aUZsRDkrKyswc2NIRkxPUkwxTGx1OXlTTmw3OHQzcDMySU9LYXRrYS9kN05EaWtUUFRuYmZGbGRFakp2LzJsL2M5T2g1VHFWTzNMaHhNZFVvNEptckM4OG5aSWRWTTRNbnZwWTRkVTNZN1VLZXY5MFFLQk5TOHhON1VZR2dCTU1JZFVwaVlXUWRrU0lma2xpVG54dm9sNTZVWDVaYW5GOFI2cHlTV0pSU0E5S0FaeEZ1V1g2OEVNNHdVWjFzQUFCdHpvTmlibkpCYkRiSVFKY3FVa2xpVHFwUlVCOVFONS85QzBzT2NYbEdUbTV3RTFNWUhpaXhWTk0yTVJtZ0IvYVI3SUpTbTZ5Um1sZWRtZ2lHZmdBa3RETUMrVTVrWmlNMEdzWlBvUE5Zb1ZhaFJiYWw1NlpsNHF6TzA1aVVtcE9WQU9IOURIWUEvckZSUmw1cFhBZkFJVUxkWXJBUVVhVENRNVB3Y21Bdllid3o4QVJ2ZGxWYVlDQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["year"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Total_Mangroves_Hectares"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"1996","2":"163.7020","_rn_":"1"},{"1":"2007","2":"165.8768","_rn_":"2"},{"1":"2008","2":"166.3861","_rn_":"3"},{"1":"2009","2":"165.9309","_rn_":"4"},{"1":"2010","2":"165.3161","_rn_":"5"},{"1":"2015","2":"164.5409","_rn_":"6"},{"1":"2016","2":"163.4956","_rn_":"7"},{"1":"2017","2":"163.8561","_rn_":"8"},{"1":"2018","2":"166.1896","_rn_":"9"},{"1":"2019","2":"170.1915","_rn_":"10"},{"1":"2020","2":"169.4229","_rn_":"11"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[11]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiQW15IFNoYXcgRGlzc2VydGF0aW9uIENvZGUgU2NyaXB0IgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpMb2FkIHBhY2thZ2VzIAoKYGBge3J9CmxpYnJhcnkoZHBseXIpCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGdncGxvdDIpCmxpYnJhcnkocGF0Y2h3b3JrKQpgYGAKCmBgYHtyfQpsaWJyYXJ5KGRhdGEudGFibGUpCmxpYnJhcnkoc2NhbGVzKQpgYGAKClNldHRpbmcgUG90dGluZyBUaGVtZSAKCmBgYHtyfQp0aGVtZV9mYW5jeSA8LSBmdW5jdGlvbigpIHsKICB0aGVtZV9idygpICsKICAgIHRoZW1lKAogICAgICB0ZXh0ID0gZWxlbWVudF90ZXh0KGZhbWlseSA9ICJIZWx2ZXRpY2EiKSwKICAgICAgYXhpcy50ZXh0ID0gZWxlbWVudF90ZXh0KHNpemUgPSA4LCBjb2xvciA9ICJibGFjayIpLAogICAgICBheGlzLnRpdGxlID0gZWxlbWVudF90ZXh0KHNpemUgPSAxMCwgY29sb3IgPSAiYmxhY2siKSwKICAgICAgYXhpcy5saW5lLnggPSBlbGVtZW50X2xpbmUoc2l6ZSA9IDAuMywgY29sb3IgPSAiYmxhY2siKSwKICAgICAgYXhpcy5saW5lLnkgPSBlbGVtZW50X2xpbmUoc2l6ZSA9IDAuMywgY29sb3IgPSAiYmxhY2siKSwKICAgICAgYXhpcy50aWNrcyA9IGVsZW1lbnRfbGluZShzaXplID0gMC4zLCBjb2xvciA9ICJibGFjayIpLAogICAgICBwYW5lbC5ib3JkZXIgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgIHBhbmVsLmdyaWQubWFqb3IueCA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgcGFuZWwuZ3JpZC5taW5vci54ID0gZWxlbWVudF9ibGFuaygpLAogICAgICBwYW5lbC5ncmlkLm1pbm9yLnkgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgIHBhbmVsLmdyaWQubWFqb3IueSA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgcGxvdC5tYXJnaW4gPSB1bml0KGMoMC41LCAwLjUsIDAuNSwgMC41KSwgdW5pdHMgPSAsICJjbSIpLAogICAgICBwbG90LnRpdGxlID0gZWxlbWVudF90ZXh0KAogICAgICAgIHNpemUgPSAxMCwKICAgICAgICB2anVzdCA9IDEsCiAgICAgICAgaGp1c3QgPSAwLjUsCiAgICAgICAgY29sb3IgPSAiYmxhY2siCiAgICAgICksCiAgICAgIGxlZ2VuZC50ZXh0ID0gZWxlbWVudF90ZXh0KHNpemUgPSA5LCBjb2xvciA9ICJibGFjayIpLAogICAgICBsZWdlbmQudGl0bGUgPSBlbGVtZW50X3RleHQoc2l6ZSA9IDksIGNvbG9yID0gImJsYWNrIiksCiAgICAgIGxlZ2VuZC5wb3NpdGlvbiA9IGMoMC45LCAwLjkpLAogICAgICBsZWdlbmQua2V5LnNpemUgPSB1bml0KDAuNywgImxpbmUiKSwKICAgICAgbGVnZW5kLmJhY2tncm91bmQgPSBlbGVtZW50X3JlY3QoCiAgICAgICAgY29sb3IgPSAiYmxhY2siLAogICAgICAgIGZpbGwgPSAidHJhbnNwYXJlbnQiLAogICAgICAgIHNpemUgPSAyLAogICAgICAgIGxpbmV0eXBlID0gImJsYW5rIgogICAgICApCiAgICApCn0KYGBgCgpJbXBvcnQgYWxsIExhbXUgQ291bnR5IG1hbmdyb3ZlIGNvdmVyIGRhdGEgc2V0cyAKCkltcG9ydCBMYW11IENvdW50eSAxOTk2IE1hbmdyb3ZlIERhdGEgCgpgYGB7cn0KTGFtdTE5OTZEYXRhIDwtIHJlYWRfY3N2KCJEYXRhL0xhbXUxOTk2RGF0YS5jc3YiKQpMYW11MTk5NkRhdGEKYGBgClJlbmFtZSAxOTk2IGNvbHVtbiB0byBtYW5ncm92ZXMgCgpgYGB7cn0KbmFtZXMoTGFtdTE5OTZEYXRhKVtuYW1lcyhMYW11MTk5NkRhdGEpID09ICcxOTk2J10gPC0gJ01hbmdyb3ZlcycKTGFtdTE5OTZEYXRhCmBgYApDcmVhdGUgYSAxOTk2IHllYXIgY29sdW1uIAoKYGBge3J9CkxhbXUxOTk2RGF0YSA8LSBjYmluZChMYW11MTk5NkRhdGEsIHllYXI9IjE5OTYiKQpMYW11MTk5NkRhdGEKYGBgCkRyb3AgY29sdW1ucyBQWExWQUwgYW5kIGNsaXBwZWQxOTk2ZGF0YSBhcyBuZWl0aGVyIGlzIG5lZWRlZCAKCmBgYHtyfQpMYW11MTk5NkRhdGEgPSBzdWJzZXQoTGFtdTE5OTZEYXRhLHNlbGVjdCA9IC1jKFBYTFZBTCwgY2xpcHBlZDE5OTZkYXRhKSkKTGFtdTE5OTZEYXRhCmBgYApJbXBvcnQgTGFtdSBDb3VudHkgMjAwNyBNYW5ncm92ZSBEYXRhIAoKYGBge3J9CkxhbXUyMDA3RGF0YSA8LSByZWFkX2NzdigiRGF0YS9MYW11MjAwN0RhdGEuY3N2IikKTGFtdTIwMDdEYXRhCmBgYApSZW5hbWUgMjAwNyB5ZWFyIHRvIG1hbmdyb3ZlcyAKCmBgYHtyfQpuYW1lcyhMYW11MjAwN0RhdGEpW25hbWVzKExhbXUyMDA3RGF0YSkgPT0gJzIwMDcnXSA8LSAnTWFuZ3JvdmVzJwpMYW11MjAwN0RhdGEKYGBgCgpDcmVhdGUgYSAyMDA3IHllYXIgY29sdW1uIAoKYGBge3J9CkxhbXUyMDA3RGF0YSA8LSBjYmluZChMYW11MjAwN0RhdGEsIHllYXI9IjIwMDciKQpMYW11MjAwN0RhdGEKYGBgCgpEcm9wIGNvbHVtbnMgUFhMVkFMIGFuZCBjbGlwcGVkMjAwN2RhdGEgYXMgbmVpdGhlciBpcyBuZWVkZWQgCgpgYGB7cn0KTGFtdTIwMDdEYXRhID0gc3Vic2V0KExhbXUyMDA3RGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQyMDA3ZGF0YSkpCkxhbXUyMDA3RGF0YQpgYGAKSW1wb3J0IExhbXUgQ291bnR5IDIwMDggTWFuZ3JvdmUgRGF0YSAKCmBgYHtyfQpMYW11MjAwOERhdGEgPC0gcmVhZF9jc3YoIkRhdGEvTGFtdTIwMDhEYXRhLmNzdiIpCkxhbXUyMDA4RGF0YQpgYGAKClJlbmFtZSAyMDA4IGNvbHVtbiB0byBtYW5ncm92ZXMgCgpgYGB7cn0KbmFtZXMoTGFtdTIwMDhEYXRhKVtuYW1lcyhMYW11MjAwOERhdGEpID09ICcyMDA4J10gPC0gJ01hbmdyb3ZlcycKTGFtdTIwMDhEYXRhCmBgYApDcmVhdGUgYSAyMDA4IHllYXIgY29sdW1uIAoKYGBge3J9CkxhbXUyMDA4RGF0YSA8LSBjYmluZChMYW11MjAwOERhdGEsIHllYXI9IjIwMDgiKQpMYW11MjAwOERhdGEKYGBgCgpEcm9wIGNvbHVtbnMgUFhMVkFMIGFuZCBjbGlwcGVkMjAwOGRhdGEgYXMgbmVpdGhlciBpcyBuZWVkZWQgCgpgYGB7cn0KTGFtdTIwMDhEYXRhID0gc3Vic2V0KExhbXUyMDA4RGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQyMDA4ZGF0YSkpCkxhbXUyMDA4RGF0YQpgYGAKCkltcG9ydCBMYW11IENvdW50eSAyMDA5IE1hbmdyb3ZlIERhdGEgCgpgYGB7cn0KTGFtdTIwMDlEYXRhIDwtIHJlYWRfY3N2KCJEYXRhL0xhbXUyMDA5RGF0YS5jc3YiKQpMYW11MjAwOURhdGEKYGBgClJlbmFtZSAyMDA5IGNvbHVtbiB0byBtYW5ncm92ZXMgCgpgYGB7cn0KbmFtZXMoTGFtdTIwMDlEYXRhKVtuYW1lcyhMYW11MjAwOURhdGEpID09ICcyMDA5J10gPC0gJ01hbmdyb3ZlcycKTGFtdTIwMDlEYXRhCmBgYAoKQ3JlYXRlIGEgMjAwOSB5ZWFyIGNvbHVtbiAKCmBgYHtyfQpMYW11MjAwOURhdGEgPC0gY2JpbmQoTGFtdTIwMDlEYXRhLCB5ZWFyPSIyMDA5IikKTGFtdTIwMDlEYXRhCmBgYAoKRHJvcCBjb2x1bW5zIFBYTFZBTCBhbmQgY2xpcHBlZDIwMDlkYXRhIGFzIG5laXRoZXIgaXMgbmVlZGVkIAoKYGBge3J9CkxhbXUyMDA5RGF0YSA9IHN1YnNldChMYW11MjAwOURhdGEsc2VsZWN0ID0gLWMoUFhMVkFMLCBjbGlwcGVkMjAwOWRhdGEpKQpMYW11MjAwOURhdGEKYGBgCgpJbXBvcnQgTGFtdSBDb3VudHkgMjAxMCBNYW5ncm92ZSBEYXRhIAoKYGBge3J9CkxhbXUyMDEwRGF0YSA8LSByZWFkX2NzdigiRGF0YS9MYW11MjAxMERhdGEuY3N2IikKTGFtdTIwMTBEYXRhCmBgYAoKUmVuYW1lIDIwMTAgY29sdW1uIHRvIG1hbmdyb3ZlcyAKCmBgYHtyfQpuYW1lcyhMYW11MjAxMERhdGEpW25hbWVzKExhbXUyMDEwRGF0YSkgPT0gJzIwMTAnXSA8LSAnTWFuZ3JvdmVzJwpMYW11MjAxMERhdGEKYGBgCgpDcmVhdGUgYSAyMDEwIHllYXIgY29sdW1uIAoKYGBge3J9CkxhbXUyMDEwRGF0YSA8LSBjYmluZChMYW11MjAxMERhdGEsIHllYXI9IjIwMTAiKQpMYW11MjAxMERhdGEKYGBgCgpEcm9wIGNvbHVtbnMgUFhMVkFMIGFuZCBjbGlwcGVkMjAxMGRhdGEgYXMgbmVpdGhlciBpcyBuZWVkZWQgCgpgYGB7cn0KTGFtdTIwMTBEYXRhID0gc3Vic2V0KExhbXUyMDEwRGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQyMDEwZGF0YSkpCkxhbXUyMDEwRGF0YQpgYGAKCkltcG9ydCBMYW11IENvdW50eSAyMDE1IE1hbmdyb3ZlIERhdGEgCgpgYGB7cn0KTGFtdTIwMTVEYXRhIDwtIHJlYWRfY3N2KCJEYXRhL0xhbXUyMDE1RGF0YS5jc3YiKQpMYW11MjAxNURhdGEKYGBgCgpSZW5hbWUgMjAxNSBjb2x1bW4gdG8gbWFuZ3JvdmVzIAoKYGBge3J9Cm5hbWVzKExhbXUyMDE1RGF0YSlbbmFtZXMoTGFtdTIwMTVEYXRhKSA9PSAnMjAxNSddIDwtICdNYW5ncm92ZXMnCkxhbXUyMDE1RGF0YQpgYGAKCkNyZWF0ZSBhIDIwMTUgeWVhciBjb2x1bW4gCgpgYGB7cn0KTGFtdTIwMTVEYXRhIDwtIGNiaW5kKExhbXUyMDE1RGF0YSwgeWVhcj0iMjAxNSIpCkxhbXUyMDE1RGF0YQpgYGAKCkRyb3AgY29sdW1ucyBQWExWQUwgYW5kIGNsaXBwZWQyMDE1ZGF0YSBhcyBuZWl0aGVyIGlzIG5lZWRlZCAKCmBgYHtyfQpMYW11MjAxNURhdGEgPSBzdWJzZXQoTGFtdTIwMTVEYXRhLHNlbGVjdCA9IC1jKFBYTFZBTCwgY2xpcHBlZDIwMTVkYXRhKSkKTGFtdTIwMTVEYXRhCmBgYAoKSW1wb3J0IExhbXUgQ291bnR5IDIwMTYgTWFuZ3JvdmUgRGF0YSAKCmBgYHtyfQpMYW11MjAxNkRhdGEgPC0gcmVhZF9jc3YoIkRhdGEvTGFtdTIwMTZEYXRhLmNzdiIpCkxhbXUyMDE2RGF0YQpgYGAKClJlbmFtZSAyMDE2IGNvbHVtbiB0byBtYW5ncm92ZXMgCgpgYGB7cn0KbmFtZXMoTGFtdTIwMTZEYXRhKVtuYW1lcyhMYW11MjAxNkRhdGEpID09ICcyMDE2J10gPC0gJ01hbmdyb3ZlcycKTGFtdTIwMTZEYXRhCmBgYAoKQ3JlYXRlIGEgMjAxNiB5ZWFyIGNvbHVtbiAKCmBgYHtyfQpMYW11MjAxNkRhdGEgPC0gY2JpbmQoTGFtdTIwMTZEYXRhLCB5ZWFyPSIyMDE2IikKTGFtdTIwMTZEYXRhCmBgYAoKRHJvcCBjb2x1bW5zIFBYTFZBTCBhbmQgY2xpcHBlZDIwMTZkYXRhIGFzIG5laXRoZXIgaXMgbmVlZGVkIAoKYGBge3J9CkxhbXUyMDE2RGF0YSA9IHN1YnNldChMYW11MjAxNkRhdGEsc2VsZWN0ID0gLWMoUFhMVkFMLCBjbGlwcGVkMjAxNmRhdGEpKQpMYW11MjAxNkRhdGEKYGBgCgpJbXBvcnQgTGFtdSBDb3VudHkgMjAxNyBNYW5ncm92ZSBEYXRhIAoKYGBge3J9CkxhbXUyMDE3RGF0YSA8LSByZWFkX2NzdigiRGF0YS9MYW11MjAxN0RhdGEuY3N2IikKTGFtdTIwMTdEYXRhCmBgYApSZW5hbWUgMjAxNyBjb2x1bW4gdG8gTWFuZ3JvdmVzIAoKYGBge3J9Cm5hbWVzKExhbXUyMDE3RGF0YSlbbmFtZXMoTGFtdTIwMTdEYXRhKSA9PSAnMjAxNyddIDwtICdNYW5ncm92ZXMnCkxhbXUyMDE3RGF0YQpgYGAKCkNyZWF0ZSBhIDIwMTcgeWVhciBjb2x1bW4gCgpgYGB7cn0KTGFtdTIwMTdEYXRhIDwtIGNiaW5kKExhbXUyMDE3RGF0YSwgeWVhcj0iMjAxNyIpCkxhbXUyMDE3RGF0YQpgYGAKCkRyb3AgY29sdW1ucyBQWExWQUwgYW5kIGNsaXBwZWQyMDE3ZGF0YSBhcyBuZWl0aGVyIGlzIG5lZWRlZCAKCmBgYHtyfQpMYW11MjAxN0RhdGEgPSBzdWJzZXQoTGFtdTIwMTdEYXRhLHNlbGVjdCA9IC1jKFBYTFZBTCwgY2xpcHBlZDIwMTdkYXRhKSkKTGFtdTIwMTdEYXRhCmBgYAoKSW1wb3J0IExhbXUgQ291bnR5IDIwMTggTWFuZ3JvdmUgRGF0YSAKCmBgYHtyfQpMYW11MjAxOERhdGEgPC0gcmVhZF9jc3YoIkRhdGEvTGFtdTIwMThEYXRhLmNzdiIpCkxhbXUyMDE4RGF0YQpgYGAKUmVuYW1lIDIwMTggY29sdW1uIHRvIE1hbmdyb3ZlcyAKCmBgYHtyfQpuYW1lcyhMYW11MjAxOERhdGEpW25hbWVzKExhbXUyMDE4RGF0YSkgPT0gJzIwMTgnXSA8LSAnTWFuZ3JvdmVzJwpMYW11MjAxOERhdGEKYGBgCgpDcmVhdGUgYSAyMDE4IHllYXIgY29sdW1uIAoKYGBge3J9CkxhbXUyMDE4RGF0YSA8LSBjYmluZChMYW11MjAxOERhdGEsIHllYXI9IjIwMTgiKQpMYW11MjAxOERhdGEKYGBgCkRyb3AgUFhMVkFMIGNvbHVtbiBhcyBpdCBpcyBub3QgbmVlZGVkIAoKYGBge3J9CkxhbXUyMDE4RGF0YSA9IHN1YnNldChMYW11MjAxOERhdGEsc2VsZWN0ID0gLWMoUFhMVkFMKSkKTGFtdTIwMThEYXRhCmBgYAoKSW1wb3J0IExhbXUgQ291bnR5IDIwMTkgTWFuZ3JvdmUgRGF0YSAKCmBgYHtyfQpMYW11MjAxOURhdGEgPC0gcmVhZF9jc3YoIkRhdGEvTGFtdTIwMTlEYXRhLmNzdiIpCkxhbXUyMDE5RGF0YQpgYGAKClJlbmFtZSAyMDE5IGNvbHVtbiB0byBNYW5ncm92ZXMgCgpgYGB7cn0KbmFtZXMoTGFtdTIwMTlEYXRhKVtuYW1lcyhMYW11MjAxOURhdGEpID09ICcyMDE5J10gPC0gJ01hbmdyb3ZlcycKTGFtdTIwMTlEYXRhCmBgYApDcmVhdGUgYSAyMDE5IHllYXIgY29sdW1uIAoKYGBge3J9CkxhbXUyMDE5RGF0YSA8LSBjYmluZChMYW11MjAxOURhdGEsIHllYXI9IjIwMTkiKQpMYW11MjAxOURhdGEKYGBgCgpEcm9wIGNvbHVtbnMgUFhMVkFMIGFuZCBjbGlwcGVkMjAxOWRhdGEgYXMgbmVpdGhlciBpcyBuZWVkZWQgCgpgYGB7cn0KTGFtdTIwMTlEYXRhID0gc3Vic2V0KExhbXUyMDE5RGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQyMDE5ZGF0YSkpCkxhbXUyMDE5RGF0YQpgYGAKCkltcG9ydCBMYW11IENvdW50eSAyMDIwIE1hbmdyb3ZlIERhdGEgCgpgYGB7cn0KTGFtdTIwMjBEYXRhIDwtIHJlYWRfY3N2KCJEYXRhL0xhbXUyMDIwRGF0YS5jc3YiKQpMYW11MjAyMERhdGEKYGBgCgpSZW5hbWUgMjAyMCBjb2x1bW4gdG8gTWFuZ3JvdmVzIAoKYGBge3J9Cm5hbWVzKExhbXUyMDIwRGF0YSlbbmFtZXMoTGFtdTIwMjBEYXRhKSA9PSAnMjAyMCddIDwtICdNYW5ncm92ZXMnCkxhbXUyMDIwRGF0YQpgYGAKQ3JlYXRlIGEgMjAyMCB5ZWFyIGNvbHVtbiAKCmBgYHtyfQpMYW11MjAyMERhdGEgPC0gY2JpbmQoTGFtdTIwMjBEYXRhLCB5ZWFyPSIyMDIwIikKTGFtdTIwMjBEYXRhCmBgYApEcm9wIGNvbHVtbnMgUFhMVkFMIGFuZCBjbGlwcGVkMjAyMGRhdGEgYXMgbmVpdGhlciBpcyBuZWVkZWQgCgpgYGB7cn0KTGFtdTIwMjBEYXRhID0gc3Vic2V0KExhbXUyMDIwRGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQyMDIwZGF0YSkpCkxhbXUyMDIwRGF0YQpgYGAKCkNvbWJpbmUgYWxsIExhbXUgQ291bnR5IE1hbmdyb3ZlIERhdGFzZXRzIGJ5IHllYXIgCgpgYGB7cn0KZGYxIDwtIGJpbmRfcm93cyhMYW11MTk5NkRhdGEsIExhbXUyMDA3RGF0YSwgTGFtdTIwMDhEYXRhLCBMYW11MjAwOURhdGEsIExhbXUyMDEwRGF0YSwgTGFtdTIwMTVEYXRhLCBMYW11MjAxNkRhdGEsIExhbXUyMDE3RGF0YSwgTGFtdTIwMThEYXRhLCBMYW11MjAxOURhdGEsIExhbXUyMDIwRGF0YSkKZGYxCmBgYAoKQ2hlY2sgdW5pcXVlIHZhbHVlcyB0byBtYWtlIHN1cmUgZWFjaCB5ZWFyIGhhcyBiZWVuIGluY2x1ZGVkIAoKYGBge3J9CnVuaXF1ZShkZjEkeWVhcikKYGBgCgoKR3JvdXAgbWFuZ3JvdmVzIGJ5IHllYXIKCmBgYHtyfQphZ2dfdGJsIDwtIGRmMSAlPiUgZ3JvdXBfYnkoeWVhcikgJT4lIHN1bW1hcmlzZShUb3RhbF9NYW5ncm92ZXM9c3VtKE1hbmdyb3ZlcyksLmdyb3VwcyA9ICdkcm9wJykKYWdnX3RibApgYGAKCgpDb252ZXJ0IHRvIGEgbmV3IGRhdGFmcmFtZSAKCmBgYHtyfQpkZjIgPC0gYWdnX3RibCAlPiUgYXMuZGF0YS5mcmFtZSgpCmRmMgpgYGAKQ29udmVydCBNYW5ncm92ZSBjb3ZlciB0byBoZWN0YXJlcwoKYGBge3J9CmRmMiRUb3RhbF9NYW5ncm92ZXNfSGVjdGFyZXMgPC0gZGYyJFRvdGFsX01hbmdyb3ZlcyAvIDEwMDAwCmRmMgpgYGAKCkRyb3AgVG90YWxfTWFuZ3JvdmVzIGNvbHVtbnMgYXMgdW5uZXNlc3NhcnkgCgpgYGB7cn0KZGYyID0gc3Vic2V0KGRmMixzZWxlY3QgPSAtYyhUb3RhbF9NYW5ncm92ZXMpKQpkZjIKYGBgCgpEdXBsaWNhdGUgZGF0YXNldCAKCmBgYHtyfQpkZjMgPC0gZGYyCmRmMwpgYGAKCgoKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiQW15IFNoYXcgRGlzc2VydGF0aW9uIENvZGUgU2NyaXB0IgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpMb2FkIHBhY2thZ2VzIAoKYGBge3J9CmxpYnJhcnkoZHBseXIpCmxpYnJhcnkodGlkeXZlcnNlKQpsaWJyYXJ5KGdncGxvdDIpCmxpYnJhcnkocGF0Y2h3b3JrKQpgYGAKCmBgYHtyfQpsaWJyYXJ5KGRhdGEudGFibGUpCmxpYnJhcnkoc2NhbGVzKQpgYGAKClNldHRpbmcgUG90dGluZyBUaGVtZSAKCmBgYHtyfQp0aGVtZV9mYW5jeSA8LSBmdW5jdGlvbigpIHsKICB0aGVtZV9idygpICsKICAgIHRoZW1lKAogICAgICB0ZXh0ID0gZWxlbWVudF90ZXh0KGZhbWlseSA9ICJIZWx2ZXRpY2EiKSwKICAgICAgYXhpcy50ZXh0ID0gZWxlbWVudF90ZXh0KHNpemUgPSA4LCBjb2xvciA9ICJibGFjayIpLAogICAgICBheGlzLnRpdGxlID0gZWxlbWVudF90ZXh0KHNpemUgPSAxMCwgY29sb3IgPSAiYmxhY2siKSwKICAgICAgYXhpcy5saW5lLnggPSBlbGVtZW50X2xpbmUoc2l6ZSA9IDAuMywgY29sb3IgPSAiYmxhY2siKSwKICAgICAgYXhpcy5saW5lLnkgPSBlbGVtZW50X2xpbmUoc2l6ZSA9IDAuMywgY29sb3IgPSAiYmxhY2siKSwKICAgICAgYXhpcy50aWNrcyA9IGVsZW1lbnRfbGluZShzaXplID0gMC4zLCBjb2xvciA9ICJibGFjayIpLAogICAgICBwYW5lbC5ib3JkZXIgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgIHBhbmVsLmdyaWQubWFqb3IueCA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgcGFuZWwuZ3JpZC5taW5vci54ID0gZWxlbWVudF9ibGFuaygpLAogICAgICBwYW5lbC5ncmlkLm1pbm9yLnkgPSBlbGVtZW50X2JsYW5rKCksCiAgICAgIHBhbmVsLmdyaWQubWFqb3IueSA9IGVsZW1lbnRfYmxhbmsoKSwKICAgICAgcGxvdC5tYXJnaW4gPSB1bml0KGMoMC41LCAwLjUsIDAuNSwgMC41KSwgdW5pdHMgPSAsICJjbSIpLAogICAgICBwbG90LnRpdGxlID0gZWxlbWVudF90ZXh0KAogICAgICAgIHNpemUgPSAxMCwKICAgICAgICB2anVzdCA9IDEsCiAgICAgICAgaGp1c3QgPSAwLjUsCiAgICAgICAgY29sb3IgPSAiYmxhY2siCiAgICAgICksCiAgICAgIGxlZ2VuZC50ZXh0ID0gZWxlbWVudF90ZXh0KHNpemUgPSA5LCBjb2xvciA9ICJibGFjayIpLAogICAgICBsZWdlbmQudGl0bGUgPSBlbGVtZW50X3RleHQoc2l6ZSA9IDksIGNvbG9yID0gImJsYWNrIiksCiAgICAgIGxlZ2VuZC5wb3NpdGlvbiA9IGMoMC45LCAwLjkpLAogICAgICBsZWdlbmQua2V5LnNpemUgPSB1bml0KDAuNywgImxpbmUiKSwKICAgICAgbGVnZW5kLmJhY2tncm91bmQgPSBlbGVtZW50X3JlY3QoCiAgICAgICAgY29sb3IgPSAiYmxhY2siLAogICAgICAgIGZpbGwgPSAidHJhbnNwYXJlbnQiLAogICAgICAgIHNpemUgPSAyLAogICAgICAgIGxpbmV0eXBlID0gImJsYW5rIgogICAgICApCiAgICApCn0KYGBgCgpJbXBvcnQgYWxsIExhbXUgQ291bnR5IG1hbmdyb3ZlIGNvdmVyIGRhdGEgc2V0cyAKCkltcG9ydCBMYW11IENvdW50eSAxOTk2IE1hbmdyb3ZlIERhdGEgCgpgYGB7cn0KTGFtdTE5OTZEYXRhIDwtIHJlYWRfY3N2KCJEYXRhL0xhbXUxOTk2RGF0YS5jc3YiKQpMYW11MTk5NkRhdGEKYGBgClJlbmFtZSAxOTk2IGNvbHVtbiB0byBtYW5ncm92ZXMgCgpgYGB7cn0KbmFtZXMoTGFtdTE5OTZEYXRhKVtuYW1lcyhMYW11MTk5NkRhdGEpID09ICcxOTk2J10gPC0gJ01hbmdyb3ZlcycKTGFtdTE5OTZEYXRhCmBgYApDcmVhdGUgYSAxOTk2IHllYXIgY29sdW1uIAoKYGBge3J9CkxhbXUxOTk2RGF0YSA8LSBjYmluZChMYW11MTk5NkRhdGEsIHllYXI9IjE5OTYiKQpMYW11MTk5NkRhdGEKYGBgCkRyb3AgY29sdW1ucyBQWExWQUwgYW5kIGNsaXBwZWQxOTk2ZGF0YSBhcyBuZWl0aGVyIGlzIG5lZWRlZCAKCmBgYHtyfQpMYW11MTk5NkRhdGEgPSBzdWJzZXQoTGFtdTE5OTZEYXRhLHNlbGVjdCA9IC1jKFBYTFZBTCwgY2xpcHBlZDE5OTZkYXRhKSkKTGFtdTE5OTZEYXRhCmBgYApJbXBvcnQgTGFtdSBDb3VudHkgMjAwNyBNYW5ncm92ZSBEYXRhIAoKYGBge3J9CkxhbXUyMDA3RGF0YSA8LSByZWFkX2NzdigiRGF0YS9MYW11MjAwN0RhdGEuY3N2IikKTGFtdTIwMDdEYXRhCmBgYApSZW5hbWUgMjAwNyB5ZWFyIHRvIG1hbmdyb3ZlcyAKCmBgYHtyfQpuYW1lcyhMYW11MjAwN0RhdGEpW25hbWVzKExhbXUyMDA3RGF0YSkgPT0gJzIwMDcnXSA8LSAnTWFuZ3JvdmVzJwpMYW11MjAwN0RhdGEKYGBgCgpDcmVhdGUgYSAyMDA3IHllYXIgY29sdW1uIAoKYGBge3J9CkxhbXUyMDA3RGF0YSA8LSBjYmluZChMYW11MjAwN0RhdGEsIHllYXI9IjIwMDciKQpMYW11MjAwN0RhdGEKYGBgCgpEcm9wIGNvbHVtbnMgUFhMVkFMIGFuZCBjbGlwcGVkMjAwN2RhdGEgYXMgbmVpdGhlciBpcyBuZWVkZWQgCgpgYGB7cn0KTGFtdTIwMDdEYXRhID0gc3Vic2V0KExhbXUyMDA3RGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQyMDA3ZGF0YSkpCkxhbXUyMDA3RGF0YQpgYGAKSW1wb3J0IExhbXUgQ291bnR5IDIwMDggTWFuZ3JvdmUgRGF0YSAKCmBgYHtyfQpMYW11MjAwOERhdGEgPC0gcmVhZF9jc3YoIkRhdGEvTGFtdTIwMDhEYXRhLmNzdiIpCkxhbXUyMDA4RGF0YQpgYGAKClJlbmFtZSAyMDA4IGNvbHVtbiB0byBtYW5ncm92ZXMgCgpgYGB7cn0KbmFtZXMoTGFtdTIwMDhEYXRhKVtuYW1lcyhMYW11MjAwOERhdGEpID09ICcyMDA4J10gPC0gJ01hbmdyb3ZlcycKTGFtdTIwMDhEYXRhCmBgYApDcmVhdGUgYSAyMDA4IHllYXIgY29sdW1uIAoKYGBge3J9CkxhbXUyMDA4RGF0YSA8LSBjYmluZChMYW11MjAwOERhdGEsIHllYXI9IjIwMDgiKQpMYW11MjAwOERhdGEKYGBgCgpEcm9wIGNvbHVtbnMgUFhMVkFMIGFuZCBjbGlwcGVkMjAwOGRhdGEgYXMgbmVpdGhlciBpcyBuZWVkZWQgCgpgYGB7cn0KTGFtdTIwMDhEYXRhID0gc3Vic2V0KExhbXUyMDA4RGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQyMDA4ZGF0YSkpCkxhbXUyMDA4RGF0YQpgYGAKCkltcG9ydCBMYW11IENvdW50eSAyMDA5IE1hbmdyb3ZlIERhdGEgCgpgYGB7cn0KTGFtdTIwMDlEYXRhIDwtIHJlYWRfY3N2KCJEYXRhL0xhbXUyMDA5RGF0YS5jc3YiKQpMYW11MjAwOURhdGEKYGBgClJlbmFtZSAyMDA5IGNvbHVtbiB0byBtYW5ncm92ZXMgCgpgYGB7cn0KbmFtZXMoTGFtdTIwMDlEYXRhKVtuYW1lcyhMYW11MjAwOURhdGEpID09ICcyMDA5J10gPC0gJ01hbmdyb3ZlcycKTGFtdTIwMDlEYXRhCmBgYAoKQ3JlYXRlIGEgMjAwOSB5ZWFyIGNvbHVtbiAKCmBgYHtyfQpMYW11MjAwOURhdGEgPC0gY2JpbmQoTGFtdTIwMDlEYXRhLCB5ZWFyPSIyMDA5IikKTGFtdTIwMDlEYXRhCmBgYAoKRHJvcCBjb2x1bW5zIFBYTFZBTCBhbmQgY2xpcHBlZDIwMDlkYXRhIGFzIG5laXRoZXIgaXMgbmVlZGVkIAoKYGBge3J9CkxhbXUyMDA5RGF0YSA9IHN1YnNldChMYW11MjAwOURhdGEsc2VsZWN0ID0gLWMoUFhMVkFMLCBjbGlwcGVkMjAwOWRhdGEpKQpMYW11MjAwOURhdGEKYGBgCgpJbXBvcnQgTGFtdSBDb3VudHkgMjAxMCBNYW5ncm92ZSBEYXRhIAoKYGBge3J9CkxhbXUyMDEwRGF0YSA8LSByZWFkX2NzdigiRGF0YS9MYW11MjAxMERhdGEuY3N2IikKTGFtdTIwMTBEYXRhCmBgYAoKUmVuYW1lIDIwMTAgY29sdW1uIHRvIG1hbmdyb3ZlcyAKCmBgYHtyfQpuYW1lcyhMYW11MjAxMERhdGEpW25hbWVzKExhbXUyMDEwRGF0YSkgPT0gJzIwMTAnXSA8LSAnTWFuZ3JvdmVzJwpMYW11MjAxMERhdGEKYGBgCgpDcmVhdGUgYSAyMDEwIHllYXIgY29sdW1uIAoKYGBge3J9CkxhbXUyMDEwRGF0YSA8LSBjYmluZChMYW11MjAxMERhdGEsIHllYXI9IjIwMTAiKQpMYW11MjAxMERhdGEKYGBgCgpEcm9wIGNvbHVtbnMgUFhMVkFMIGFuZCBjbGlwcGVkMjAxMGRhdGEgYXMgbmVpdGhlciBpcyBuZWVkZWQgCgpgYGB7cn0KTGFtdTIwMTBEYXRhID0gc3Vic2V0KExhbXUyMDEwRGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQyMDEwZGF0YSkpCkxhbXUyMDEwRGF0YQpgYGAKCkltcG9ydCBMYW11IENvdW50eSAyMDE1IE1hbmdyb3ZlIERhdGEgCgpgYGB7cn0KTGFtdTIwMTVEYXRhIDwtIHJlYWRfY3N2KCJEYXRhL0xhbXUyMDE1RGF0YS5jc3YiKQpMYW11MjAxNURhdGEKYGBgCgpSZW5hbWUgMjAxNSBjb2x1bW4gdG8gbWFuZ3JvdmVzIAoKYGBge3J9Cm5hbWVzKExhbXUyMDE1RGF0YSlbbmFtZXMoTGFtdTIwMTVEYXRhKSA9PSAnMjAxNSddIDwtICdNYW5ncm92ZXMnCkxhbXUyMDE1RGF0YQpgYGAKCkNyZWF0ZSBhIDIwMTUgeWVhciBjb2x1bW4gCgpgYGB7cn0KTGFtdTIwMTVEYXRhIDwtIGNiaW5kKExhbXUyMDE1RGF0YSwgeWVhcj0iMjAxNSIpCkxhbXUyMDE1RGF0YQpgYGAKCkRyb3AgY29sdW1ucyBQWExWQUwgYW5kIGNsaXBwZWQyMDE1ZGF0YSBhcyBuZWl0aGVyIGlzIG5lZWRlZCAKCmBgYHtyfQpMYW11MjAxNURhdGEgPSBzdWJzZXQoTGFtdTIwMTVEYXRhLHNlbGVjdCA9IC1jKFBYTFZBTCwgY2xpcHBlZDIwMTVkYXRhKSkKTGFtdTIwMTVEYXRhCmBgYAoKSW1wb3J0IExhbXUgQ291bnR5IDIwMTYgTWFuZ3JvdmUgRGF0YSAKCmBgYHtyfQpMYW11MjAxNkRhdGEgPC0gcmVhZF9jc3YoIkRhdGEvTGFtdTIwMTZEYXRhLmNzdiIpCkxhbXUyMDE2RGF0YQpgYGAKClJlbmFtZSAyMDE2IGNvbHVtbiB0byBtYW5ncm92ZXMgCgpgYGB7cn0KbmFtZXMoTGFtdTIwMTZEYXRhKVtuYW1lcyhMYW11MjAxNkRhdGEpID09ICcyMDE2J10gPC0gJ01hbmdyb3ZlcycKTGFtdTIwMTZEYXRhCmBgYAoKQ3JlYXRlIGEgMjAxNiB5ZWFyIGNvbHVtbiAKCmBgYHtyfQpMYW11MjAxNkRhdGEgPC0gY2JpbmQoTGFtdTIwMTZEYXRhLCB5ZWFyPSIyMDE2IikKTGFtdTIwMTZEYXRhCmBgYAoKRHJvcCBjb2x1bW5zIFBYTFZBTCBhbmQgY2xpcHBlZDIwMTZkYXRhIGFzIG5laXRoZXIgaXMgbmVlZGVkIAoKYGBge3J9CkxhbXUyMDE2RGF0YSA9IHN1YnNldChMYW11MjAxNkRhdGEsc2VsZWN0ID0gLWMoUFhMVkFMLCBjbGlwcGVkMjAxNmRhdGEpKQpMYW11MjAxNkRhdGEKYGBgCgpJbXBvcnQgTGFtdSBDb3VudHkgMjAxNyBNYW5ncm92ZSBEYXRhIAoKYGBge3J9CkxhbXUyMDE3RGF0YSA8LSByZWFkX2NzdigiRGF0YS9MYW11MjAxN0RhdGEuY3N2IikKTGFtdTIwMTdEYXRhCmBgYApSZW5hbWUgMjAxNyBjb2x1bW4gdG8gTWFuZ3JvdmVzIAoKYGBge3J9Cm5hbWVzKExhbXUyMDE3RGF0YSlbbmFtZXMoTGFtdTIwMTdEYXRhKSA9PSAnMjAxNyddIDwtICdNYW5ncm92ZXMnCkxhbXUyMDE3RGF0YQpgYGAKCkNyZWF0ZSBhIDIwMTcgeWVhciBjb2x1bW4gCgpgYGB7cn0KTGFtdTIwMTdEYXRhIDwtIGNiaW5kKExhbXUyMDE3RGF0YSwgeWVhcj0iMjAxNyIpCkxhbXUyMDE3RGF0YQpgYGAKCkRyb3AgY29sdW1ucyBQWExWQUwgYW5kIGNsaXBwZWQyMDE3ZGF0YSBhcyBuZWl0aGVyIGlzIG5lZWRlZCAKCmBgYHtyfQpMYW11MjAxN0RhdGEgPSBzdWJzZXQoTGFtdTIwMTdEYXRhLHNlbGVjdCA9IC1jKFBYTFZBTCwgY2xpcHBlZDIwMTdkYXRhKSkKTGFtdTIwMTdEYXRhCmBgYAoKSW1wb3J0IExhbXUgQ291bnR5IDIwMTggTWFuZ3JvdmUgRGF0YSAKCmBgYHtyfQpMYW11MjAxOERhdGEgPC0gcmVhZF9jc3YoIkRhdGEvTGFtdTIwMThEYXRhLmNzdiIpCkxhbXUyMDE4RGF0YQpgYGAKUmVuYW1lIDIwMTggY29sdW1uIHRvIE1hbmdyb3ZlcyAKCmBgYHtyfQpuYW1lcyhMYW11MjAxOERhdGEpW25hbWVzKExhbXUyMDE4RGF0YSkgPT0gJzIwMTgnXSA8LSAnTWFuZ3JvdmVzJwpMYW11MjAxOERhdGEKYGBgCgpDcmVhdGUgYSAyMDE4IHllYXIgY29sdW1uIAoKYGBge3J9CkxhbXUyMDE4RGF0YSA8LSBjYmluZChMYW11MjAxOERhdGEsIHllYXI9IjIwMTgiKQpMYW11MjAxOERhdGEKYGBgCkRyb3AgUFhMVkFMIGNvbHVtbiBhcyBpdCBpcyBub3QgbmVlZGVkIAoKYGBge3J9CkxhbXUyMDE4RGF0YSA9IHN1YnNldChMYW11MjAxOERhdGEsc2VsZWN0ID0gLWMoUFhMVkFMKSkKTGFtdTIwMThEYXRhCmBgYAoKSW1wb3J0IExhbXUgQ291bnR5IDIwMTkgTWFuZ3JvdmUgRGF0YSAKCmBgYHtyfQpMYW11MjAxOURhdGEgPC0gcmVhZF9jc3YoIkRhdGEvTGFtdTIwMTlEYXRhLmNzdiIpCkxhbXUyMDE5RGF0YQpgYGAKClJlbmFtZSAyMDE5IGNvbHVtbiB0byBNYW5ncm92ZXMgCgpgYGB7cn0KbmFtZXMoTGFtdTIwMTlEYXRhKVtuYW1lcyhMYW11MjAxOURhdGEpID09ICcyMDE5J10gPC0gJ01hbmdyb3ZlcycKTGFtdTIwMTlEYXRhCmBgYApDcmVhdGUgYSAyMDE5IHllYXIgY29sdW1uIAoKYGBge3J9CkxhbXUyMDE5RGF0YSA8LSBjYmluZChMYW11MjAxOURhdGEsIHllYXI9IjIwMTkiKQpMYW11MjAxOURhdGEKYGBgCgpEcm9wIGNvbHVtbnMgUFhMVkFMIGFuZCBjbGlwcGVkMjAxOWRhdGEgYXMgbmVpdGhlciBpcyBuZWVkZWQgCgpgYGB7cn0KTGFtdTIwMTlEYXRhID0gc3Vic2V0KExhbXUyMDE5RGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQyMDE5ZGF0YSkpCkxhbXUyMDE5RGF0YQpgYGAKCkltcG9ydCBMYW11IENvdW50eSAyMDIwIE1hbmdyb3ZlIERhdGEgCgpgYGB7cn0KTGFtdTIwMjBEYXRhIDwtIHJlYWRfY3N2KCJEYXRhL0xhbXUyMDIwRGF0YS5jc3YiKQpMYW11MjAyMERhdGEKYGBgCgpSZW5hbWUgMjAyMCBjb2x1bW4gdG8gTWFuZ3JvdmVzIAoKYGBge3J9Cm5hbWVzKExhbXUyMDIwRGF0YSlbbmFtZXMoTGFtdTIwMjBEYXRhKSA9PSAnMjAyMCddIDwtICdNYW5ncm92ZXMnCkxhbXUyMDIwRGF0YQpgYGAKQ3JlYXRlIGEgMjAyMCB5ZWFyIGNvbHVtbiAKCmBgYHtyfQpMYW11MjAyMERhdGEgPC0gY2JpbmQoTGFtdTIwMjBEYXRhLCB5ZWFyPSIyMDIwIikKTGFtdTIwMjBEYXRhCmBgYApEcm9wIGNvbHVtbnMgUFhMVkFMIGFuZCBjbGlwcGVkMjAyMGRhdGEgYXMgbmVpdGhlciBpcyBuZWVkZWQgCgpgYGB7cn0KTGFtdTIwMjBEYXRhID0gc3Vic2V0KExhbXUyMDIwRGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQyMDIwZGF0YSkpCkxhbXUyMDIwRGF0YQpgYGAKCkNvbWJpbmUgYWxsIExhbXUgQ291bnR5IE1hbmdyb3ZlIERhdGFzZXRzIGJ5IHllYXIgCgpgYGB7cn0KZGYxIDwtIGJpbmRfcm93cyhMYW11MTk5NkRhdGEsIExhbXUyMDA3RGF0YSwgTGFtdTIwMDhEYXRhLCBMYW11MjAwOURhdGEsIExhbXUyMDEwRGF0YSwgTGFtdTIwMTVEYXRhLCBMYW11MjAxNkRhdGEsIExhbXUyMDE3RGF0YSwgTGFtdTIwMThEYXRhLCBMYW11MjAxOURhdGEsIExhbXUyMDIwRGF0YSkKZGYxCmBgYAoKQ2hlY2sgdW5pcXVlIHZhbHVlcyB0byBtYWtlIHN1cmUgZWFjaCB5ZWFyIGhhcyBiZWVuIGluY2x1ZGVkIAoKYGBge3J9CnVuaXF1ZShkZjEkeWVhcikKYGBgCgoKR3JvdXAgbWFuZ3JvdmVzIGJ5IHllYXIKCmBgYHtyfQphZ2dfdGJsIDwtIGRmMSAlPiUgZ3JvdXBfYnkoeWVhcikgJT4lIHN1bW1hcmlzZShUb3RhbF9NYW5ncm92ZXM9c3VtKE1hbmdyb3ZlcyksLmdyb3VwcyA9ICdkcm9wJykKYWdnX3RibApgYGAKCgpDb252ZXJ0IHRvIGEgbmV3IGRhdGFmcmFtZSAKCmBgYHtyfQpkZjIgPC0gYWdnX3RibCAlPiUgYXMuZGF0YS5mcmFtZSgpCmRmMgpgYGAKQ29udmVydCBNYW5ncm92ZSBjb3ZlciB0byBoZWN0YXJlcwoKYGBge3J9CmRmMiRUb3RhbF9NYW5ncm92ZXNfSGVjdGFyZXMgPC0gZGYyJFRvdGFsX01hbmdyb3ZlcyAvIDEwMDAwCmRmMgpgYGAKCkRyb3AgVG90YWxfTWFuZ3JvdmVzIGNvbHVtbnMgYXMgdW5uZXNlc3NhcnkgCgpgYGB7cn0KZGYyID0gc3Vic2V0KGRmMixzZWxlY3QgPSAtYyhUb3RhbF9NYW5ncm92ZXMpKQpkZjIKYGBgCgpEdXBsaWNhdGUgZGF0YXNldCAKCmBgYHtyfQpkZjMgPC0gZGYyCmRmMwpgYGAKCkltcG9ydCBhbGwgTWFuZGEgSXNsYW5kIENvbnNlcnZhbmN5IFByb2plY3QgKE1JQ1ApIG1hbmdyb3ZlIGNvdmVyIGRhdGEgc2V0cyAKCkltcG9ydCBNSUNQIDE5OTYgTWFuZ3JvdmUgRGF0YSAKCmBgYHtyfQpNSUNQMTk5NkRhdGEgPC0gcmVhZF9jc3YoIkRhdGEvTUlDUDE5OTZEYXRhLmNzdiIpCk1JQ1AxOTk2RGF0YQpgYGAKUmVuYW1lIDE5OTYgY29sdW1uIHRvIG1hbmdyb3ZlcyAKCmBgYHtyfQpuYW1lcyhNSUNQMTk5NkRhdGEpW25hbWVzKE1JQ1AxOTk2RGF0YSkgPT0gJzE5OTZhcmVhJ10gPC0gJ01hbmdyb3ZlcycKTUlDUDE5OTZEYXRhCmBgYAoKQ3JlYXRlIGEgMTk5NiB5ZWFyIGNvbHVtbiAKCmBgYHtyfQpNSUNQMTk5NkRhdGEgPC0gY2JpbmQoTUlDUDE5OTZEYXRhLCB5ZWFyPSIxOTk2IikKTUlDUDE5OTZEYXRhCmBgYAoKRHJvcCBjb2x1bW5zIFBYTFZBTCBhbmQgY2xpcHBlZDE5OTZkYXRhIGFzIG5laXRoZXIgaXMgbmVlZGVkIAoKYGBge3J9Ck1JQ1AxOTk2RGF0YSA9IHN1YnNldChNSUNQMTk5NkRhdGEsc2VsZWN0ID0gLWMoUFhMVkFMLCBjbGlwcGVkMTk5NmRhdGEpKQpNSUNQMTk5NkRhdGEKYGBgCgpJbXBvcnQgTUlDUCAyMDA3IE1hbmdyb3ZlIERhdGEgCgpgYGB7cn0KTUlDUDIwMDdEYXRhIDwtIHJlYWRfY3N2KCJEYXRhL01JQ1AyMDA3RGF0YS5jc3YiKQpNSUNQMjAwN0RhdGEKYGBgCgpSZW5hbWUgMjAwNyBjb2x1bW4gdG8gbWFuZ3JvdmVzIAoKYGBge3J9Cm5hbWVzKE1JQ1AyMDA3RGF0YSlbbmFtZXMoTUlDUDIwMDdEYXRhKSA9PSAnMjAwNyddIDwtICdNYW5ncm92ZXMnCk1JQ1AyMDA3RGF0YQpgYGAKCkNyZWF0ZSBhIDIwMDcgeWVhciBjb2x1bW4gCgpgYGB7cn0KTUlDUDIwMDdEYXRhIDwtIGNiaW5kKE1JQ1AyMDA3RGF0YSwgeWVhcj0iMjAwNyIpCk1JQ1AyMDA3RGF0YQpgYGAKCkRyb3AgY29sdW1ucyBQWExWQUwgYW5kIGNsaXBwZWQyMDA3ZGF0YSBhcyBuZWl0aGVyIGlzIG5lZWRlZCAKCmBgYHtyfQpNSUNQMjAwN0RhdGEgPSBzdWJzZXQoTUlDUDIwMDdEYXRhLHNlbGVjdCA9IC1jKFBYTFZBTCwgY2xpcHBlZDIwMDdkYXRhKSkKTUlDUDIwMDdEYXRhCmBgYAoKSW1wb3J0IE1JQ1AgMjAwOCBNYW5ncm92ZSBEYXRhIAoKYGBge3J9Ck1JQ1AyMDA4RGF0YSA8LSByZWFkX2NzdigiRGF0YS9NSUNQMjAwOERhdGEuY3N2IikKTUlDUDIwMDhEYXRhCmBgYAoKUmVuYW1lIDIwMDggY29sdW1uIHRvIG1hbmdyb3ZlcyAKCmBgYHtyfQpuYW1lcyhNSUNQMjAwOERhdGEpW25hbWVzKE1JQ1AyMDA4RGF0YSkgPT0gJzIwMDgnXSA8LSAnTWFuZ3JvdmVzJwpNSUNQMjAwOERhdGEKYGBgCgpDcmVhdGUgYSAyMDA4IHllYXIgY29sdW1uIAoKYGBge3J9Ck1JQ1AyMDA4RGF0YSA8LSBjYmluZChNSUNQMjAwOERhdGEsIHllYXI9IjIwMDgiKQpNSUNQMjAwOERhdGEKYGBgCgpEcm9wIGNvbHVtbnMgUFhMVkFMIGFuZCBjbGlwcGVkMjAwOGRhdGEgYXMgbmVpdGhlciBpcyBuZWVkZWQgCgpgYGB7cn0KTUlDUDIwMDhEYXRhID0gc3Vic2V0KE1JQ1AyMDA4RGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQyMDA4ZGF0YSkpCk1JQ1AyMDA4RGF0YQpgYGAKCkltcG9ydCBNSUNQIDIwMDkgTWFuZ3JvdmUgRGF0YSAKCmBgYHtyfQpNSUNQMjAwOURhdGEgPC0gcmVhZF9jc3YoIkRhdGEvTUlDUDIwMDlEYXRhLmNzdiIpCk1JQ1AyMDA5RGF0YQpgYGAKClJlbmFtZSAyMDA5IGNvbHVtbiB0byBtYW5ncm92ZXMgCgpgYGB7cn0KbmFtZXMoTUlDUDIwMDlEYXRhKVtuYW1lcyhNSUNQMjAwOURhdGEpID09ICcyMDA5J10gPC0gJ01hbmdyb3ZlcycKTUlDUDIwMDlEYXRhCmBgYAoKQ3JlYXRlIGEgMjAwOSB5ZWFyIGNvbHVtbiAKCmBgYHtyfQpNSUNQMjAwOURhdGEgPC0gY2JpbmQoTUlDUDIwMDlEYXRhLCB5ZWFyPSIyMDA5IikKTUlDUDIwMDlEYXRhCmBgYAoKRHJvcCBjb2x1bW5zIFBYTFZBTCBhbmQgY2xpcHBlZDIwMDlkYXRhIGFzIG5laXRoZXIgaXMgbmVlZGVkIAoKYGBge3J9Ck1JQ1AyMDA5RGF0YSA9IHN1YnNldChNSUNQMjAwOURhdGEsc2VsZWN0ID0gLWMoUFhMVkFMLCBjbGlwcGVkMjAwOWRhdGEpKQpNSUNQMjAwOURhdGEKYGBgCgpJbXBvcnQgTUlDUCAyMDEwIE1hbmdyb3ZlIERhdGEgCgpgYGB7cn0KTUlDUDIwMTBEYXRhIDwtIHJlYWRfY3N2KCJEYXRhL01JQ1AyMDEwRGF0YS5jc3YiKQpNSUNQMjAxMERhdGEKYGBgCgpSZW5hbWUgMjAxMCBjb2x1bW4gdG8gbWFuZ3JvdmVzIAoKYGBge3J9Cm5hbWVzKE1JQ1AyMDEwRGF0YSlbbmFtZXMoTUlDUDIwMTBEYXRhKSA9PSAnMjAxMCddIDwtICdNYW5ncm92ZXMnCk1JQ1AyMDEwRGF0YQpgYGAKQ3JlYXRlIGEgMjAxMCB5ZWFyIGNvbHVtbiAKCmBgYHtyfQpNSUNQMjAxMERhdGEgPC0gY2JpbmQoTUlDUDIwMTBEYXRhLCB5ZWFyPSIyMDEwIikKTUlDUDIwMTBEYXRhCmBgYApEcm9wIGNvbHVtbnMgUFhMVkFMIGFuZCBjbGlwcGVkMjAxMGRhdGEgYXMgbmVpdGhlciBpcyBuZWVkZWQgCgpgYGB7cn0KTUlDUDIwMTBEYXRhID0gc3Vic2V0KE1JQ1AyMDEwRGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQyMDEwZGF0YSkpCk1JQ1AyMDEwRGF0YQpgYGAKCkltcG9ydCBNSUNQIDIwMTUgTWFuZ3JvdmUgRGF0YSAKCmBgYHtyfQpNSUNQMjAxNURhdGEgPC0gcmVhZF9jc3YoIkRhdGEvTUlDUDIwMTVEYXRhLmNzdiIpCk1JQ1AyMDE1RGF0YQpgYGAKClJlbmFtZSAyMDE1IGNvbHVtbiB0byBtYW5ncm92ZXMgCgpgYGB7cn0KbmFtZXMoTUlDUDIwMTVEYXRhKVtuYW1lcyhNSUNQMjAxNURhdGEpID09ICcyMDE1J10gPC0gJ01hbmdyb3ZlcycKTUlDUDIwMTVEYXRhCmBgYAoKQ3JlYXRlIGEgMjAxNSB5ZWFyIGNvbHVtbiAKCmBgYHtyfQpNSUNQMjAxNURhdGEgPC0gY2JpbmQoTUlDUDIwMTVEYXRhLCB5ZWFyPSIyMDE1IikKTUlDUDIwMTVEYXRhCmBgYAoKRHJvcCBjb2x1bW5zIFBYTFZBTCBhbmQgY2xpcHBlZDIwMTVkYXRhIGFzIG5laXRoZXIgaXMgbmVlZGVkIAoKYGBge3J9Ck1JQ1AyMDE1RGF0YSA9IHN1YnNldChNSUNQMjAxNURhdGEsc2VsZWN0ID0gLWMoUFhMVkFMLCBjbGlwcGVkMjAxNWRhdGEpKQpNSUNQMjAxNURhdGEKYGBgCgpJbXBvcnQgTUlDUCAyMDE2IE1hbmdyb3ZlIERhdGEgCgpgYGB7cn0KTUlDUDIwMTZEYXRhIDwtIHJlYWRfY3N2KCJEYXRhL01JQ1AyMDE2RGF0YS5jc3YiKQpNSUNQMjAxNkRhdGEKYGBgCgpSZW5hbWUgMjAxNiBjb2x1bW4gdG8gbWFuZ3JvdmVzIAoKYGBge3J9Cm5hbWVzKE1JQ1AyMDE2RGF0YSlbbmFtZXMoTUlDUDIwMTZEYXRhKSA9PSAnMjAxNiddIDwtICdNYW5ncm92ZXMnCk1JQ1AyMDE2RGF0YQpgYGAKCkNyZWF0ZSBhIDIwMTYgeWVhciBjb2x1bW4gCgpgYGB7cn0KTUlDUDIwMTZEYXRhIDwtIGNiaW5kKE1JQ1AyMDE2RGF0YSwgeWVhcj0iMjAxNiIpCk1JQ1AyMDE2RGF0YQpgYGAKCkRyb3AgY29sdW1ucyBQWExWQUwgYW5kIGNsaXBwZWQyMDE2ZGF0YSBhcyBuZWl0aGVyIGlzIG5lZWRlZCAKCmBgYHtyfQpNSUNQMjAxNkRhdGEgPSBzdWJzZXQoTUlDUDIwMTZEYXRhLHNlbGVjdCA9IC1jKFBYTFZBTCwgY2xpcHBlZDIwMTZkYXRhKSkKTUlDUDIwMTZEYXRhCmBgYAoKSW1wb3J0IE1JQ1AgMjAxNyBNYW5ncm92ZSBEYXRhIAoKYGBge3J9Ck1JQ1AyMDE3RGF0YSA8LSByZWFkX2NzdigiRGF0YS9NSUNQMjAxN0RhdGEuY3N2IikKTUlDUDIwMTdEYXRhCmBgYAoKUmVuYW1lIDIwMTcgY29sdW1uIHRvIG1hbmdyb3ZlcyAKCmBgYHtyfQpuYW1lcyhNSUNQMjAxN0RhdGEpW25hbWVzKE1JQ1AyMDE3RGF0YSkgPT0gJzIwMTcnXSA8LSAnTWFuZ3JvdmVzJwpNSUNQMjAxN0RhdGEKYGBgCgpDcmVhdGUgYSAyMDE3IHllYXIgY29sdW1uIAoKYGBge3J9Ck1JQ1AyMDE3RGF0YSA8LSBjYmluZChNSUNQMjAxN0RhdGEsIHllYXI9IjIwMTciKQpNSUNQMjAxN0RhdGEKYGBgCgpEcm9wIGNvbHVtbnMgUFhMVkFMIGFuZCBjbGlwcGVkMjAxN2RhdGEgYXMgbmVpdGhlciBpcyBuZWVkZWQgCgpgYGB7cn0KTUlDUDIwMTdEYXRhID0gc3Vic2V0KE1JQ1AyMDE3RGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQyMDE3ZGF0YSkpCk1JQ1AyMDE3RGF0YQpgYGAKCkltcG9ydCBNSUNQIDIwMTggTWFuZ3JvdmUgRGF0YSAKCmBgYHtyfQpNSUNQMjAxOERhdGEgPC0gcmVhZF9jc3YoIkRhdGEvTUlDUDIwMThEYXRhLmNzdiIpCk1JQ1AyMDE4RGF0YQpgYGAKClJlbmFtZSAyMDE4IGNvbHVtbiB0byBtYW5ncm92ZXMgCgpgYGB7cn0KbmFtZXMoTUlDUDIwMThEYXRhKVtuYW1lcyhNSUNQMjAxOERhdGEpID09ICcyMDE4YXJlYSddIDwtICdNYW5ncm92ZXMnCk1JQ1AyMDE4RGF0YQpgYGAKQ3JlYXRlIGEgMjAxOCB5ZWFyIGNvbHVtbiAKCmBgYHtyfQpNSUNQMjAxOERhdGEgPC0gY2JpbmQoTUlDUDIwMThEYXRhLCB5ZWFyPSIyMDE4IikKTUlDUDIwMThEYXRhCmBgYAoKRHJvcCBQWExWQUwgY29sdW1uIGFzIGl0IGlzIG5vdCBuZWVkZWQgCgpgYGB7cn0KTUlDUDIwMThEYXRhID0gc3Vic2V0KE1JQ1AyMDE4RGF0YSxzZWxlY3QgPSAtYyhQWExWQUwpKQpNSUNQMjAxOERhdGEKYGBgCgpJbXBvcnQgTUlDUCAyMDE5IE1hbmdyb3ZlIERhdGEgCgpgYGB7cn0KTUlDUDIwMTlEYXRhIDwtIHJlYWRfY3N2KCJEYXRhL01JQ1AyMDE5RGF0YS5jc3YiKQpNSUNQMjAxOURhdGEKYGBgCgpSZW5hbWUgMjAxOSBjb2x1bW4gdG8gbWFuZ3JvdmVzIAoKYGBge3J9Cm5hbWVzKE1JQ1AyMDE5RGF0YSlbbmFtZXMoTUlDUDIwMTlEYXRhKSA9PSAnMjAxOSddIDwtICdNYW5ncm92ZXMnCk1JQ1AyMDE5RGF0YQpgYGAKCkNyZWF0ZSBhIDIwMTkgeWVhciBjb2x1bW4gCgpgYGB7cn0KTUlDUDIwMTlEYXRhIDwtIGNiaW5kKE1JQ1AyMDE5RGF0YSwgeWVhcj0iMjAxOSIpCk1JQ1AyMDE5RGF0YQpgYGAKCkRyb3AgY29sdW1ucyBQWExWQUwgYW5kIGNsaXBwZWQyMDE5ZGF0YSBhcyBuZWl0aGVyIGlzIG5lZWRlZCAKCmBgYHtyfQpNSUNQMjAxOURhdGEgPSBzdWJzZXQoTUlDUDIwMTlEYXRhLHNlbGVjdCA9IC1jKFBYTFZBTCwgY2xpcHBlZDIwMTlkYXRhKSkKTUlDUDIwMTlEYXRhCmBgYAoKCkltcG9ydCBNSUNQIDIwMjAgTWFuZ3JvdmUgRGF0YSAKCmBgYHtyfQpNSUNQMjAyMERhdGEgPC0gcmVhZF9jc3YoIkRhdGEvTUlDUDIwMjBEYXRhLmNzdiIpCk1JQ1AyMDIwRGF0YQpgYGAKClJlbmFtZSAyMDIwIGNvbHVtbiB0byBtYW5ncm92ZXMgCgpgYGB7cn0KbmFtZXMoTUlDUDIwMjBEYXRhKVtuYW1lcyhNSUNQMjAyMERhdGEpID09ICcyMDIwJ10gPC0gJ01hbmdyb3ZlcycKTUlDUDIwMjBEYXRhCmBgYAoKQ3JlYXRlIGEgMjAyMCB5ZWFyIGNvbHVtbiAKCmBgYHtyfQpNSUNQMjAyMERhdGEgPC0gY2JpbmQoTUlDUDIwMjBEYXRhLCB5ZWFyPSIyMDIwIikKTUlDUDIwMjBEYXRhCmBgYApEcm9wIGNvbHVtbnMgUFhMVkFMIGFuZCBjbGlwcGVkMjAyMGRhdGEgYXMgbmVpdGhlciBpcyBuZWVkZWQgCgpgYGB7cn0KTUlDUDIwMjBEYXRhID0gc3Vic2V0KE1JQ1AyMDIwRGF0YSxzZWxlY3QgPSAtYyhQWExWQUwsIGNsaXBwZWQyMDIwZGF0YSkpCk1JQ1AyMDIwRGF0YQpgYGAKCkNvbWJpbmUgYWxsIE1JQ1AgTWFuZ3JvdmUgRGF0YXNldHMgYnkgeWVhciAKCmBgYHtyfQpkZjQgPC0gYmluZF9yb3dzKE1JQ1AxOTk2RGF0YSwgTUlDUDIwMDdEYXRhLCBNSUNQMjAwOERhdGEsIE1JQ1AyMDA5RGF0YSwgTUlDUDIwMTBEYXRhLCBNSUNQMjAxNURhdGEsIE1JQ1AyMDE2RGF0YSwgTUlDUDIwMTdEYXRhLCBNSUNQMjAxOERhdGEsIE1JQ1AyMDE5RGF0YSwgTUlDUDIwMjBEYXRhKQpkZjQKYGBgCgpDaGVjayB1bmlxdWUgdmFsdWVzIHRvIG1ha2Ugc3VyZSBlYWNoIHllYXIgaGFzIGJlZW4gaW5jbHVkZWQgCgpgYGB7cn0KdW5pcXVlKGRmNCR5ZWFyKQpgYGAKCgpHcm91cCBtYW5ncm92ZXMgYnkgeWVhcgoKYGBge3J9CmFnZ190YmwgPC0gZGY0ICU+JSBncm91cF9ieSh5ZWFyKSAlPiUgc3VtbWFyaXNlKFRvdGFsX01hbmdyb3Zlcz1zdW0oTWFuZ3JvdmVzKSwuZ3JvdXBzID0gJ2Ryb3AnKQphZ2dfdGJsCmBgYAoKCkNvbnZlcnQgdG8gYSBuZXcgZGF0YWZyYW1lIAoKYGBge3J9CmRmNSA8LSBhZ2dfdGJsICU+JSBhcy5kYXRhLmZyYW1lKCkKZGY1CmBgYAoKQ29udmVydCBNYW5ncm92ZSBjb3ZlciB0byBoZWN0YXJlcwoKYGBge3J9CmRmNSRUb3RhbF9NYW5ncm92ZXNfSGVjdGFyZXMgPC0gZGY1JFRvdGFsX01hbmdyb3ZlcyAvIDEwMDAwCmRmNQpgYGAKCkRyb3AgVG90YWxfTWFuZ3JvdmVzIGNvbHVtbnMgYXMgdW5uZXNlc3NhcnkgCgpgYGB7cn0KZGY1ID0gc3Vic2V0KGRmNSxzZWxlY3QgPSAtYyhUb3RhbF9NYW5ncm92ZXMpKQpkZjUKYGBgCgpEdXBsaWNhdGUgZGF0YXNldCAKCmBgYHtyfQpkZjYgPC0gZGY1CmRmNgpgYGAKCgo=</div>
 
 
 
