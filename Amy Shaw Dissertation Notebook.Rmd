@@ -756,4 +756,126 @@ df6 <- df5
 df6
 ```
 
+Convert into a data.table
 
+```{r}
+setDT(df6)
+class(df6)
+```
+
+Calculate % change between the MICP years of data 
+
+```{r}
+df6[ , change := (Total_Mangroves_Hectares - shift(Total_Mangroves_Hectares)) / shift(Total_Mangroves_Hectares)]  
+df6
+```
+Round up % change 
+
+```{r}
+df6$percentchange <- percent(df6$change, accuracy=.1)
+df6
+```
+
+convert to data frame
+
+```{r}
+df7 <- as.data.frame(df6) 
+df7
+```
+
+Create location column for MICP 
+
+```{r}
+df7 <- cbind(df7, location="MICP")
+df7
+```
+
+Same processes are now done for the Lamu dataset 
+
+Convert into a data.table
+
+```{r}
+setDT(df3)
+class(df3)
+```
+
+Calculate % change between the Lamu County years of data 
+
+```{r}
+df3[ , change := (Total_Mangroves_Hectares - shift(Total_Mangroves_Hectares)) / shift(Total_Mangroves_Hectares)]  
+df3
+```
+
+Round up % change 
+
+```{r}
+df3$percentchange <- percent(df3$change, accuracy=.1)
+df3
+```
+
+convert to data frame
+
+```{r}
+df8 <- as.data.frame(df3) 
+df8
+```
+
+Create location column for Lamu County 
+
+```{r}
+df8 <- cbind(df8, location="Lamu County")
+df8
+```
+
+Combine dataframes 
+
+```{r}
+df9 <- bind_rows(df8, df7)
+df9
+```
+
+Check unique years to make sure everything was included 
+
+```{r}
+unique(df9$year)
+```
+
+
+
+Create a Percentage Change graph 
+
+```{r}
+df9 %>%
+  ggplot( aes(x=year, y=percentchange, group=location, colour=location)) +
+    geom_line() +
+    geom_point() 
+
+```
+
+Create a Scatterplot showing a time-series for Lamu County and Manda 
+
+```{r}
+p1 <- ggplot(data=df8, aes(x=year, y=Total_Mangroves_Hectares)) +
+    geom_line() +
+    geom_point() +
+  ylim(lamu_y_axis_min,lamu_y_axis_max) +
+  theme_fancy() +
+  ggtitle("Lamu County") +
+  xlab("Year") +
+  ylab("Mangroves in Ha")
+
+p2 <- ggplot(data=df7, aes(x=year, y=Total_Mangroves_Hectares)) +
+    geom_line() +
+    geom_point() +
+  ylim(manda_y_axis_min, manda_y_axis_max) +
+  theme_fancy() +
+  ggtitle("MICP") +
+  xlab("Year") +
+  ylab("Mangroves in Ha")
+
+fig1 <- p1 + p2 + plot_annotation(tag_levels = 'a') + 
+  plot_annotation(title = 'Lamu County and MICP mangrove cover 1996 to 2020',
+                  theme = theme(plot.title = element_text(size = 16)))
+
+fig1
+```
