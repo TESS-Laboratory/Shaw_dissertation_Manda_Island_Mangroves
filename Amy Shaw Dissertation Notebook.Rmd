@@ -55,7 +55,6 @@ theme_fancy <- function() {
     )
 }
 ```
-```
 
 Import all Lamu County mangrove cover data sets 
 
@@ -859,14 +858,127 @@ df9 %>%
 
 ```
 
+Convert Manda year column to numeric
+
+```{r}
+df7$year = as.numeric(as.character(df8$year)) 
+df7
+```
+
+Convert Lamu year column to numeric
+
+```{r}
+df8$year = as.numeric(as.character(df8$year)) 
+df8
+```
+
+
+```{r}
+y_axis_scaler <- 0.03
+y_axis_scaler
+```
+
+Summarise Manda data
+
+```{r}
+summary(df7)
+```
+Calculate Manda range and store as a vector
+
+```{r}
+manda_range <- range(df7$Total_Mangroves_Hectares)
+manda_range
+```
+
+Calculate Manda y axis max value
+
+```{r}
+manda_y_axis_max <- manda_range[2] * (1+y_axis_scaler)
+manda_y_axis_max
+```
+
+Calculate Manda y axis min value
+
+```{r}
+manda_y_axis_min <- manda_range[1] * (1-y_axis_scaler)
+manda_y_axis_min
+```
+
+Summarise Lamu data
+
+```{r}
+summary(df8)
+```
+Calculate Manda range and store as a vector
+
+```{r}
+lamu_range <- range(df8$Total_Mangroves_Hectares)
+lamu_range
+```
+
+Calculate Lamu y axis max value
+
+```{r}
+lamu_y_axis_max <- lamu_range[2] * (1+y_axis_scaler)
+lamu_y_axis_max
+```
+
+Calculate Lamu y axis min value
+
+```{r}
+lamu_y_axis_min <- lamu_range[1] * (1-y_axis_scaler)
+lamu_y_axis_min
+```
 
 Create a Line plot showing a time-series for Lamu County and Manda 
+
+```{r}
+
+p1 <- ggplot(data=df8, aes(x=year, y=Total_Mangroves_Hectares)) +
+    geom_line() +
+    geom_point() +
+  theme_fancy() +
+  ylim(lamu_y_axis_min,lamu_y_axis_max) +
+  ggtitle("Lamu County") +
+  xlab("Year") +
+  ylab("Hectares of Mangroves")
+
+p2 <- ggplot(data=df7, aes(x=year, y=Total_Mangroves_Hectares)) +
+    geom_line() +
+    geom_point() +
+  theme_fancy() +
+  ylim(manda_y_axis_min, manda_y_axis_max) +
+  ggtitle("MICP") +
+  xlab("Year") +
+  ylab("Hectares of Mangroves")
+
+p3 <- ggplot(data=df8, aes(x=year, y=Total_Mangroves_Hectares)) +
+    geom_bar(stat="identity") +
+  theme_fancy() +
+  ggtitle("Lamu County") +
+  xlab("Year") +
+  ylab("Hectares of Mangroves")
+
+p4 <- ggplot(data=df7, aes(x=year, y=Total_Mangroves_Hectares)) +
+    geom_bar(stat="identity") +
+  theme_fancy() +
+  ggtitle("MICP") +
+  xlab("Year") +
+  ylab("Hectares of Mangroves")
+
+fig2 <- p1 + p2 + p3 + p4 + plot_annotation(tag_levels = 'a') + 
+  plot_annotation(title = 'Lamu County and MICP mangrove cover 1996 to 2020',
+                  theme = theme(plot.title = element_text(size = 16)))
+
+fig2
+```
 
 ```{r}
 p1 <- ggplot(data=df8, aes(x=year, y=Total_Mangroves_Hectares, group=1)) +
     geom_line() +
     geom_point() +
   theme_fancy() +
+  ylim(lamu_y_axis_min, lamu_y_axis_max) +
   ggtitle("Lamu County") +
   xlab("Year") +
   ylab("Mangroves in Ha")
@@ -875,6 +987,7 @@ p2 <- ggplot(data=df7, aes(x=year, y=Total_Mangroves_Hectares, group=1)) +
     geom_line() +
     geom_point() +
   theme_fancy() +
+  ylim(manda_y_axis_min, manda_y_axis_max) +
   ggtitle("MICP") +
   xlab("Year") +
   ylab("Mangroves in Ha")
@@ -927,7 +1040,7 @@ p4 <- ggplot(data=df7, aes(x=year, y=Total_Mangroves_Hectares)) +
   xlab("Year") +
   ylab("Hectares of Mangroves")
 
-fig2 <- p1 + p2 + p3 + p4 + plot_annotation(tag_levels = 'a') + 
+fig2 <- p3 + p4 + plot_annotation(tag_levels = 'a') + 
   plot_annotation(title = 'Lamu County and MICP mangrove cover 1996 to 2020',
                   theme = theme(plot.title = element_text(size = 16)))
 
