@@ -20,6 +20,7 @@ library(scales)
 Setting Potting Theme 
 
 ```{r}
+## Plotting theme
 theme_fancy <- function() {
   theme_bw() +
     theme(
@@ -53,6 +54,7 @@ theme_fancy <- function() {
       )
     )
 }
+```
 ```
 
 Import all Lamu County mangrove cover data sets 
@@ -840,7 +842,12 @@ Check unique years to make sure everything was included
 unique(df9$year)
 ```
 
+Filter out 1996
 
+```{r}
+df9 <- na.omit(df9)
+df9
+```
 
 Create a Percentage Change graph 
 
@@ -852,30 +859,98 @@ df9 %>%
 
 ```
 
-Create a Scatterplot showing a time-series for Lamu County and Manda 
+
+Create a Line plot showing a time-series for Lamu County and Manda 
 
 ```{r}
-p1 <- ggplot(data=df8, aes(x=year, y=Total_Mangroves_Hectares)) +
+p1 <- ggplot(data=df8, aes(x=year, y=Total_Mangroves_Hectares, group=1)) +
     geom_line() +
     geom_point() +
-  ylim(lamu_y_axis_min,lamu_y_axis_max) +
   theme_fancy() +
   ggtitle("Lamu County") +
   xlab("Year") +
   ylab("Mangroves in Ha")
 
-p2 <- ggplot(data=df7, aes(x=year, y=Total_Mangroves_Hectares)) +
+p2 <- ggplot(data=df7, aes(x=year, y=Total_Mangroves_Hectares, group=1)) +
     geom_line() +
     geom_point() +
-  ylim(manda_y_axis_min, manda_y_axis_max) +
   theme_fancy() +
   ggtitle("MICP") +
   xlab("Year") +
   ylab("Mangroves in Ha")
 
+
 fig1 <- p1 + p2 + plot_annotation(tag_levels = 'a') + 
+  plot_annotation(title = 'Lamu County and MICP mangrove cover 1996 to 2020',
+                  theme = theme(plot.title = element_text(size = 12))) 
+
+fig1 
+```
+
+
+Save
+
+```{r}
+filename = "Lamu County vs MICP cover change 1996-2020"
+
+ggsave(
+  fig1,
+  filename = paste0("Plots/", filename, ".png"),
+  width = 23,
+  height = 17,
+  units = "cm"
+)
+
+ggsave(
+  fig1,
+  filename = paste0("Plots/", filename, ".pdf"),
+  width = 23,
+  height = 17,
+  units = "cm"
+)
+```
+
+
+
+```{r}
+p3 <- ggplot(data=df8, aes(x=year, y=Total_Mangroves_Hectares)) +
+    geom_bar(stat="identity") +
+  theme_fancy() +
+  ggtitle("Lamu County") +
+  xlab("Year") +
+  ylab("Hectares of Mangroves")
+
+p4 <- ggplot(data=df7, aes(x=year, y=Total_Mangroves_Hectares)) +
+    geom_bar(stat="identity") +
+  theme_fancy() +
+  ggtitle("MICP") +
+  xlab("Year") +
+  ylab("Hectares of Mangroves")
+
+fig2 <- p1 + p2 + p3 + p4 + plot_annotation(tag_levels = 'a') + 
   plot_annotation(title = 'Lamu County and MICP mangrove cover 1996 to 2020',
                   theme = theme(plot.title = element_text(size = 16)))
 
-fig1
+fig2
+```
+Save
+
+```{r}
+filename = "Lamu County vs MICP cover change 1996-2020 Bar Chart"
+
+ggsave(
+  fig2,
+  filename = paste0("Plots/", filename, ".png"),
+  width = 23,
+  height = 17,
+  units = "cm"
+)
+
+ggsave(
+  fig2,
+  filename = paste0("Plots/", filename, ".pdf"),
+  width = 23,
+  height = 17,
+  units = "cm"
+)
 ```
