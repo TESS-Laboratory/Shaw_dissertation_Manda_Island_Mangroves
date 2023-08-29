@@ -94,14 +94,14 @@ Lamu1996Data = subset(Lamu1996Data,select = -c(PXLVAL, clipped1996data))
 Lamu1996Data
 ```
 
-Import Lamu County 2007 mangrove data
+Import Lamu County 2007 mangrove data.
 
 ```{r}
 Lamu2007Data <- read_csv("Data/Lamu2007Data.csv")
 Lamu2007Data
 ```
 
-Rename 2007 column to Mangroves
+Rename 2007 column to Mangroves.
 
 ```{r}
 names(Lamu2007Data)[names(Lamu2007Data) == '2007'] <- 'Mangroves'
@@ -185,7 +185,7 @@ Lamu2010Data <- read_csv("Data/Lamu2010Data.csv")
 Lamu2010Data
 ```
 
-Rename 2010 column to Mangroves
+Rename 2010 column to Mangroves.
 
 ```{r}
 names(Lamu2010Data)[names(Lamu2010Data) == '2010'] <- 'Mangroves'
@@ -234,7 +234,7 @@ Lamu2015Data = subset(Lamu2015Data,select = -c(PXLVAL, clipped2015data))
 Lamu2015Data
 ```
 
-Import Lamu County 2016 Mangrove Data
+Import Lamu County 2016 Mangrove Data.
 
 ```{r}
 Lamu2016Data <- read_csv("Data/Lamu2016Data.csv")
@@ -376,7 +376,7 @@ Lamu2020Data
 
 ## Lamu County data merging, aggregation and further processing
 
-The Lamu County data for each observation year is merged into a single data frame. The data is then aggregated to return the total Mangrove coverage in each year and converted into a new data frame. Next, the Total_Mangroves_Hectares column is created, which converts the Mangrove coverage figures from square meters to hectares. Lastly, the Total_Mangroves column, measured in square meters is dropped.
+The Lamu County data for each observation year is merged into a single data frame. The data is then aggregated to return the total Mangrove coverage in each year and converted into a new data frame. Next, the Total_Mangroves_Hectares column is created, which converts the Mangrove coverage figures from square metres to hectares. Lastly, the Total_Mangroves column, measured in square metres is dropped.
 
 Merge all Lamu County Mangrove dataframes
 
@@ -391,14 +391,14 @@ Check unique values to make sure all observation years are present.
 unique(df1$year)
 ```
 
-Aggregate the data to return the total mangrove coverage in square meters by year.
+Aggregate the data to return the total mangrove coverage in square metres by year.
 
 ```{r}
 agg_tbl1 <- df1 %>% group_by(year) %>% summarise(Total_Mangroves=sum(Mangroves),.groups = 'drop')
 agg_tbl1
 ```
 
-Convert aggregated data into a new dataframe
+Convert aggregated data into a new data frame.
 
 ```{r}
 df2 <- agg_tbl1 %>% as.data.frame()
@@ -412,7 +412,7 @@ df2$Total_Mangroves_Hectares <- df2$Total_Mangroves / 10000
 df2
 ```
 
-Drop Total_Mangroves (sq meters) column as unnecessary.
+Drop Total_Mangroves (sq metres) column as unnecessary.
 
 ```{r}
 df2 = subset(df2,select = -c(Total_Mangroves))
@@ -430,246 +430,246 @@ df3
 
 In this section 11 csv files from the Global Mangrove Watch 3.0 dataset are imported and processed. Clips were made in QGIS for the Manda Island Conservation Project (MICP) for the available observation years of 1996, 2007-2010 and 2015-2020.
 
-The following processing steps are then take for each imported dataframe.
+The following processing steps are then take for each imported data frame.
 
-1.  Rename the column labelled with the observation year to 'Mangroves'. This column contains mangrove coverage in square meters for the QGIS pixel in question.
+1.  Rename the column labelled with the observation year to 'Mangroves'. This column contains mangrove coverage in square metres for the QGIS pixel in question.
 2.  Create a column called 'year' and set the value to the observation year.
 3.  Drop columns that are not required retaining the 'Mangroves' and 'year' columns.
 
 #### MICP mangrove cover data import and initial processing
 
-Import MICP 1996 Mangrove Data
+Import MICP 1996 Mangrove data.
 
 ```{r}
 MICP1996Data <- read_csv("Data/MICP1996Data.csv")
 MICP1996Data
 ```
 
-Rename 1996 column to Mangroves
+Rename 1996 column to Mangroves.
 
 ```{r}
 names(MICP1996Data)[names(MICP1996Data) == '1996area'] <- 'Mangroves'
 MICP1996Data
 ```
 
-Create a 1996 year column
+Create year column and set the value to 1996.
 
 ```{r}
 MICP1996Data <- cbind(MICP1996Data, year="1996")
 MICP1996Data
 ```
 
-Drop columns PXLVAL and clipped1996data as neither is needed
+Drop columns PXLVAL and clipped1996data as neither is needed.
 
 ```{r}
 MICP1996Data = subset(MICP1996Data,select = -c(PXLVAL, clipped1996data))
 MICP1996Data
 ```
 
-Import MICP 2007 mangrove data
+Import MICP 2007 mangrove data.
 
 ```{r}
 MICP2007Data <- read_csv("Data/MICP2007Data.csv")
 MICP2007Data
 ```
 
-Rename 2007 column to Mangroves
+Rename 2007 column to Mangroves.
 
 ```{r}
 names(MICP2007Data)[names(MICP2007Data) == '2007'] <- 'Mangroves'
 MICP2007Data
 ```
 
-Create a 2007 year column
+Create year column and set the value to 2007.
 
 ```{r}
 MICP2007Data <- cbind(MICP2007Data, year="2007")
 MICP2007Data
 ```
 
-Drop columns PXLVAL and clipped2007data as neither is needed
+Drop columns PXLVAL and clipped2007data as neither is needed.
 
 ```{r}
 MICP2007Data = subset(MICP2007Data,select = -c(PXLVAL, clipped2007data))
 MICP2007Data
 ```
 
-Import MICP 2008 Mangrove Data
+Import MICP 2008 Mangrove data.
 
 ```{r}
 MICP2008Data <- read_csv("Data/MICP2008Data.csv")
 MICP2008Data
 ```
 
-Rename 2008 column to Mangroves
+Rename 2008 column to Mangroves.
 
 ```{r}
 names(MICP2008Data)[names(MICP2008Data) == '2008'] <- 'Mangroves'
 MICP2008Data
 ```
 
-Create a 2008 year column
+Create year column and set the value to 2008.
 
 ```{r}
 MICP2008Data <- cbind(MICP2008Data, year="2008")
 MICP2008Data
 ```
 
-Drop columns PXLVAL and clipped2008data as neither is needed
+Drop columns PXLVAL and clipped2008data as neither is needed.
 
 ```{r}
 MICP2008Data = subset(MICP2008Data,select = -c(PXLVAL, clipped2008data))
 MICP2008Data
 ```
 
-Import MICP 2009 mangrove data
+Import MICP 2009 mangrove data.
 
 ```{r}
 MICP2009Data <- read_csv("Data/MICP2009Data.csv")
 MICP2009Data
 ```
 
-Rename 2009 column to Mangroves
+Rename 2009 column to Mangroves.
 
 ```{r}
 names(MICP2009Data)[names(MICP2009Data) == '2009'] <- 'Mangroves'
 MICP2009Data
 ```
 
-Create a 2009 year column
+Create year column and set the value to 2009.
 
 ```{r}
 MICP2009Data <- cbind(MICP2009Data, year="2009")
 MICP2009Data
 ```
 
-Drop columns PXLVAL and clipped2009data as neither is needed
+Drop columns PXLVAL and clipped2009data as neither is needed.
 
 ```{r}
 MICP2009Data = subset(MICP2009Data,select = -c(PXLVAL, clipped2009data))
 MICP2009Data
 ```
 
-Import MICP 2010 mangrove data
+Import MICP 2010 mangrove data.
 
 ```{r}
 MICP2010Data <- read_csv("Data/MICP2010Data.csv")
 MICP2010Data
 ```
 
-Rename 2010 column to Mangroves
+Rename 2010 column to Mangroves.
 
 ```{r}
 names(MICP2010Data)[names(MICP2010Data) == '2010'] <- 'Mangroves'
 MICP2010Data
 ```
 
-Create a 2010 year column
+Create year column and set the value to 2010.
 
 ```{r}
 MICP2010Data <- cbind(MICP2010Data, year="2010")
 MICP2010Data
 ```
 
-Drop columns PXLVAL and clipped2010data as neither is needed
+Drop columns PXLVAL and clipped2010data as neither is needed.
 
 ```{r}
 MICP2010Data = subset(MICP2010Data,select = -c(PXLVAL, clipped2010data))
 MICP2010Data
 ```
 
-Import MICP 2015 mangrove data
+Import MICP 2015 mangrove data.
 
 ```{r}
 MICP2015Data <- read_csv("Data/MICP2015Data.csv")
 MICP2015Data
 ```
 
-Rename 2015 column to Mangroves
+Rename 2015 column to Mangroves.
 
 ```{r}
 names(MICP2015Data)[names(MICP2015Data) == '2015'] <- 'Mangroves'
 MICP2015Data
 ```
 
-Create a 2015 year column
+Create year column and set the value to 2015.
 
 ```{r}
 MICP2015Data <- cbind(MICP2015Data, year="2015")
 MICP2015Data
 ```
 
-Drop columns PXLVAL and clipped2015data as neither is needed
+Drop columns PXLVAL and clipped2015data as neither is needed.
 
 ```{r}
 MICP2015Data = subset(MICP2015Data,select = -c(PXLVAL, clipped2015data))
 MICP2015Data
 ```
 
-Import MICP 2016 mangrove data
+Import MICP 2016 mangrove data.
 
 ```{r}
 MICP2016Data <- read_csv("Data/MICP2016Data.csv")
 MICP2016Data
 ```
 
-Rename 2016 column to Mangroves
+Rename 2016 column to Mangroves.
 
 ```{r}
 names(MICP2016Data)[names(MICP2016Data) == '2016'] <- 'Mangroves'
 MICP2016Data
 ```
 
-Create a 2016 year column
+Create year column and set the value to 2016.
 
 ```{r}
 MICP2016Data <- cbind(MICP2016Data, year="2016")
 MICP2016Data
 ```
 
-Drop columns PXLVAL and clipped2016data as neither is needed
+Drop columns PXLVAL and clipped2016data as neither is needed.
 
 ```{r}
 MICP2016Data = subset(MICP2016Data,select = -c(PXLVAL, clipped2016data))
 MICP2016Data
 ```
 
-Import MICP 2017 mangrove data
+Import MICP 2017 mangrove data.
 
 ```{r}
 MICP2017Data <- read_csv("Data/MICP2017Data.csv")
 MICP2017Data
 ```
 
-Rename 2017 column to mangroves
+Rename 2017 column to Mangroves.
 
 ```{r}
 names(MICP2017Data)[names(MICP2017Data) == '2017'] <- 'Mangroves'
 MICP2017Data
 ```
 
-Create a 2017 year column
+Create year column and set the value to 2017.
 
 ```{r}
 MICP2017Data <- cbind(MICP2017Data, year="2017")
 MICP2017Data
 ```
 
-Drop columns PXLVAL and clipped2017data as neither is needed
+Drop columns PXLVAL and clipped2017data as neither is needed.
 
 ```{r}
 MICP2017Data = subset(MICP2017Data,select = -c(PXLVAL, clipped2017data))
 MICP2017Data
 ```
 
-Import MICP 2018 mangrove data
+Import MICP 2018 mangrove data.
 
 ```{r}
 MICP2018Data <- read_csv("Data/MICP2018Data.csv")
 MICP2018Data
 ```
 
-Rename 2018 column to Mangroves
+Create year column and set the value to 2018.
 
 ```{r}
 names(MICP2018Data)[names(MICP2018Data) == '2018area'] <- 'Mangroves'
@@ -683,35 +683,35 @@ MICP2018Data <- cbind(MICP2018Data, year="2018")
 MICP2018Data
 ```
 
-Drop PXLVAL column as it is not needed
+Drop PXLVAL column as it is not needed.
 
 ```{r}
 MICP2018Data = subset(MICP2018Data,select = -c(PXLVAL))
 MICP2018Data
 ```
 
-Import MICP 2019 mangrove data
+Import MICP 2019 mangrove data.
 
 ```{r}
 MICP2019Data <- read_csv("Data/MICP2019Data.csv")
 MICP2019Data
 ```
 
-Rename 2019 column to Mangroves
+Rename 2019 column to Mangroves.
 
 ```{r}
 names(MICP2019Data)[names(MICP2019Data) == '2019'] <- 'Mangroves'
 MICP2019Data
 ```
 
-Create a 2019 year column
+Create year column and set the value to 2019.
 
 ```{r}
 MICP2019Data <- cbind(MICP2019Data, year="2019")
 MICP2019Data
 ```
 
-Drop columns PXLVAL and clipped2019data as neither is needed
+Drop columns PXLVAL and clipped2019data as neither is needed.
 
 ```{r}
 MICP2019Data = subset(MICP2019Data,select = -c(PXLVAL, clipped2019data))
@@ -725,14 +725,14 @@ MICP2020Data <- read_csv("Data/MICP2020Data.csv")
 MICP2020Data
 ```
 
-Rename 2020 column to Mangroves
+Rename 2020 column to Mangroves.
 
 ```{r}
 names(MICP2020Data)[names(MICP2020Data) == '2020'] <- 'Mangroves'
 MICP2020Data
 ```
 
-Create a 2020 year column
+Create year column and set the value to 2020.
 
 ```{r}
 MICP2020Data <- cbind(MICP2020Data, year="2020")
@@ -748,7 +748,7 @@ MICP2020Data
 
 ## MICP data merging, aggregation and further processing
 
-The MICP data for each observation year is merged into a single dataframe. The data is then aggregated to return the total Mangrove coverage in each year. Next, the Total_Mangroves_Hectares column is created, which converts the Mangrove coverage figures from square meters to hectares. Lastly, the Total_Mangroves column, measured in square meters is dropped.
+The MICP data for each observation year is merged into a single dataframe. The data is then aggregated to return the total Mangrove coverage in each year. Next, the Total_Mangroves_Hectares column is created, which converts the Mangrove coverage figures from square metres to hectares. Lastly, the Total_Mangroves column, measured in square metres is dropped.
 
 Merge all MICP mangrove datasets by year
 
@@ -757,20 +757,20 @@ df4 <- bind_rows(MICP1996Data, MICP2007Data, MICP2008Data, MICP2009Data, MICP201
 df4
 ```
 
-Check unique values to make sure all observation years are present
+Check unique values to make sure all observation years are present.
 
 ```{r}
 unique(df4$year)
 ```
 
-Aggregate the data to return the total mangrove coverage in square meters by year
+Aggregate the data to return the total mangrove coverage in square metres by year.
 
 ```{r}
 agg_tbl <- df4 %>% group_by(year) %>% summarise(Total_Mangroves=sum(Mangroves),.groups = 'drop')
 agg_tbl
 ```
 
-Convert aggregated data into a new dataframe
+Convert aggregated data into a new data frame
 
 ```{r}
 df5 <- agg_tbl %>% as.data.frame()
@@ -784,14 +784,14 @@ df5$Total_Mangroves_Hectares <- df5$Total_Mangroves / 10000
 df5
 ```
 
-Drop Total_Mangroves (sq meters) columns as unnecessary
+Drop Total_Mangroves (sq metres) columns as unnecessary.
 
 ```{r}
 df5 = subset(df5,select = -c(Total_Mangroves))
 df5
 ```
 
-Duplicate dataset
+Duplicate dataset.
 
 ```{r}
 df6 <- df5
