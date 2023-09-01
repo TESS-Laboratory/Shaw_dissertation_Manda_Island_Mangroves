@@ -1,2 +1,2 @@
 # shaw_dissertation_Manda_Island_Mangroves
-Code for Manda Island Mangroves 
+Script for research focussed on analysis of the Manda Island Conservancy Project Mangroves. Full script and explanatory notes are available within the Notebook 'Amy Shaw Dissertation Notebook'. All csv files downloaded from QGIS, containing data for the available observation years between 1996 and 2020 for both MICP and Lamu County are stored in the 'Data' folder. All plots, graphs and visualisations are saved in the 'Plots' folder. All other notebooks (MICP, MandaLamu, Q2b and Question 2) contain old code which has been duplicated within the main script and are therefore redundant.
