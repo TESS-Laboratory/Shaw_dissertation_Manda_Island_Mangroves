@@ -3,4 +3,4 @@ Script for research focussed on anaylsis of the Manda Island Conservancy Project
 Full script and explanatroy notes are avaliable within the Notebook 'Amy Shaw Dissertation Notebook'. 
 All csv files downloaded from QGIS, containing data for every year for both MICP and Lamu County are stored in the 'Data' folder.
 All plots, graphs and visusalisations are saved within the 'Plots' folder. 
-All other notebooks hold old code which has been duplicated within the main script and are therefore redunant. 
+All other notebooks (MICP, MandaLamu, Q2b and Question 2) contain old code which has been duplicated within the main script and are therefore redunant. 
