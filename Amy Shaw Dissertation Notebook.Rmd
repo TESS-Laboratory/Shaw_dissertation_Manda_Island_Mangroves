@@ -878,7 +878,7 @@ df8
 
 ### Percentage change visualisation
 
-The MICP and Lamu County data frames are first merged to create a new data frame. The year 1996 is then filtered out as it does not have a data point to compare to. A line graph is then created to show the percentage changes in mangrove cover between each obseration year for both Lamu County and the MICP. Lastly, the graph is saved to the plots folder.
+The MICP and Lamu County data frames are first merged to create a new data frame. The year 1996 is then filtered out as there is no data point to compare it to. A line graph is then created to show the percentage changes in mangrove cover between each obseration year for both Lamu County and the MICP. Lastly, the graph is saved to the plots folder.
 
 Merge Lamu and MICP data frames.
 
@@ -951,7 +951,7 @@ ggsave(
 
 ## Absolute change visualisation
 
-Create scatter plots and bar charts to visualise the absolute change in mangrove cover in the MICP and Lamu County across the 24 year period of observation. Bar chart Y axes are not truncated to provide context as to the relative change over time. The line graph Y axis' are scaled at 3% above the maximum value and 3% below the minimum value for both MICP and Lamu County to minimise graph distortion. Summaries of each data frame are created to check the max and min values. Scatter plots and bar charts are created in one image and saved into the plots folder.
+Create scatter plots and bar charts to visualise the absolute change in mangrove cover in the MICP and Lamu County across the 24 year period of observation. Bar chart Y axis' are not truncated to provide visual context on the degree of change over time. The line graph Y axis' are scaled at 3% above the maximum value and 3% below the minimum value for both MICP and Lamu County to minimise line graph distortion. Summaries of each data frame are created to check the max and min values. Scatter plots and bar charts are created in one image and saved into the plots folder.
 
 Y axis scaler set to 3% to minimise graph distortion.
 
@@ -973,14 +973,14 @@ manda_range <- range(df7$Total_Mangroves_Hectares)
 manda_range
 ```
 
-Define the MICP line graph Y axis limit as 3% above the MICP data Max value to normalise the data.
+Define the MICP line graph Y axis upper limit as 3% above the MICP data max value to minimise distortion.
 
 ```{r}
 manda_y_axis_max <- manda_range[2] * (1+y_axis_scaler)
 manda_y_axis_max
 ```
 
-Define the MICP line graph Y axis limit as 3% below the MICP data Min value to normalise the data.
+Define the MICP line graph Y axis lower limit as 3% below the MICP data min value to minimise distortion.
 
 ```{r}
 manda_y_axis_min <- manda_range[1] * (1-y_axis_scaler)
@@ -1007,14 +1007,14 @@ lamu_range <- range(df8$Total_Mangroves_Hectares)
 lamu_range
 ```
 
-Define the Lamu line graph Y axis limit as 3% above the Lamu data Max value to normalise the data.
+Define the Lamu line graph Y axis upper limit as 3% above the Lamu data max value to minimise distortion.
 
 ```{r}
 lamu_y_axis_max <- lamu_range[2] * (1+y_axis_scaler)
 lamu_y_axis_max
 ```
 
-Define the Lamu line graph Y axis limit as 3% below the Lamu data Min value to normalise the data.
+Define the Lamu line graph Y axis lower limit as 3% below the Lamu data min value to minimise distortion.
 
 ```{r}
 lamu_y_axis_min <- lamu_range[1] * (1-y_axis_scaler)
